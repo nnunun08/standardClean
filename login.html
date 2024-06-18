@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="login-wrap">
+        <div class="login-bg">
+            <div class="dim"></div>
+            <img src="./img/logo_w.svg" alt="logo">
+        </div>
+        <div class="login-pannel">
+            <div>
+                <h2>간편 로그인</h2>
+                <button class="btn-kakao">카카오로 계속하기</button>
+            </div>
+            <div>
+                <h2>이메일 로그인</h2>
+                <input type="email" class="input" placeholder="이메일을 입력해 주세요">
+                <input type="password" class="input" placeholder="비밀번호를 입력해 주세요">
+                <label class="checkbox-label" style="margin-top: 8px;">
+                    <input type="checkbox">
+                    <span class="checkbox-ic"></span>
+                    로그인 정보를 기억할게요
+                </label>
+                <button class="btn-primary" style="margin-bottom: 40px;">로그인</button>
+            </div>
+            <div class="bottom-wrap">
+                <div class="divider"></div>
+                <h3>계정이 없으신가요?</h3>
+                <button class="btn-secondary">회원가입</button>
+                <div class="link-wrap">
+                    <a href="#" class="grey-link">회원가입</a>
+                    <a href="#" class="grey-link">비밀번호 찾기</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- modal 에 'ac' 클래스 붙여주시면 display 됩니다 -->
+    <div class="modal">
+        <div class="dim">
+            <div class="alert">
+                <p class="mesg">해당 이메일로 등록된 계정이 없습니다.</p>
+                <!-- <p class="mesg">비밀번호가 일치하지 않습니다. </p> -->
+                <button class="btn-primary-sm">확인</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

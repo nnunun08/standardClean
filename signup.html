@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="signup-wrap">
+        <h2>회원가입</h2>
+        <div class="form">
+            <img src="./img/logo_hori_b.svg" alt="logo">
+            <dl>
+                <dt>이메일 주소</dt>
+                <dd>
+                    <input type="email" class="input" placeholder="이메일을 입력해 주세요">
+                </dd>
+            </dl>
+            <dl>
+                <dt>비밀번호</dt>
+                <dd>
+                    <input type="password" class="input" placeholder="비밀번호를 입력해주세요.">
+                    <input type="password" class="input" placeholder="비밀번호를 다시 입력해주세요.">
+                </dd>
+            </dl>
+            <dl>
+                <dt>이름</dt>
+                <dd>
+                    <input type="text" class="input" placeholder="이름을 입력해주세요.">
+                </dd>
+            </dl>
+            <dl>
+                <dt>휴대폰번호</dt>
+                <dd>
+                    <div class="inputBtn">
+                        <input type="number" class="input" placeholder="휴대폰번호를 입력해주세요.">
+                        <button>인증요청</button>
+                    </div>
+                    <div class="inputBtn">
+                        <input type="number" class="input" placeholder="인증번호 6자리">
+                        <button>인증확인</button>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+
+        <button class="btn-primary">회원가입</button>
+    </section>
+
+
+    <!-- modal 에 'ac' 클래스 붙여주시면 display 됩니다 -->
+    <div class="modal">
+        <div class="dim">
+            <div class="alert">
+                <p class="mesg">이미 등록된 이메일입니다. </p>
+                <!-- <p class="mesg">올바른 이메일 주소 형식이 아닙니다.</p> -->
+                <!-- <p class="mesg">인증번호가 잘못되었습니다.</p> -->
+                <!-- <p class="mesg">비밀번호가 일치하지 않습니다.</p> -->
+                <!-- <p class="mesg">비밀번호는 최소 8자리 이상으로 정해주세요</p> -->
+                <button class="btn-primary-sm">확인</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
