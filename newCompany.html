@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="signup-wrap">
+        <h2>신규 기업 등록</h2>
+        <div class="form form2">
+            <dl>
+                <dt>회사명</dt>
+                <dd><input type="text" class="input" placeholder="회사명을 입력해주세요."></dd>
+            </dl>
+            <dl>
+                <dt>사업자등록번호</dt>
+                <dd><input type="number" class="input" placeholder="123-45-00333"></dd>
+            </dl>
+            <dl>
+                <dt>대표자</dt>
+                <dd><input type="text" class="input" placeholder="대표자 명"></dd>
+            </dl>
+        </div>
+
+        <button class="btn-primary" onclick="openModal()">신규 기업 등록</button>
+        <div class="link-wrap">
+            <a href="#" class="grey-link">뒤로가기</a>
+        </div>
+    </section>
+
+
+    <!-- modal 에 'ac' 클래스 붙여주시면 display 됩니다 -->
+    <div class="modal">
+        <div class="dim">
+            <div class="alert">
+                <p class="mesg">홍길동 컴퍼니 신규 등록되었습니다. 다시 로그인해 주세요.</p>
+                <!-- <p class="mesg">이미 등록되어 있는 기업입니다.</p> -->
+                <button class="btn-primary-sm" onclick="closeModal()">확인</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- alert -->
+    <script>
+        const openModal = () => {
+            document.querySelector('.modal').classList.add('ac')
+        }
+        const closeModal = () => {
+            document.querySelector('.modal').classList.remove('ac')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="acount-wrap" style="max-width: 520px;">
+        <h2>다른 회사에 직원 등록요청</h2>
+        <div class="loginWrap">
+            <h3 class="subtit">회사 찾기</h3>
+            <div class="desc">
+                상호명, 대표명으로 검색시 두글자 이상 <br/>
+                사업자번호로 검색시 끝까지 입력해주세요
+            </div>
+
+            <div class="search">
+                <i class="searchIcon"></i>
+                <input class="input" type="text" placeholder="상호명, 대표명, 사업자번호 중에서 검색">
+                <button class="searchBtn">검색</button>
+            </div>
+            <div class="companyWrap" style="display: none;">
+                <div class="id">홍길동 컴퍼니</div>
+                <div class="bottom">
+                    <span class="grey4">123-45-00361</span>
+                    <span class="divider"></span>
+                    <span class="grey4">대표</span>
+                    <span class="grey5">홍길동</span>
+                </div>
+
+                <ul class="etcAccount">
+
+                    <li class="item">
+                        <div class="id">홍길동 컴퍼니</div>
+                        <div class="bottom">
+                            <span class="grey4">123-45-00361</span>
+                            <span class="divider"></span>
+                            <span class="grey4">대표</span>
+                            <span class="grey5">홍길동</span>
+                        </div>
+                    </li>
+
+                    <li class="item">
+                        <div class="id">주식회사 업스탠다드</div>
+                        <div class="bottom">
+                            <span class="grey4">225-86-02687</span>
+                            <span class="divider"></span>
+                            <span class="grey4">대표</span>
+                            <span class="grey5">최태환</span>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="id">주식회사 업스탠다드</div>
+                        <div class="bottom">
+                            <span class="grey4">225-86-02687</span>
+                            <span class="divider"></span>
+                            <span class="grey4">대표</span>
+                            <span class="grey5">최태환</span>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="id">주식회사 업스탠다드</div>
+                        <div class="bottom">
+                            <span class="grey4">225-86-02687</span>
+                            <span class="divider"></span>
+                            <span class="grey4">대표</span>
+                            <span class="grey5">최태환</span>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="id">주식회사 업스탠다드</div>
+                        <div class="bottom">
+                            <span class="grey4">225-86-02687</span>
+                            <span class="divider"></span>
+                            <span class="grey4">대표</span>
+                            <span class="grey5">최태환</span>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <button class="btn-primary">직원 등록 요청</button>
+        </div>
+        <div class="divider-land"></div>
+        <div>
+            <div>
+                <button class="btn-secondary">신규 기업 등록</button>
+            </div>
+            <div class="link-wrap">
+                <a href="#" class="grey-link">뒤로가기</a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- modal 에 'ac' 클래스 붙여주시면 display 됩니다 -->
+    <div class="modal">
+        <div class="dim">
+            <div class="alert">
+                <p class="mesg">"없는회사명"에 대한 검색 결과가 없습니다.<br/>
+                    상호명, 대표명, 사업자번호는 정확하게 입력되어야합니다.<br/>
+                    찾으시는 회사가 없는 경우 아래 "신규 기업 등록"을 통해 등록해 주세요.</p>
+                <!-- <p>검색어은(는) 최소 2자리 입니다.</p> -->
+                <button class="btn-primary-sm">확인</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // 로그인 아이디 선택
+        const companyWrap = document.querySelector('.companyWrap')
+        const etcAccount = document.querySelector('.etcAccount')
+        companyWrap.addEventListener('click', () => {
+            etcAccount.classList.toggle('ac')
+        })
+
+        // 회사 검색
+        const searchBtn = document.querySelector('.searchBtn')
+        searchBtn.addEventListener('click', () => {
+            companyWrap.style.display = 'block';
+        })
+    </script>
+
+    
+
+</body>
+</html>
