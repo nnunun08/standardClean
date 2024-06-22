@@ -389,6 +389,23 @@ a:hover {
   font-size: 16px;
   font-weight: 700;
 }
+.link-wrap.flex {
+  display: flex;
+  justify-content: space-between;
+  color: var(--evoke-grey4, #A2A7B3);
+  font-size: 16px;
+  font-weight: 500;
+}
+.link-wrap .black-link {
+  font-weight: 500;
+  color: var(--evoke-grey5, #4E505D);
+  margin-left: 4px;
+}
+.link-wrap .primary-link {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
+}
 
 .acount-wrap {
   max-width: 460px;
@@ -527,4 +544,26 @@ a:hover {
 }
 .acount-wrap .etcAccount .item + .item {
   border-top: 1px solid var(--evoke-grey2, #CFD4D9);
+}
+
+.tab1 .nav-tabs {
+  border: 0;
+  border-radius: 5px;
+  background: var(--evoke-bg, #F5F5F7);
+  padding: 5px;
+}
+.tab1 .nav-item {
+  flex: 1 0 auto;
+}
+.tab1 .nav-item .nav-link {
+  width: 100%;
+  height: 56px;
+  border: 0;
+  color: var(--evoke-grey4, #A2A7B3);
+  font-weight: 700;
+  border-radius: 4px;
+}
+.tab1 .nav-item .nav-link.active {
+  background-color: #fff;
+  color: var(--evoke-grey5, #4E505D);
 }/*# sourceMappingURL=style.css.map */
