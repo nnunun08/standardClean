@@ -301,7 +301,7 @@ a:hover {
 }
 
 .signup-wrap {
-  max-width: 572px;
+  max-width: 612px;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 20px;
@@ -566,4 +566,278 @@ a:hover {
 .tab1 .nav-item .nav-link.active {
   background-color: #fff;
   color: var(--evoke-grey5, #4E505D);
+}
+
+.page-wrap {
+  background-color: #F5F5F7;
+  display: flex;
+  height: 100vh;
+}
+.page-wrap .contents {
+  flex: 1 0 0;
+  background-color: #fff;
+}
+
+.gnb {
+  position: relative;
+  width: 220px;
+  padding: 40px 0 120px;
+  display: flex;
+  flex-direction: column;
+}
+.gnb .dropdown {
+  display: flex;
+  gap: 16px;
+  padding: 0 20px;
+  margin-bottom: 16px;
+}
+.gnb .company .label {
+  color: var(--evoke-grey4, #A2A7B3);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 19.5px */
+  letter-spacing: -0.39px;
+  margin-bottom: 2px;
+}
+.gnb .company .select {
+  padding: 0;
+  padding-right: 15px;
+  background: url(../img/ic_gnb_select_arr.svg) right center no-repeat;
+  border: 0;
+  color: var(--evoke-grey5, #4E505D);
+  font-family: Pretendard;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 19.5px */
+  letter-spacing: -0.39px;
+}
+.gnb .dropdown-menu {
+  border-radius: 4px;
+  background: #FFF;
+  padding: 16px 0;
+  border: 0;
+  box-shadow: 0 0 0 1px rgb(231, 229, 237);
+}
+.gnb .dropdown-menu .dropdown-item {
+  text-decoration: none;
+  color: var(--evoke-grey4, #A2A7B3);
+  font-family: Pretendard;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 19.5px */
+  letter-spacing: -0.26px;
+  padding: 8px 20px;
+}
+.gnb .dropdown-menu .dropdown-item:active {
+  background-color: inherit;
+}
+.gnb .dropdown-menu .dropdown-item:hover {
+  background: var(--evoke-bg, #F5F5F7);
+}
+.gnb .dropdown-menu li + li::before {
+  content: "";
+  display: block;
+  width: calc(100% - 40px);
+  margin-left: 16px;
+  border-top: 1px solid var(--Base-outline, #E7E5ED);
+}
+.gnb .menu {
+  padding: 10px 0;
+}
+.gnb .menu .listItem {
+  display: flex;
+  align-items: center;
+  padding-left: 62px;
+  position: relative;
+  height: 50px;
+  box-sizing: border-box;
+  width: 100%;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.gnb .menu .listItem:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.gnb .menu .listItem .icon {
+  position: absolute;
+  left: 34px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+}
+.gnb .menu .listItem .name {
+  color: var(--evoke-grey5, #4E505D);
+  font-family: Pretendard;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 13px */
+  padding-top: 4px;
+}
+.gnb .menu .listItem .name::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: var(--evoke-primary, #5940DF);
+}
+.gnb .menu .listItem.active .name::after {
+  width: 100%;
+}
+.gnb .menu .listItem.dashboard .icon {
+  background: url("../img/ic_dashboard_df.svg") center no-repeat;
+}
+.gnb .menu .listItem.dashboard.active .icon {
+  background: url("../img/ic_dashboard_ac.svg") center no-repeat;
+}
+.gnb .menu .listItem.schedule .icon {
+  background: url("../img/ic_schedule_df.svg") center no-repeat;
+}
+.gnb .menu .listItem.schedule.active .icon {
+  background: url("../img/ic_schedule_ac.svg") center no-repeat;
+}
+.gnb .menu .listItem.community .icon {
+  background: url("../img/ic_community_df.svg") center no-repeat;
+}
+.gnb .menu .listItem.community.active .icon {
+  background: url("../img/ic_community_ac.svg") center no-repeat;
+}
+.gnb .menu .listItem.construction .icon {
+  background: url("../img/ic_construction_df.svg") center no-repeat;
+}
+.gnb .menu .listItem.construction.active .icon {
+  background: url("../img/ic_construction_ac.svg") center no-repeat;
+}
+.gnb .menu .listItem.customer .icon {
+  background: url("../img/ic_customer_df.svg") center no-repeat;
+}
+.gnb .menu .listItem.customer.active .icon {
+  background: url("../img/ic_customer_ac.svg") center no-repeat;
+}
+.gnb .menu .listItem.documents .icon {
+  background: url("../img/ic_documents_df.svg") center no-repeat;
+}
+.gnb .menu .listItem.documents.active .icon {
+  background: url("../img/ic_documents_ac.svg") center no-repeat;
+}
+.gnb .menu .listItem.employee .icon {
+  background: url("../img/ic_employee_df.svg") center no-repeat;
+}
+.gnb .menu .listItem.employee.active .icon {
+  background: url("../img/ic_employee_ac.svg") center no-repeat;
+}
+.gnb .menu .listItem.invoice .icon {
+  background: url("../img/ic_invoice_df.svg") center no-repeat;
+}
+.gnb .menu .listItem.invoice.active .icon {
+  background: url("../img/ic_invoice_ac.svg") center no-repeat;
+}
+.gnb .menu .listItem.payment .icon {
+  background: url("../img/ic_payment_df.svg") center no-repeat;
+}
+.gnb .menu .listItem.payment.active .icon {
+  background: url("../img/ic_payment_ac.svg") center no-repeat;
+}
+.gnb .menu .listItem.pricing .icon {
+  background: url("../img/ic_pricing_df.svg") center no-repeat;
+}
+.gnb .menu .listItem.pricing.active .icon {
+  background: url("../img/ic_pricing_ac.svg") center no-repeat;
+}
+.gnb .myState {
+  position: absolute;
+  left: 10px;
+  bottom: 40px;
+  width: calc(100% - 20px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px;
+  border-radius: var(--Border-8, 8px);
+  border: 1px solid var(--Base-outline, #E7E5ED);
+  background: #FFF;
+  /* boxshadow */
+  box-shadow: 0px 4px 32px 0px rgba(171, 163, 194, 0.2);
+}
+.gnb .myState .profile {
+  width: 24px;
+  height: 24px;
+  background: url(../img/img_profile_df.svg) center/cover no-repeat;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.gnb .myState .profile img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gnb .myState .text {
+  flex: 1 0 auto;
+}
+.gnb .myState .text .name {
+  color: var(--evoke-grey5, #4E505D);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 16.8px */
+  margin-bottom: 2px;
+}
+.gnb .myState .text .state {
+  color: var(--evoke-grey4, #A2A7B3);
+  font-family: Pretendard;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+.gnb .myState .more .moreBtn {
+  width: 24px;
+  height: 24px;
+  border: 0;
+  text-indent: -9999px;
+  background: url(../img/ic_more.svg) center no-repeat;
+}
+.gnb .myState .more .dropdown-menu {
+  position: relative;
+  margin-bottom: 8px !important;
+}
+.gnb .myState .more .dropdown-menu::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 1px;
+  box-sizing: border-box;
+  border-top: 0 solid transparent;
+  border-left: 0 solid transparent;
+  transform: translateX(-50%) rotate(45deg);
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  border: 6px solid #fff;
+  border-color: rgb(231, 229, 237);
+}
+.gnb .myState .more .dropdown-menu::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 1px;
+  box-sizing: border-box;
+  border-top: 0 solid transparent;
+  border-left: 0 solid transparent;
+  transform: translateX(-50%) rotate(45deg);
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  border: 6px solid #fff;
+  bottom: -5px;
 }/*# sourceMappingURL=style.css.map */
