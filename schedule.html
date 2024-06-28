@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- flatpickr calendar -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.min.css"  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body class="">
+
+    <section class="page-wrap">
+        <div class="gnb">
+
+            <div class="dropdown">
+                <div class="logo">
+                    <img src="./img/ic_symbol.svg" alt="logo">
+                </div>
+                <div class="company">
+                    <div class="label">소속회사</div>
+                    <button class="select" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        업스탠다드
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">업스탠다드</a></li>
+                      <li><a class="dropdown-item" href="#">업스탠다드2</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu">
+                <a href="#" class="listItem dashboard"><div class="icon"></div><div class="name">대시보드</div></a>
+                <a href="#" class="listItem schedule active"><div class="icon"></div><div class="name">스케쥴</div></a>
+                <a href="#" class="listItem community"><div class="icon"></div><div class="name">알림 및 커뮤니티</div></a>
+                <a href="#" class="listItem construction"><div class="icon"></div><div class="name">현장내역</div></a>
+                <a href="#" class="listItem invoice"><div class="icon"></div><div class="name">청구내역</div></a>
+                <a href="#" class="listItem payment"><div class="icon"></div><div class="name">결제내역</div></a>
+                <a href="#" class="listItem employee"><div class="icon"></div><div class="name">직원 및 급여</div></a>
+                <a href="#" class="listItem customer"><div class="icon"></div><div class="name">고객 및 협력업체</div></a>
+                <a href="#" class="listItem pricing"><div class="icon"></div><div class="name">전자계약 및 세무</div></a>
+                <a href="#" class="listItem documents"><div class="icon"></div><div class="name">비용 및 단가</div></a>
+                <a href="#" class="listItem setting"><div class="icon"></div><div class="name">설정</div></a>
+                <a href="#" class="listItem info"><div class="icon"></div><div class="name">정보</div></a>
+            </div>
+
+            <div class="myState">
+                <div class="profile">
+                    <!-- 사용자가 추가한 이미지 -->
+                    <!-- <img src="" alt=""> -->
+                </div>
+                <div class="text">
+                    <div class="name">최태환</div>
+                    <div class="state">관리자 모드</div>
+                </div>
+                <div class="more dropup-center dropup" >
+                    <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">계정 정보</a></li>
+                      <li><a class="dropdown-item" href="#">로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="conLayout">
+            <div class="contents">
+                <div class="schedule">
+                    <h2 class="pageName">스케쥴</h2>
+                    <div class="inner">
+                        <div class="leftLayout">
+                            <div class="scheduleCalendar">
+                                <div class="calendarTop">
+                                    <div class="commandCal">
+                                        <div class="prevMonth"></div>
+                                        <div class="month">2024년 5월</div>
+                                        <div class="nextMonth"></div>
+                                    </div>
+                                    <button type="button" class="btn-border-sm" onclick="schedule_today_move();"> 오늘 </button>
+                                </div>
+                                <div class="calendarBody">
+                                    <div class="calRow">
+                                        <div class="week">일</div>
+                                        <div class="week">월</div>
+                                        <div class="week">화</div>
+                                        <div class="week">수</div>
+                                        <div class="week">목</div>
+                                        <div class="week">금</div>
+                                        <div class="week">토</div>
+                                    </div>
+                                    <!-- 1 weekly -->
+                                    <div class="calRow">
+                                        <div class="day">
+                                            <div class="date disabled">31</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">1</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">2</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">3</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">4</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">5</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">6</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                    </div>
+                                    <!-- 2 weekly -->
+                                    <div class="calRow">
+                                        <div class="day">
+                                            <div class="date">7</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">8</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">9</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">10</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">11</div>
+                                            <div class="status">
+                                                <div class="item ac">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">12</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">13</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                    </div>
+                                    <!-- 3 weekly -->
+                                    <div class="calRow">
+                                        <div class="day">
+                                            <div class="date">14</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">15</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">16</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">17</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">18</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">19</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">20</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                    </div>
+                                    <!-- 4 weekly -->
+                                    <div class="calRow">
+                                        <div class="day">
+                                            <div class="date">21</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">22</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">23</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">24</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">25</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">26</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">27</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                    </div>
+                                    <!-- 5 weekly -->
+                                    <div class="calRow">
+                                        <div class="day">
+                                            <div class="date">28</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">29</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date">30</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date disabled">1</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date disabled">2</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date disabled">3</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                        <div class="day">
+                                            <div class="date disabled">4</div>
+                                            <div class="status">
+                                                <div class="item">오전</div>
+                                                <div class="item ac">오후</div>
+                                            </div>
+                                            <div class="reserve">3</div>
+                                            <div class="confirm">3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rightLayout">
+                            <div class="choiceDay">12월 30일 예약 정보</div>
+                            <div class="tray">
+                                <div class="top">
+                                    <div>오전 예약</div>
+                                    <label class="stateToggle">
+                                        <input type="checkbox">
+                                        <div class="toggleIcon"></div>
+                                    </label>
+                                </div>
+                                <ul>
+                                    <li class="noData">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="36" viewBox="0 0 26 36" fill="none">
+                                        <path d="M11.9182 12.874C11.8338 12.9588 11.693 12.9588 11.6085 12.874C11.5897 12.8551 11.5757 12.8316 11.5663 12.8127L9.93308 14.4523C9.75005 14.636 9.45438 14.636 9.26666 14.4523L7.64755 12.8269C7.46452 12.6431 7.46452 12.3463 7.64755 12.1578L9.28543 10.5135C9.25258 10.5041 9.22442 10.4853 9.20096 10.4617C9.11648 10.3769 9.11648 10.2356 9.20096 10.1508L9.60456 9.74558L9.25727 9.39694L10.5385 8.11072L10.8858 8.45936L11.2894 8.05418C11.3738 7.96938 11.5146 7.96938 11.5991 8.05418C11.6226 8.07774 11.6414 8.11072 11.6507 8.13899L13.2886 6.4947C13.4717 6.31095 13.7673 6.31095 13.955 6.4947L15.5742 8.12014C15.7572 8.30389 15.7572 8.60071 15.5742 8.78916L13.941 10.4287C13.941 10.4287 13.9832 10.4523 14.002 10.4711C14.0864 10.5559 14.0864 10.6973 14.002 10.7821L13.5984 11.1873L19.8214 17.4346L25.5 11.7338L14.4103 0.586572C13.6312 -0.195524 12.3688 -0.195524 11.5897 0.586572L1.20865 11.013L13.6828 23.5359L14.0864 23.1307C14.1709 23.0459 14.3117 23.0459 14.3962 23.1307C14.415 23.1496 14.429 23.1731 14.4384 23.192L16.0716 21.5524C16.2546 21.3687 16.5503 21.3687 16.738 21.5524L18.3571 23.1779C18.5402 23.3616 18.5402 23.6584 18.3571 23.8469L16.7193 25.4912C16.7521 25.5006 16.7803 25.5194 16.8037 25.543C16.8882 25.6278 16.8882 25.7691 16.8037 25.8539L16.4001 26.2591L16.7474 26.6078L15.4662 27.894L15.1189 27.5453L14.7153 27.9505C14.6308 28.0353 14.4901 28.0353 14.4056 27.9505C14.3821 27.927 14.3633 27.894 14.354 27.8657L12.7161 29.51C12.533 29.6938 12.2374 29.6938 12.0497 29.51L10.4305 27.8846C10.2475 27.7008 10.2475 27.404 10.4305 27.2155L12.0637 25.576C12.0637 25.576 12.0215 25.5524 12.0027 25.5336C11.9182 25.4488 11.9182 25.3074 12.0027 25.2226L12.4063 24.8174L6.18331 18.5701L0.5 24.2756L11.5944 35.4134C12.3735 36.1955 13.6359 36.1955 14.415 35.4134L24.8007 24.987L12.3265 12.4641L11.9229 12.8693L11.9182 12.874Z" fill="#181B20"/>
+                                        </svg>
+                                        예약이 없습니다.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tray">
+                                <div class="top">
+                                    <div>오후 예약</div>
+                                    <label class="stateToggle">
+                                        <input type="checkbox" checked="">
+                                        <div class="toggleIcon"></div>
+                                    </label>
+                                </div>
+                                <ul>
+                                    <li class="noData">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="36" viewBox="0 0 26 36" fill="none">
+                                        <path d="M11.9182 12.874C11.8338 12.9588 11.693 12.9588 11.6085 12.874C11.5897 12.8551 11.5757 12.8316 11.5663 12.8127L9.93308 14.4523C9.75005 14.636 9.45438 14.636 9.26666 14.4523L7.64755 12.8269C7.46452 12.6431 7.46452 12.3463 7.64755 12.1578L9.28543 10.5135C9.25258 10.5041 9.22442 10.4853 9.20096 10.4617C9.11648 10.3769 9.11648 10.2356 9.20096 10.1508L9.60456 9.74558L9.25727 9.39694L10.5385 8.11072L10.8858 8.45936L11.2894 8.05418C11.3738 7.96938 11.5146 7.96938 11.5991 8.05418C11.6226 8.07774 11.6414 8.11072 11.6507 8.13899L13.2886 6.4947C13.4717 6.31095 13.7673 6.31095 13.955 6.4947L15.5742 8.12014C15.7572 8.30389 15.7572 8.60071 15.5742 8.78916L13.941 10.4287C13.941 10.4287 13.9832 10.4523 14.002 10.4711C14.0864 10.5559 14.0864 10.6973 14.002 10.7821L13.5984 11.1873L19.8214 17.4346L25.5 11.7338L14.4103 0.586572C13.6312 -0.195524 12.3688 -0.195524 11.5897 0.586572L1.20865 11.013L13.6828 23.5359L14.0864 23.1307C14.1709 23.0459 14.3117 23.0459 14.3962 23.1307C14.415 23.1496 14.429 23.1731 14.4384 23.192L16.0716 21.5524C16.2546 21.3687 16.5503 21.3687 16.738 21.5524L18.3571 23.1779C18.5402 23.3616 18.5402 23.6584 18.3571 23.8469L16.7193 25.4912C16.7521 25.5006 16.7803 25.5194 16.8037 25.543C16.8882 25.6278 16.8882 25.7691 16.8037 25.8539L16.4001 26.2591L16.7474 26.6078L15.4662 27.894L15.1189 27.5453L14.7153 27.9505C14.6308 28.0353 14.4901 28.0353 14.4056 27.9505C14.3821 27.927 14.3633 27.894 14.354 27.8657L12.7161 29.51C12.533 29.6938 12.2374 29.6938 12.0497 29.51L10.4305 27.8846C10.2475 27.7008 10.2475 27.404 10.4305 27.2155L12.0637 25.576C12.0637 25.576 12.0215 25.5524 12.0027 25.5336C11.9182 25.4488 11.9182 25.3074 12.0027 25.2226L12.4063 24.8174L6.18331 18.5701L0.5 24.2756L11.5944 35.4134C12.3735 36.1955 13.6359 36.1955 14.415 35.4134L24.8007 24.987L12.3265 12.4641L11.9229 12.8693L11.9182 12.874Z" fill="#181B20"/>
+                                        </svg>
+                                        예약이 없습니다.
+                                    </li>
+                                    <li class="reserveItem">
+                                        <div class="head">
+                                            <div class="time">09:00</div>
+                                            <a href="#" class="detailBtn">보기</a>
+                                        </div>
+                                        <p class="address">대구 달성군 다사읍 다사역로 60 (매곡리, 다사 e-편한세상)</p>
+                                        <div class="vendorWrap">
+                                            <div class="vendor">
+                                                <span class="group">지점</span>
+                                                <span>한샘방배대리점</span>
+                                            </div>
+                                            <div class="vendor">
+                                                <span class="group">담당</span>
+                                                <span>홍서준차장</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="technician">
+                                            <span class="position">종합철거</span>
+                                            <span class="name">김보균</span>
+                                            <span class="scheduleDay">2024-06-25</span>
+                                            <span class="scheduleTime">10:00</span>
+                                        </div>
+                                        <div class="technician">
+                                            <span class="position">마루철거</span>
+                                            <span class="name">박영현</span>
+                                            <span class="scheduleDay">2024-06-25</span>
+                                            <span class="scheduleTime">10:00</span>
+                                        </div>
+                                        <div class="technician">
+                                            <span class="position">설비</span>
+                                            <span class="name">정철욱</span>
+                                            <span class="scheduleDay">2024-06-25</span>
+                                            <span class="scheduleTime">10:00</span>
+                                        </div>
+                                        <div class="technician">
+                                            <span class="position">수거</span>
+                                            <span class="name">정철욱</span>
+                                            <span class="scheduleDay">2024-06-25</span>
+                                            <span class="scheduleTime">10:00</span>
+                                        </div>
+                                        <div class="technician">
+                                            <span class="position">설비</span>
+                                            <span class="name">우홍명</span>
+                                            <span class="scheduleDay">2024-06-25</span>
+                                            <span class="scheduleTime">10:00</span>
+                                        </div>
+                                        <div class="technician">
+                                            <span class="position">보양</span>
+                                            <span class="name">조은철</span>
+                                            <span class="scheduleDay">2024-06-25</span>
+                                            <span class="scheduleTime">10:00</span>
+                                        </div>
+                                    </li>
+                                    <li class="reserveItem">
+                                        <div class="head">
+                                            <div class="time">13:00</div>
+                                            <a href="#" class="detailBtn">보기</a>
+                                        </div>
+                                        <p class="address">대구 달성군 다사읍 다사역로 60</p>
+                                        <div class="vendorWrap">
+                                            <div class="vendor">
+                                                <span class="group">지점</span>
+                                                <span>한샘방배대리점</span>
+                                            </div>
+                                            <div class="vendor">
+                                                <span class="group">담당</span>
+                                                <span>홍서준차장</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="technician">
+                                            <span class="position">종합철거</span>
+                                            <span class="name">김보균</span>
+                                            <span class="scheduleDay">2024-06-25</span>
+                                            <span class="scheduleTime">10:00</span>
+                                        </div>
+                                        <div class="technician">
+                                            <span class="position">마루철거</span>
+                                            <span class="name">박영현</span>
+                                            <span class="scheduleDay">2024-06-25</span>
+                                            <span class="scheduleTime">10:00</span>
+                                        </div>
+                                        <div class="technician">
+                                            <span class="position">설비</span>
+                                            <span class="name">정철욱</span>
+                                            <span class="scheduleDay">2024-06-25</span>
+                                            <span class="scheduleTime">10:00</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/flatpickr.js"></script>
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
