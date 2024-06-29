@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- flatpickr calendar -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.min.css"  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body class="">
+
+    <section class="page-wrap">
+        <div class="gnb">
+
+            <div class="dropdown">
+                <div class="logo">
+                    <img src="./img/ic_symbol.svg" alt="logo">
+                </div>
+                <div class="company">
+                    <div class="label">소속회사</div>
+                    <button class="select" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        업스탠다드
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">업스탠다드</a></li>
+                      <li><a class="dropdown-item" href="#">업스탠다드2</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu">
+                <a href="#" class="listItem dashboard"><div class="icon"></div><div class="name">대시보드</div></a>
+                <a href="#" class="listItem schedule"><div class="icon"></div><div class="name">스케쥴</div></a>
+                <a href="#" class="listItem community active"><div class="icon"></div><div class="name">알림 및 커뮤니티</div></a>
+                <a href="#" class="listItem construction"><div class="icon"></div><div class="name">현장내역</div></a>
+                <a href="#" class="listItem invoice"><div class="icon"></div><div class="name">청구내역</div></a>
+                <a href="#" class="listItem payment"><div class="icon"></div><div class="name">결제내역</div></a>
+                <a href="#" class="listItem employee"><div class="icon"></div><div class="name">직원 및 급여</div></a>
+                <a href="#" class="listItem customer"><div class="icon"></div><div class="name">고객 및 협력업체</div></a>
+                <a href="#" class="listItem pricing"><div class="icon"></div><div class="name">전자계약 및 세무</div></a>
+                <a href="#" class="listItem documents"><div class="icon"></div><div class="name">비용 및 단가</div></a>
+                <a href="#" class="listItem setting"><div class="icon"></div><div class="name">설정</div></a>
+                <a href="#" class="listItem info"><div class="icon"></div><div class="name">정보</div></a>
+            </div>
+
+            <div class="myState">
+                <div class="profile">
+                    <!-- 사용자가 추가한 이미지 -->
+                    <!-- <img src="" alt=""> -->
+                </div>
+                <div class="text">
+                    <div class="name">최태환</div>
+                    <div class="state">관리자 모드</div>
+                </div>
+                <div class="more dropup-center dropup" >
+                    <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">계정 정보</a></li>
+                      <li><a class="dropdown-item" href="#">로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="conLayout">
+            <div class="contents">
+                <div class="community">
+                    <h2 class="pageName">
+                        커뮤니티
+                        <div class="btn-black">새글 등록</div>
+                    </h2>
+                    <div class="inner">
+                        <div class="tab2">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="notice-tab" data-bs-toggle="tab" data-bs-target="#notice-tab-pane" type="button" role="tab" aria-controls="notice-tab-pane" aria-selected="true">공지사항</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="event-tab" data-bs-toggle="tab" data-bs-target="#event-tab-pane" type="button" role="tab" aria-controls="event-tab-pane" aria-selected="false">이벤트</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="example-tab" data-bs-toggle="tab" data-bs-target="#example-tab-pane" type="button" role="tab" aria-controls="example-tab-pane" aria-selected="false">시공사례</button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content" id="myTabContent" style="margin-top: 36px;">
+                                <!-- 공지사항 -->
+                                <div class="tab-pane fade show active" id="notice-tab-pane" role="tabpanel" aria-labelledby="notice-tab" tabindex="0">
+                
+                                </div>
+                                <!-- 이벤트 -->
+                                <div class="tab-pane fade" id="event-tab-pane" role="tabpanel" aria-labelledby="event-tab" tabindex="0">
+                                    ...
+                                </div>
+                                <!-- 시공사례 -->
+                                <div class="tab-pane fade" id="example-tab-pane" role="tabpanel" aria-labelledby="example-tab" tabindex="0">
+                                    ...
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="searchModule">
+                            <div class="item" style="width: 192px;">
+                                <div class="label">등록일자</div>
+                                <!-- flatpickr -->
+                                <input type="text" class="calendar" id="datepicker" placeholder="2023.02 ~ 현재">
+                            </div>
+                            <div class="item">
+                                <div class="label">시공 사례 타입</div>
+                                <div class="dropdown">
+                                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">전체</button>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">option</a></li>
+                                      <li><a class="dropdown-item" href="#">option</a></li>
+                                    </ul>
+                                  </div>
+                            </div>
+                            <div class="item">
+                                <div class="label">유저</div>
+                                <div class="dropdown">
+                                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">전체</button>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">option</a></li>
+                                      <li><a class="dropdown-item" href="#">option</a></li>
+                                    </ul>
+                                  </div>
+                            </div>
+                            <div class="item">
+                                <div class="label">상태</div>
+                                <div class="dropdown">
+                                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">전체</button>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">option</a></li>
+                                      <li><a class="dropdown-item" href="#">option</a></li>
+                                    </ul>
+                                  </div>
+                            </div>
+                            <div class="item widthVariable">
+                                <div class="label">검색어 입력</div>
+                                <input class="input" placeholder="검색어 입력" />
+                            </div>
+
+                            <button class="btn-border">적용</button>
+                        </div>
+
+                        <div class="gridModule">
+                            <div class="gridResult">조회결과 : 0건</div>
+                            <div class="grid">
+                                <table style="min-width: 560px;">
+                                    <thead>
+                                        <tr>
+                                            <th class="wid_100">구분</th>
+                                            <th class="wid_700">제목</th>
+                                            <th class="wid_100">작성일</th>
+                                            <th class="wid_30">실행</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="status-blue">긴급공지</span></td>
+                                            <td>
+                                                포스트 제목
+                                            </td>
+                                            <td>2024-06-10</td>
+                                            <td>
+                                                <div class="dropup-center dropstart" >
+                                                    <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                    <ul class="dropdown-menu">
+                                                      <li><a class="dropdown-item" href="#">수정</a></li>
+                                                      <li><a class="dropdown-item red" href="#">삭제</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                      <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                          <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                      </li>
+                                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                      <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                          <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/flatpickr.js"></script>
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
