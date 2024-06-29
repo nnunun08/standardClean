@@ -95,6 +95,105 @@
                                 <!-- 공지사항 -->
                                 <div class="tab-pane fade show active" id="notice-tab-pane" role="tabpanel" aria-labelledby="notice-tab" tabindex="0">
                 
+                                    <!-- 검색모듈 -->
+                                    <div class="searchModule">
+                                        <div class="item" style="width: 192px;">
+                                            <div class="label">등록일자</div>
+                                            <!-- flatpickr -->
+                                            <input type="text" class="calendar" id="datepicker" placeholder="2023.02 ~ 현재">
+                                        </div>
+                                        <div class="item">
+                                            <div class="label">시공 사례 타입</div>
+                                            <div class="dropdown">
+                                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">전체</button>
+                                                <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">option</a></li>
+                                                <li><a class="dropdown-item" href="#">option</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="label">유저</div>
+                                            <div class="dropdown">
+                                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">전체</button>
+                                                <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">option</a></li>
+                                                <li><a class="dropdown-item" href="#">option</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="label">상태</div>
+                                            <div class="dropdown">
+                                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">전체</button>
+                                                <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">option</a></li>
+                                                <li><a class="dropdown-item" href="#">option</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="item widthVariable">
+                                            <div class="label">검색어 입력</div>
+                                            <input class="input" placeholder="검색어 입력" />
+                                        </div>
+
+                                        <button class="btn-border">적용</button>
+                                    </div>
+
+                                    <!-- 그리드모듈 -->
+                                    <div class="gridModule">
+                                        <div class="gridResult">조회결과 : 0건</div>
+                                        <div class="grid">
+                                            <table style="min-width: 560px;">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="wid_100">구분</th>
+                                                        <th class="wid_700">제목</th>
+                                                        <th class="wid_100">작성일</th>
+                                                        <th class="wid_30">실행</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><span class="status-blue">긴급공지</span></td>
+                                                        <td>
+                                                            포스트 제목
+                                                        </td>
+                                                        <td>2024-06-10</td>
+                                                        <td>
+                                                            <div class="dropup-center dropstart" >
+                                                                <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#">수정</a></li>
+                                                                <li><a class="dropdown-item red" href="#">삭제</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <nav aria-label="Page navigation">
+                                                <ul class="pagination">
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                            </nav>
+
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <!-- 이벤트 -->
                                 <div class="tab-pane fade" id="event-tab-pane" role="tabpanel" aria-labelledby="event-tab" tabindex="0">
@@ -104,103 +203,6 @@
                                 <div class="tab-pane fade" id="example-tab-pane" role="tabpanel" aria-labelledby="example-tab" tabindex="0">
                                     ...
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="searchModule">
-                            <div class="item" style="width: 192px;">
-                                <div class="label">등록일자</div>
-                                <!-- flatpickr -->
-                                <input type="text" class="calendar" id="datepicker" placeholder="2023.02 ~ 현재">
-                            </div>
-                            <div class="item">
-                                <div class="label">시공 사례 타입</div>
-                                <div class="dropdown">
-                                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">전체</button>
-                                    <ul class="dropdown-menu">
-                                      <li><a class="dropdown-item" href="#">option</a></li>
-                                      <li><a class="dropdown-item" href="#">option</a></li>
-                                    </ul>
-                                  </div>
-                            </div>
-                            <div class="item">
-                                <div class="label">유저</div>
-                                <div class="dropdown">
-                                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">전체</button>
-                                    <ul class="dropdown-menu">
-                                      <li><a class="dropdown-item" href="#">option</a></li>
-                                      <li><a class="dropdown-item" href="#">option</a></li>
-                                    </ul>
-                                  </div>
-                            </div>
-                            <div class="item">
-                                <div class="label">상태</div>
-                                <div class="dropdown">
-                                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">전체</button>
-                                    <ul class="dropdown-menu">
-                                      <li><a class="dropdown-item" href="#">option</a></li>
-                                      <li><a class="dropdown-item" href="#">option</a></li>
-                                    </ul>
-                                  </div>
-                            </div>
-                            <div class="item widthVariable">
-                                <div class="label">검색어 입력</div>
-                                <input class="input" placeholder="검색어 입력" />
-                            </div>
-
-                            <button class="btn-border">적용</button>
-                        </div>
-
-                        <div class="gridModule">
-                            <div class="gridResult">조회결과 : 0건</div>
-                            <div class="grid">
-                                <table style="min-width: 560px;">
-                                    <thead>
-                                        <tr>
-                                            <th class="wid_100">구분</th>
-                                            <th class="wid_700">제목</th>
-                                            <th class="wid_100">작성일</th>
-                                            <th class="wid_30">실행</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><span class="status-blue">긴급공지</span></td>
-                                            <td>
-                                                포스트 제목
-                                            </td>
-                                            <td>2024-06-10</td>
-                                            <td>
-                                                <div class="dropup-center dropstart" >
-                                                    <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
-                                                    <ul class="dropdown-menu">
-                                                      <li><a class="dropdown-item" href="#">수정</a></li>
-                                                      <li><a class="dropdown-item red" href="#">삭제</a></li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                                <nav aria-label="Page navigation">
-                                    <ul class="pagination">
-                                      <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                          <span aria-hidden="true">&laquo;</span>
-                                        </a>
-                                      </li>
-                                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                      <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                          <span aria-hidden="true">&raquo;</span>
-                                        </a>
-                                      </li>
-                                    </ul>
-                                </nav>
-
                             </div>
                         </div>
                     </div>
