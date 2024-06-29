@@ -75,7 +75,7 @@
                 <div class="community">
                     <h2 class="pageName">
                         커뮤니티
-                        <div class="btn-black">새글 등록</div>
+                        <div class="btn-black" data-bs-toggle="modal" data-bs-target="#exampleModal">새글 등록</div>
                     </h2>
                     <div class="inner">
                         <div class="tab2">
@@ -157,7 +157,7 @@
                                                     <tr>
                                                         <td><span class="status-blue">긴급공지</span></td>
                                                         <td>
-                                                            포스트 제목
+                                                            <a class="conLink" data-bs-toggle="modal" data-bs-target="#exampleModal2">포스트 제목</a>
                                                         </td>
                                                         <td>2024-06-10</td>
                                                         <td>
@@ -210,6 +210,121 @@
             </div>
         </div>
     </section>
+    
+    <!-- 새글등록 -->
+    <div class="modal2 modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 640px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">공지사항</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modalForm">
+                        <div class="tr">
+                            <div class="th">공지사항 타입</div>
+                            <div class="td">
+                                <select name="" id="">
+                                    <option value="1">욕실철거</option>
+                                    <option value="2">마루철거</option>
+                                    <option value="3">장식장철거</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="th">제목</div>
+                            <div class="td">
+                                <input type="text" placeholder="제목을 입력하세요">
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="th">내용</div>
+                            <div class="td">
+                                <textarea style="height: 190px;" placeholder="공지사항 내용을 입력하세요"></textarea>
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="th">첨부파일</div>
+                            <div class="td">
+                                <div class="fileHead">
+                                    <label class="fileAttach">
+                                        파일 선택
+                                        <input type="file">
+                                    </label>
+                                    <div class="size">총 0 Bytes</div>
+                                </div>
+                                <ul class="fileList">
+                                    <li><div>첨부된파일1.pdf</div><button class="fileRemove">X</button></li>
+                                    <li><div>첨부된파일2.pdf</div><button class="fileRemove">X</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="th">작성자</div>
+                            <div class="td">
+                                <select name="" id="">
+                                    <option value="유저">유저</option>
+                                    <option value="유저">유저</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="th">상태</div>
+                            <div class="td">
+
+                                <label class="form-check">
+                                    <input type="radio" name="status" checked>
+                                    <div class="radio">Y</div>
+                                </label>
+                                <label class="form-check">
+                                    <input type="radio" name="status">
+                                    <div class="radio">N</div>
+                                </label>
+                                <label class="form-check">
+                                    <input type="radio" name="status">
+                                    <div class="radio">X</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-secondary" data-bs-dismiss="modal">닫기</button>
+                    <button type="button" class="btn-primary">등록</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal2 modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 640px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <div class="cate">공지사항</div>
+                        <h1 class="modal-title fs-5" id="exampleModal2Label">어쩌구 저쩌구 등록된 공지사항 제목</h1>
+                        <div class="writer">작성자 : 업스탠다드</div>
+                    </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Pulvinar vivamus sagittis dui lectus vel nisi eget. Eget est tristique id facilisi. Arcu fames id tincidunt elit ultricies id magna. Ante lorem nam erat sociis enim. Quis bibendum eget adipiscing proin ornare rhoncus pulvinar.<br/><br/>
+                        Fringilla felis nunc est cras ut elementum sem. Facilisi felis suspendisse purus habitasse dictum eget tellus mi. Ut ultricies semper sollicitudin lectus commodo velit. Ac eleifend habitant porttitor non gravida amet. Duis pretium etiam orci vehicula consectetur tristique vel. Amet est facilisi eget tellus. Ac volutpat tristique ut ante nunc nunc.
+                    </p>
+                    <ul class="fileList fileList-grey">
+                        <li><div>첨부된파일1.pdf</div><button class="fileRemove">X</button><span class="vol">192 KB</span></li>
+                        <li><div>첨부된파일2.pdf</div><button class="fileRemove">X</button><span class="vol">192 KB</span></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-secondary" data-bs-dismiss="modal">닫기</button>
+                    <button type="button" class="btn-primary">수정</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="./js/flatpickr.js"></script>
     <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
