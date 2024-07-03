@@ -79,7 +79,10 @@
                         <div class="btnWrap">
                             <div class="btn-secondary">엑셀 다운</div>
                             <div class="btn-secondary">엑셀 업로드</div>
-                            <div class="btn-black">새글 등록</div>
+                            <div data-bs-toggle="modal" data-bs-target="#sample" class="btn-black">sample</div>
+                            <div data-bs-toggle="modal" data-bs-target="#teamLeader" class="btn-black">현장팀장 등록</div>
+                            <div data-bs-toggle="modal" data-bs-target="#siteDetail" class="btn-black">현장상세 등록</div>
+                            <div data-bs-toggle="modal" data-bs-target="#siteFull" class="btn-black">현장 등록</div>
                         </div>
                     </h2>
                     <div class="inner">
@@ -643,116 +646,594 @@
             </div>
         </div>
     </section>
-    
-    <!-- 새글등록 -->
-    <div class="modal2 modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" style="max-width: 640px;">
+
+    <!-- SAMPLE -->
+    <div class="modal2 modal fade" id="sample" tabindex="-1" aria-labelledby="sampleLabel" aria-hidden="true">
+
+        <!-- 모달 width를 maxwidth로 설정해 주세요 -->
+        <div class="modal-dialog" style="max-width: 860px;">
             <div class="modal-content">
                 <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">공지사항</h1>
+                <h1 class="modal-title fs-5" id="sampleLabel">현장상세</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <div class="modalForm">
-                        <div class="tr">
-                            <div class="th">공지사항 타입</div>
-                            <div class="td">
-                                <select name="" id="">
-                                    <option value="1">욕실철거</option>
-                                    <option value="2">마루철거</option>
-                                    <option value="3">장식장철거</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="tr">
-                            <div class="th">제목</div>
-                            <div class="td">
-                                <input type="text" placeholder="제목을 입력하세요">
-                            </div>
-                        </div>
-                        <div class="tr">
-                            <div class="th">내용</div>
-                            <div class="td">
-                                <textarea style="height: 190px;" placeholder="공지사항 내용을 입력하세요"></textarea>
-                            </div>
-                        </div>
-                        <div class="tr">
-                            <div class="th">첨부파일</div>
-                            <div class="td">
-                                <div class="fileHead">
-                                    <label class="fileAttach">
-                                        파일 선택
-                                        <input type="file">
-                                    </label>
-                                    <div class="size">총 0 Bytes</div>
-                                </div>
-                                <ul class="fileList">
-                                    <li><div>첨부된파일1.pdf</div><button class="fileRemove">X</button></li>
-                                    <li><div>첨부된파일2.pdf</div><button class="fileRemove">X</button></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="tr">
-                            <div class="th">작성자</div>
-                            <div class="td">
-                                <select name="" id="">
-                                    <option value="유저">유저</option>
-                                    <option value="유저">유저</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="tr">
-                            <div class="th">상태</div>
-                            <div class="td">
 
-                                <label class="form-check">
-                                    <input type="radio" name="status" checked>
-                                    <div class="radio">Y</div>
-                                </label>
-                                <label class="form-check">
-                                    <input type="radio" name="status">
-                                    <div class="radio">N</div>
-                                </label>
-                                <label class="form-check">
-                                    <input type="radio" name="status">
-                                    <div class="radio">X</div>
-                                </label>
+                <!-- .modal-body를 form으로 감싸주세요  -->
+
+                <form>
+                    <div class="modal-body">
+                        <div class="modalForm">
+                            <!-- text -->
+                            <div class="tr">
+                                <div class="th">텍스트</div>
+                                <div class="td">
+                                    <input type="text" placeholder="제목을 입력하세요">
+                                </div>
+                            </div>
+                            <!-- select -->
+                            <div class="tr">
+                                <div class="th">셀렉트</div>
+                                <div class="td">
+                                    <select name="" id="">
+                                        <option value="1">1000003</option>
+                                        <option value="2">1000004</option>
+                                        <option value="3">1000005</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- date -->
+                            <div class="tr">
+                                <div class="th">캘린더</div>
+                                <div class="td">
+                                    <input type="text" class="calendar" id="datepicker2" placeholder="2023.02 ~ 현재">
+                                </div>
+                            </div>
+                            <!-- textarea -->
+                            <div class="tr">
+                                <div class="th">textarea</div>
+                                <div class="td">
+                                    <textarea style="height: 120px;" placeholder="설명 내용을 입력해 주세요"></textarea>
+                                </div>
+                            </div>
+                            <!-- radio -->
+                            <div class="tr">
+                                <div class="th">라디오</div>
+                                <div class="td">
+                                    <label class="form-check">
+                                        <input type="radio" name="status2" checked>
+                                        <div class="radio">Y</div>
+                                    </label>
+                                    <label class="form-check">
+                                        <input type="radio" name="status2">
+                                        <div class="radio">N</div>
+                                    </label>
+                                    <label class="form-check">
+                                        <input type="radio" name="status2">
+                                        <div class="radio">X</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- tag -->
+                            <div class="tr">
+                                <div class="th">태그</div>
+                                <div class="td">
+                                    <div class="tagWrap">
+                                        <a href="#" class="appendTag"></a>
+                                        <div class="tagItem">사다리차:500,000</div>
+                                        <div class="tagItem">자재:0</div>
+                                        <div class="tagItem">폐기물:1,300,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- multy field -->
+                            <div class="tr">
+                                <div class="th">다중 입력 필드</div>
+                                <div class="td">
+                                    <div class="flexWrap">
+                                        <select name="" id="" style="width: auto;">
+                                            <option value="1">현장상태</option>
+                                        </select>
+                                        <input type="text">
+                                        <input type="text">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 구분선 -->
+                            <hr/>
+
+                            <!-- 이미지 첨부 -->
+                            <div class="tr">
+                                <div class="th">현장참고사진</div>
+                                <div class="td">
+                                    <div class="fileHead">
+                                        <label class="fileAttach">
+                                            파일 선택
+                                            <input type="file">
+                                        </label>
+                                    </div>
+                                    <ul class="imgList">
+                                        <li><img src="./img/sampleImg.jpg" alt="sample"><button class="imgRemove"></button></li>
+                                        <li><img src="./img/sampleImg.jpg" alt="sample"><button class="imgRemove"></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 파일첨부 -->
+                            <hr/>
+                            <div class="tr">
+                                <div class="th">첨부파일</div>
+                                <div class="td">
+                                    <div class="fileHead">
+                                        <label class="fileAttach">
+                                            파일 선택
+                                            <input type="file">
+                                        </label>
+                                        <div class="size">총 0 Bytes</div>
+                                    </div>
+                                    <ul class="fileList">
+                                        <li><div>첨부된파일1.pdf</div><button class="fileRemove">X</button></li>
+                                        <li><div>첨부된파일2.pdf</div><button class="fileRemove">X</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn-transparent" data-bs-dismiss="modal">닫기</button>
+                    <button type="button" class="btn-primary">등록</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 현장팀장 -->
+    <div class="modal2 modal fade" id="teamLeader" tabindex="-1" aria-labelledby="teamLeaderLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 860px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="teamLeaderLabel">현장팀장</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="modalForm">
+                            <div class="tr">
+                                <div class="th">현장번호</div>
+                                <div class="td">
+                                    <select name="" id="">
+                                        <option value="1">1000003</option>
+                                        <option value="2">1000004</option>
+                                        <option value="3">1000005</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">작업타입</div>
+                                <div class="td">
+                                    <select name="" id="">
+                                        <option value="1">종합철거</option>
+                                        <option value="2">종합철거</option>
+                                        <option value="3">종합철거</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">직원</div>
+                                <div class="td">
+                                    <select name="" id="">
+                                        <option value="1">박태원</option>
+                                        <option value="2">박태원</option>
+                                        <option value="3">박태원</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">작업일자</div>
+                                <div class="td">
+                                    <!-- flatpickr -->
+                                    <input type="text" class="calendar" id="datepicker3" placeholder="2023.02 ~ 현재">
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">작업시간</div>
+                                <div class="td">
+                                    <select name="" id="">
+                                        <option value="1">09:00</option>
+                                        <option value="2">09:00</option>
+                                        <option value="3">09:00</option>
+                                    </select>
+                                </div>
+                            </div>
+                    
+                            <div class="tr">
+                                <div class="th">설명</div>
+                                <div class="td">
+                                    <textarea style="height: 120px;" placeholder="설명 내용을 입력해 주세요"></textarea>
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">상태</div>
+                                <div class="td">
+                                    <label class="form-check">
+                                        <input type="radio" name="status3" checked>
+                                        <div class="radio">Y</div>
+                                    </label>
+                                    <label class="form-check">
+                                        <input type="radio" name="status3">
+                                        <div class="radio">N</div>
+                                    </label>
+                                    <label class="form-check">
+                                        <input type="radio" name="status3">
+                                        <div class="radio">X</div>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
                 <div class="modal-footer">
-                    <button type="button" class="btn-secondary" data-bs-dismiss="modal">닫기</button>
+                    <button type="button" class="btn-transparent" data-bs-dismiss="modal">닫기</button>
                     <button type="button" class="btn-primary">등록</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal2 modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
-        <div class="modal-dialog" style="max-width: 640px;">
+    <!-- 현장상세 -->
+    <div class="modal2 modal fade" id="siteDetail" tabindex="-1" aria-labelledby="siteDetailLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 860px;">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div>
-                        <div class="cate">공지사항</div>
-                        <h1 class="modal-title fs-5" id="exampleModal2Label">어쩌구 저쩌구 등록된 공지사항 제목</h1>
-                        <div class="writer">작성자 : 업스탠다드</div>
-                    </div>
+                <h1 class="modal-title fs-5" id="siteDetailLabel">현장상세</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur. Pulvinar vivamus sagittis dui lectus vel nisi eget. Eget est tristique id facilisi. Arcu fames id tincidunt elit ultricies id magna. Ante lorem nam erat sociis enim. Quis bibendum eget adipiscing proin ornare rhoncus pulvinar.<br/><br/>
-                        Fringilla felis nunc est cras ut elementum sem. Facilisi felis suspendisse purus habitasse dictum eget tellus mi. Ut ultricies semper sollicitudin lectus commodo velit. Ac eleifend habitant porttitor non gravida amet. Duis pretium etiam orci vehicula consectetur tristique vel. Amet est facilisi eget tellus. Ac volutpat tristique ut ante nunc nunc.
-                    </p>
-                    <ul class="fileList fileList-grey">
-                        <li><div>첨부된파일1.pdf</div><button class="fileRemove">X</button><span class="vol">192 KB</span></li>
-                        <li><div>첨부된파일2.pdf</div><button class="fileRemove">X</button><span class="vol">192 KB</span></li>
-                    </ul>
-                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="modalForm">
+                            <div class="tr">
+                                <div class="th">현장번호</div>
+                                <div class="td">
+                                    <input type="text" placeholder="제목을 입력하세요">
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">현장번호</div>
+                                <div class="td">
+                                    <input type="text" placeholder="제목을 입력하세요">
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">당일 현장 상태</div>
+                                <div class="td">
+                                    <select name="" id="">
+                                        <option value="1">거주중</option>
+                                        <option value="2">당일이사</option>
+                                        <option value="3">빈집상태</option>
+                                        <option value="4">직접입력</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">당일 현장상태 메모</div>
+                                <div class="td">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">현장 상세내용</div>
+                                <div class="td">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">현장 요청사항</div>
+                                <div class="td">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">긴급 메모사항</div>
+                                <div class="td">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">세대정보</div>
+                                <div class="td">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">설명</div>
+                                <div class="td">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">상태</div>
+                                <div class="td">
+                                    <label class="form-check">
+                                        <input type="radio" name="status1" checked>
+                                        <div class="radio">Y</div>
+                                    </label>
+                                    <label class="form-check">
+                                        <input type="radio" name="status1">
+                                        <div class="radio">N</div>
+                                    </label>
+                                    <!-- <label class="form-check">
+                                        <input type="radio" name="status1">
+                                        <div class="radio">X</div>
+                                    </label> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
                 <div class="modal-footer">
-                    <button type="button" class="btn-secondary" data-bs-dismiss="modal">닫기</button>
-                    <button type="button" class="btn-primary">수정</button>
+                    <button type="button" class="btn-transparent" data-bs-dismiss="modal">닫기</button>
+                    <button type="button" class="btn-primary">등록</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 현장 -->
+    <div class="modal2 modal fade" id="siteFull" tabindex="-1" aria-labelledby="siteFullLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 1200px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                <div class="h1Wrap">
+                    <h1 class="modal-title fs-5" id="siteFullLabel">
+                        현장
+                    </h1>
+                    <select name="" id="">
+                        <option value="1">협력업체</option>
+                    </select>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <!-- left layout -->
+                        <div class="modalForm">
+                            <div class="tr">
+                                <div class="th">우편번호</div>
+                                <div class="td">
+                                    <div class="flexWrap">
+                                        <input type="text" placeholder="15726" style="width: 94px">
+                                        <button class="btn-border-sm blue">우편번호검색</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">주소</div>
+                                <div class="td">
+                                    <input type="text" placeholder="자동 입력">
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">상세주소</div>
+                                <div class="td">
+                                    <input type="text" placeholder="상세 주소를 입력해 주세요">
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">현장타입</div>
+                                <div class="td">
+                                    <select name="" id="">
+                                        <option value="1">현장타입</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">일반/사업자고객</div>
+                                <div class="td">
+                                    <select name="" id="">
+                                        <option value="1">일반/사업자고객</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">영업사원</div>
+                                <div class="td">
+                                    <select name="" id="">
+                                        <option value="1">영업사원</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="tr">
+                                <div class="th">현장소장</div>
+                                <div class="td">
+                                    <select name="" id="">
+                                        <option value="1">현장소장</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">철겨현황</div>
+                                <div class="td">
+                                    <select name="" id="">
+                                        <option value="1">철겨현황</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">철거시작일</div>
+                                <div class="td">
+                                    <div class="flexWrap">
+                                        <input type="text" class="calendar" id="datepicker4">
+                                        <select name="" id="" style="width: auto;">
+                                            <option value="1">시작시간</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">철거종료일</div>
+                                <div class="td">
+                                    <input type="text" class="calendar" id="datepicker4">
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">철거예정일</div>
+                                <div class="td">
+                                    <input type="text" class="calendar" id="datepicker4">
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">마루철거일</div>
+                                <div class="td">
+                                    <input type="text" class="calendar" id="datepicker4">
+                                </div>
+                            </div>
+                            <div class="tr vertical">
+                                <div class="th">설명</div>
+                                <div class="td">
+                                    <textarea style="height: 120px;" placeholder="설명 내용을 입력해 주세요"></textarea>
+                                </div>
+                            </div>
+                    
+                            <div class="tr">
+                                <div class="th">상태</div>
+                                <div class="td">
+                                    <label class="form-check">
+                                        <input type="radio" name="status4" checked>
+                                        <div class="radio">Y</div>
+                                    </label>
+                                    <label class="form-check">
+                                        <input type="radio" name="status4">
+                                        <div class="radio">N</div>
+                                    </label>
+                                    <label class="form-check">
+                                        <input type="radio" name="status4">
+                                        <div class="radio">X</div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- right layout -->
+                        <div class="modalForm">
+                            <div class="tr">
+                                <div class="th">현장참고사진</div>
+                                <div class="td">
+                                    <div class="fileHead">
+                                        <label class="fileAttach">
+                                            파일 선택
+                                            <input type="file">
+                                        </label>
+                                    </div>
+                                    <ul class="imgList">
+                                        <li><img src="./img/sampleImg.jpg" alt="sample"><button class="imgRemove"></button></li>
+                                        <li><img src="./img/sampleImg.jpg" alt="sample"><button class="imgRemove"></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="tr">
+                                <div class="th">철거 항목</div>
+                                <div class="td">
+                                    <div class="tagWrap">
+                                        <a href="#" class="appendTag"></a>
+                                        <div class="tagItem">종합철거:주방</div>
+                                        <div class="tagItem">종합철거:가구목대</div>
+                                        <div class="tagItem">종합철거:방문</div>
+                                        <div class="tagItem">종합철거:벽체</div>
+                                        <div class="tagItem">확장설비:확장</div>
+                                        <div class="tagItem">확장설비:셀프레벨링</div>
+                                        <div class="tagItem">보양수거:동선보양</div>
+                                        <div class="tagItem">보양수거:폐기물 수거</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="tr">
+                                <div class="th">당일 현장상태</div>
+                                <div class="td">
+                                    <div class="flexWrap">
+                                        <select name="" id="" style="width: auto;">
+                                            <option value="1">현장상태</option>
+                                        </select>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">현장 상세내용</div>
+                                <div class="td">
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">현장 요청사항</div>
+                                <div class="td">
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">긴급 메모사항</div>
+                                <div class="td">
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="th">세대정보</div>
+                                <div class="td">
+                                    <div class="flexWrap">
+                                        <input type="text" placeholder="평수">
+                                        <input type="text" placeholder="공동현관비밀번호">
+                                        <input type="text" placeholder="세대비밀번호">
+                                    </div>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="tr">
+                                <div class="th">팀장배정</div>
+                                <div class="td">
+                                    <div class="tagWrap">
+                                        <a href="#" class="appendTag"></a>
+                                        <div class="tagItem">설비/정철욱/010-2703-6212</div>
+                                        <div class="tagItem">마루철거/박영현/010-2824-7915</div>
+                                        <div class="tagItem">종합철거/박태원/010-2783-1357</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="tr">
+                                <div class="th">현장비용</div>
+                                <div class="td">
+                                    <div class="tagWrap">
+                                        <a href="#" class="appendTag"></a>
+                                        <div class="tagItem">사다리차:500,000</div>
+                                        <div class="tagItem">자재:0</div>
+                                        <div class="tagItem">폐기물:1,300,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="tr">
+                                <div class="th">청구서</div>
+                                <div class="td">
+                                    <div class="tagWrap">
+                                        <a href="#" class="appendTag"></a>
+                                        <div class="tagItem">주방:205,000</div>
+                                        <div class="tagItem">벽체:0</div>
+                                        <div class="tagItem">욕실:0</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn-transparent" data-bs-dismiss="modal">닫기</button>
+                    <button type="button" class="btn-primary">등록</button>
                 </div>
             </div>
         </div>

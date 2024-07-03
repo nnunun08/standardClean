@@ -409,6 +409,25 @@ a:hover {
   opacity: 0.8;
 }
 
+.btn-transparent {
+  width: 100%;
+  height: 56px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  transition: 0.2s;
+  background-color: transparent;
+  color: var(--greyScale-grey4, #8B909D);
+}
+.btn-transparent:hover {
+  opacity: 0.8;
+}
+
 .btn-border {
   width: 100%;
   height: 56px;
@@ -2500,6 +2519,32 @@ a:hover {
   padding: 0;
   border: 0;
 }
+.modal2 .modal-header .h1Wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.modal2 .modal-header .h1Wrap select {
+  height: 36px;
+  padding: 0px 30px 0px 14px;
+  align-items: center;
+  background: url(../img/ic_select_arr.svg) right 3px center no-repeat;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 21px */
+  letter-spacing: -0.28px;
+  border-radius: 8px;
+  border: 1px solid var(--greyScale-grey2, #CFD4D9);
+  color: var(--greyScale-grey6, #434850);
+}
+.modal2 .modal-header .h1Wrap select::-moz-placeholder {
+  color: var(--greyScale-grey2, #CFD4D9);
+}
+.modal2 .modal-header .h1Wrap select::placeholder {
+  color: var(--greyScale-grey2, #CFD4D9);
+}
 .modal2 .modal-header .modal-title {
   color: var(--greyScale-grey8, #23262A);
   font-family: Pretendard;
@@ -2537,20 +2582,34 @@ a:hover {
 }
 .modal2 .modal-body {
   padding: 0;
+  display: flex;
+  gap: 40px;
 }
 .modal2 .modal-body .modalForm {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  flex: 1 0 0;
+}
+.modal2 .modal-body .modalForm hr {
+  margin: 0;
+  border: 0;
+  opacity: 1;
+  height: 1px;
+  background: var(--greyScale-grey1, #DEE3E9);
 }
 .modal2 .modal-body .modalForm .tr {
   display: flex;
+}
+.modal2 .modal-body .modalForm .tr.vertical {
+  gap: 5px;
+  flex-direction: column;
 }
 .modal2 .modal-body .modalForm .th {
   padding: 5px 0px;
   width: 130px;
   padding-right: 10px;
-  color: var(--greyScale-grey3, #BDC1CC);
+  color: var(--greyScale-grey5, #686E7A);
   font-family: Pretendard;
   font-size: 13px;
   font-style: normal;
@@ -2561,7 +2620,51 @@ a:hover {
 .modal2 .modal-body .modalForm .td {
   flex: 1 0 0;
 }
+.modal2 .modal-body .modalForm .tagWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.modal2 .modal-body .modalForm .tagWrap .tagItem {
+  border-radius: var(--num-4, 4px);
+  border: 1px solid var(--greyScale-grey4, #8B909D);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  padding: 0px 5px;
+  color: var(--greyScale-grey4, #8B909D);
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 12px */
+  letter-spacing: -0.24px;
+}
+.modal2 .modal-body .modalForm .tagWrap .appendTag {
+  display: flex;
+  width: 60px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: var(--num-4, 4px);
+  border: 1px solid var(--blueTone-primary, #1F79FF);
+  background: transparent url(../img/ic_append.svg) center no-repeat;
+}
+.modal2 .modal-body .modalForm .flexWrap {
+  display: flex;
+  gap: 10px;
+}
+.modal2 .modal-body .modalForm .btn-border-sm {
+  height: 36px;
+}
+.modal2 .modal-body .modalForm .calendar {
+  background: url(../img/ic_calendar2.svg) right 3px center no-repeat;
+}
 .modal2 .modal-body .modalForm select {
+  width: 100%;
   height: 36px;
   padding: 0px 30px 0px 14px;
   align-items: center;
@@ -2727,6 +2830,7 @@ a:hover {
 .modal2 .modal-body .fileList.fileList-grey {
   margin-top: 20px;
   background: var(--greyScale-grey1, #DEE3E9);
+  border: 0;
 }
 .modal2 .modal-body .fileList.fileList-grey li + li {
   margin-top: 4px;
@@ -2744,6 +2848,26 @@ a:hover {
   font-weight: 400;
   line-height: normal;
 }
+.modal2 .modal-body .imgList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.modal2 .modal-body .imgList li {
+  width: 68px;
+  aspect-ratio: 1/1;
+  border-radius: 8px;
+  position: relative;
+}
+.modal2 .modal-body .imgList li .imgRemove {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 13px;
+  aspect-ratio: 1/1;
+  background: transparent url(../img/ic_img_remove.svg) center no-repeat;
+  border: 0;
+}
 .modal2 .modal-body p {
   color: var(--greyScale-grey5, #686E7A);
   font-family: Pretendard;
@@ -2756,7 +2880,7 @@ a:hover {
 .modal2 .modal-footer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 10px;
   padding: 0;
   border: 0;
