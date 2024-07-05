@@ -654,7 +654,7 @@
         <div class="modal-dialog" style="max-width: 860px;">
             <div class="modal-content">
                 <div class="modal-header">
-                <h1 class="modal-title fs-5" id="sampleLabel">현장상세</h1>
+                <h1 class="modal-title" id="sampleLabel">현장상세</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
@@ -795,7 +795,7 @@
         <div class="modal-dialog" style="max-width: 860px;">
             <div class="modal-content">
                 <div class="modal-header">
-                <h1 class="modal-title fs-5" id="teamLeaderLabel">현장팀장</h1>
+                <h1 class="modal-title" id="teamLeaderLabel">현장팀장</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form>
@@ -888,7 +888,7 @@
         <div class="modal-dialog" style="max-width: 860px;">
             <div class="modal-content">
                 <div class="modal-header">
-                <h1 class="modal-title fs-5" id="siteDetailLabel">현장상세</h1>
+                <h1 class="modal-title" id="siteDetailLabel">현장상세</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form>
@@ -987,7 +987,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                 <div class="h1Wrap">
-                    <h1 class="modal-title fs-5" id="siteFullLabel">
+                    <h1 class="modal-title" id="siteFullLabel">
                         현장
                     </h1>
                     <select name="" id="">
@@ -1138,7 +1138,7 @@
                                 <div class="th">철거 항목</div>
                                 <div class="td">
                                     <div class="tagWrap">
-                                        <a href="#" class="appendTag"></a>
+                                        <a href="#" class="appendTag" data-bs-toggle="modal" data-bs-target="#checkList"></a>
                                         <div class="tagItem">종합철거:주방</div>
                                         <div class="tagItem">종합철거:가구목대</div>
                                         <div class="tagItem">종합철거:방문</div>
@@ -1234,6 +1234,92 @@
                 <div class="modal-footer">
                     <button type="button" class="btn-transparent" data-bs-dismiss="modal">닫기</button>
                     <button type="button" class="btn-primary">등록</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 철거항목 -->
+    <div class="modal2 modal fade" id="checkList" tabindex="-1" aria-labelledby="checkListLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 1000px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                <div class="h1Wrap">
+                    <h1 class="modal-title" id="siteFullLabel">
+                        철거항목
+                    </h1>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="checkList">
+                            <div class="columnItem">
+                                <div class="tit">종합철거</div>
+                                <div class="conWrap">
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>주방</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>가구목대</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>방문</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>벽체</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>현관</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>천장</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>욕실</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>발코니베란다</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>몰딩/장판</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>콘센트복스 및 잡철거</span></label>
+                                </div>
+                            </div>
+                            <div class="columnItem">
+                                <div class="tit">수거/보양</div>
+                                <div class="conWrap">
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>확장</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>셀프레벨링</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>주방 냉온수배관설비</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>냉온수배관설비</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>PVC하수배관설비</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>분배기설비</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>젠다이설비</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>수도내림올림공사</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>라디에이터 철거</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>욕실 보일러배관신설</span></label>
+                                </div>
+                            </div>
+                            <div class="columnItem">
+                                <div class="tit">마루철거</div>
+                                <div class="conWrap">
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>강마루(합판마루)</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>강화마루</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>데코타일</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>냉온수배관설비</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>스펀지마루</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>폴리싱타일</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>MD마루</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>맥반석마루</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>원목마루</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>카펫마루</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>에폭시마루</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>에폭시마루</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>우레탄옥상</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>장판샌딩</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>마루기본샌딩</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>마루 기타 옵션작업</span></label>
+                                </div>
+                            </div>
+                            <div class="columnItem">
+                                <div class="tit">확장설비</div>
+                                <div class="conWrap">
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>엘리베이터 보양</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>동선보양</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>세대내보양</span></label>
+                                    <label><input type="checkbox"><span class="checkIcon"></span><span>폐기물수거</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn-transparent" data-bs-dismiss="modal">닫기</button>
+                    <button type="button" class="btn-primary">저장</button>
                 </div>
             </div>
         </div>
