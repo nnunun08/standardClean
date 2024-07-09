@@ -39,8 +39,8 @@
                 <a href="#" class="listItem dashboard"><div class="icon"></div><div class="name">대시보드</div></a>
                 <a href="#" class="listItem schedule"><div class="icon"></div><div class="name">스케쥴</div></a>
                 <a href="#" class="listItem community"><div class="icon"></div><div class="name">커뮤니티</div></a>
-                <a href="#" class="listItem construction active"><div class="icon"></div><div class="name">현장내역</div></a>
-                <a href="#" class="listItem invoice"><div class="icon"></div><div class="name">청구내역</div></a>
+                <a href="#" class="listItem construction"><div class="icon"></div><div class="name">현장내역</div></a>
+                <a href="#" class="listItem invoice active"><div class="icon"></div><div class="name">청구내역</div></a>
                 <a href="#" class="listItem payment"><div class="icon"></div><div class="name">결제내역</div></a>
                 <a href="#" class="listItem employee"><div class="icon"></div><div class="name">직원 및 급여</div></a>
                 <a href="#" class="listItem customer"><div class="icon"></div><div class="name">고객 및 협력업체</div></a>
@@ -72,341 +72,227 @@
 
         <div class="conLayout">
             <div class="contents">
-                <div class="community">
+                <div class="chargeDetail">
                     <h2 class="pageName">
-                        <a href="#" class="pageArr">현장내역</a>
+                        <a href="#" class="pageArr">디자인유일 청구서</a>
                         <div class="btnWrap">
-                            <div class="btn-secondary">예약확정</div>
-                            <div class="btn-secondary">삭제</div>
-                            <div class="btn-black">수정</div>
+                            <div class="btn-print">print</div>
+                            <div class="btn-secondary">임시저장</div>
+                            <div class="btn-black">내보내기</div>
                         </div>
                     </h2>
                     <div class="inner">
-                        <div class="bodyCon">
-                            <div class="detailPageSummary">
-                                <div class="item">
-                                    <h3>현장주소</h3>
-                                    <p>서울시 강남구 청담동 134-38 청담자이 102-1302</p>
-                                </div>
-                                <div class="item">
-                                    <h3>시작일자</h3>
-                                    <p>2023-11-09 (목) 09:00</p>
-                                </div>
-                                <div class="item">
-                                    <h3>대리점</h3>
-                                    <p>대리점명</p>
-                                </div>
-                                <div class="item">
-                                    <h3>요청담당자</h3>
-                                    <a href="tel:01012341234" class="tel">
-                                        <p>조예진 대리</p>
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <h3>현장소장</h3>
-                                    <p>미정</p>
-                                </div>
-                            </div>
-                            <div class="stepTray">
-                                <h3>철거 현황</h3>
-                                <div class="stepList">
-                                    <div class="item finish">
-                                        <div class="checkBx"></div>
-                                        <h4>1. 예약대기</h4>
-                                        <p>06/30/2023</p>
-                                    </div>
-                                    <div class="item current">
-                                        <div class="checkBx"></div>
-                                        <h4>2. 예약확정</h4>
-                                        <p>-</p>
-                                    </div>
-                                    <div class="item">
-                                        <div class="checkBx"></div>
-                                        <h4>3. 팀장배정</h4>
-                                        <p>-</p>
-                                    </div>
-                                    <div class="item">
-                                        <div class="checkBx"></div>
-                                        <h4>4. 공정중</h4>
-                                        <p>-</p>
-                                    </div>
-                                    <div class="item">
-                                        <div class="checkBx"></div>
-                                        <h4>5. 정산대기</h4>
-                                        <p>-</p>
-                                    </div>
-                                    <div class="item">
-                                        <div class="checkBx"></div>
-                                        <h4>6. 결제완료</h4>
-                                        <p>-</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="constructInfo">
-                                <h4>현장 정보</h4>
-                                <div class="infoSection">
-                                    <div class="th">
-                                        철거요청 선택사항
-                                        <button class="btn-border-sm blue">수정</button>
-                                    </div>
-                                    <div class="td">
-                                        <div class="cate">
-                                            <p>종합철거</p>
-                                            <div class="checkList">
-                                                <span>주방</span>
-                                                <span>현관</span>
-                                                <span>가구</span>
-                                                <span>목대</span>
-                                            </div>
-                                        </div>
-                                        <div class="cate">
-                                            <p>수거/보양</p>
-                                            <div class="checkList">
-                                                <span>강마루 25평</span>
-                                            </div>
-                                        </div>
-                                        <div class="cate">
-                                            <p>마루철거</p>
-                                            <div class="checkList">
-                                                <span>강마루 25평</span>
-                                            </div>
-                                        </div>
-                                        <div class="cate">
-                                            <p>확장설비</p>
-                                            <div class="checkList">
-                                                <span>양변기 하수배관 설비</span>
-                                            <span>코어작업</span>
-                                            </div>
+                        <div class="tab2">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="contrast-tab" data-bs-toggle="tab" data-bs-target="#contrast-tab-pane" type="button" role="tab" aria-controls="contrast-tab-pane" aria-selected="true">원본 대조</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="photo-tab" data-bs-toggle="tab" data-bs-target="#photo-tab-pane" type="button" role="tab" aria-controls="photo-tab-pane" aria-selected="false">전후 사진</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="final-tab" data-bs-toggle="tab" data-bs-target="#final-tab-pane" type="button" role="tab" aria-controls="final-tab-pane" aria-selected="false">최종 청구서</button>
+                                </li>
+                            </ul>
                             
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="infoSection">
-                                    <div class="th">
-                                        세대 정보
-                                    </div>
-                                    <div class="td">
-                                        <div class="cate">
-                                            <p>평수</p>
-                                            <div class="checkList">
-                                                <span>전용면적 50평</span>
-                                            </div>
-                                        </div>
-                                        <div class="cate">
-                                            <p>공동현관 비밀번호</p>
-                                            <div class="checkList">
-                                                <span>1234*</span>
-                                            </div>
-                                        </div>
-                                        <div class="cate">
-                                            <p>세대 비밀번호</p>
-                                            <div class="checkList">
-                                                <span>1234*</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="infoSection">
-                                    <div class="th">
-                                        당일 현장 상태
-                                    </div>
-                                    <div class="td">
-                                        <div class="cate">
-                                            <p>정보</p>
-                                            <div class="checkList">
-                                                <span>사는 집 공사에요</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="infoSection">
-                                    <div class="th">
-                                        철거 상세내용
-                                    </div>
-                                    <div class="td">
-                                        <div class="cate">
-                                            <p>안방 욕시 기본 철거, 문틀 7세트, 거실 확장, 공용욕실 전체 철거, 현관장 철거</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="infoSection">
-                                    <div class="th">
-                                        현장 요청사항
-                                    </div>
-                                    <div class="td">
-                                        <div class="cate">
-                                            <p>주방기기 재사용, 안방 욕실 양변기 재사용, 사는집 공사이므로 바닥 찍힘 주의</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="infoSection">
-                                    <div class="th">
-                                        긴급 메모사항
-                                    </div>
-                                    <div class="td">
-                                        <div class="cate">
-                                            <p>
-                                                - 엘리베이터 사용 x <br/>
-                                                - 사다리차 사용해주세요
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="constructInfo">
-                                <h4>비용 현황</h4>
-                                <div class="infoSection">
-                                    <div class="th">
-                                        <div class="profileWrap">
-                                            <div class="profile">
-                                                <!-- <img src="./img/sampleImg.jpg" alt="profileImg"> -->
-                                            </div>
-                                            김보균 팀장 (올철거)
-                                        </div>
-                                    </div>
-                                    <div class="td">
-                                        <div class="rowsList">
-                                            <div class="name">사다리차</div>
-                                            <div class="price">450,000원</div>
-                                            <div class="date">2023-11-09, 김보균</div>
-                                            <div class="more">...</div>
-                                        </div>
-                                        <div class="rowsList">
-                                            <div class="name">인력</div>
-                                            <div class="price">1,200,000원</div>
-                                            <div class="date">2023-11-09, 김보균</div>
-                                            <div class="more">...</div>
-                                        </div>
-                                        <div class="rowsList">
-                                            <div class="name">자재비</div>
-                                            <div class="price">1,200,000원</div>
-                                            <div class="date">2023-11-09, 김보균</div>
-                                            <div class="more">...</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="infoSection">
-                                    <div class="th">
-                                        <div class="profileWrap">
-                                            <div class="profile">
-                                                <img src="./img/sampleImg.jpg" alt="profileImg">
-                                            </div>
-                                            박영현 팀장 (마루철거)
-                                        </div>
-                                    </div>
-                                    <div class="td">
-                                        <div class="rowsList">
-                                            <div class="name">사다리차</div>
-                                            <div class="price">450,000원</div>
-                                            <div class="date">2023-11-09, 김보균</div>
-                                            <div class="more">...</div>
-                                        </div>
-                                        <div class="rowsList">
-                                            <div class="name">인력</div>
-                                            <div class="price">1,200,000원</div>
-                                            <div class="date">2023-11-09, 김보균</div>
-                                            <div class="more">...</div>
-                                        </div>
-                                        <div class="rowsList">
-                                            <div class="name">자재비</div>
-                                            <div class="price">1,200,000원</div>
-                                            <div class="date">2023-11-09, 김보균</div>
-                                            <div class="more">...</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="constructImg">
-                                <h4>현장 사진</h4>
-                                <p class="desc">사진은 최대 40장까지 첨부할 수 있습니다. </p>
-                                <div class="imgWrap">
-                                    <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
-                                    <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
-                                    <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
-                                    <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sideCon">
-                            <div class="sideConTit">
-                                <h4>배정팀장</h4>
-                                <button class="btn-border-sm blue">수정</button>
-                            </div>
+                            <div class="tab-content" id="myTabContent" style="margin-top: 36px;">
 
-                            <div class="teamCardWrap">
-                                <div class="teamCard">
-                                    <h4>종합철거팀</h4>
-                                    <a class="tel" href="tel:01055130825">01055130825</a>
-                                    <div class="profileWrap">
-                                        <div class="profile">
-                                            <img src="./img/ic_profile_df.svg" alt="profile">
+                                <!-- 원본 대조 -->
+                                <div class="tab-pane fade show active" id="contrast-tab-pane" role="tabpanel" aria-labelledby="contrast-tab" tabindex="0">
+                
+                                    <div class="tray">
+                                        <div class="tabList">
+                                            <div class="tabItem active">종합 철거</div>
+                                            <div class="tabItem">확장 설비</div>
                                         </div>
-                                        <div>
-                                            <div class="name">정형욱</div>
-                                            <div class="desc">
-                                                진입: 23-11-09 (목), 12:00
+                                        <div class="contrastCon">
+                                            <div class="tit">
+                                                주방 1 (팀장 제출 원본)
+                                                <button class="btn-border-sm blue">수정</button>
+                                            </div>
+                                            <div class="itemList">
+                                                <div class="item">
+                                                    <div class="name">
+                                                        주방 타일 덧방
+                                                        <div class="infoMark"></div>
+                                                    </div>
+                                                    <div class="price">
+                                                        <div class="value">50,000원</div>
+                                                    </div>
+                                                    <div class="note">
+                                                        <div class="value">50,000원 / 수량 : 1</div>
+                                                    </div>
+                                                    <div class="dropup-center dropstart">
+                                                        <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                        <ul class="dropdown-menu" style="width: 120px;">
+                                                        <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="item edit">
+                                                    <div class="name">
+                                                        주방 타일 덧방
+                                                        <div class="infoMark"></div>
+                                                        <div class="statusBadge">수정</div>
+                                                    </div>
+                                                    <div class="price">
+                                                        <div class="value">50,000원</div>
+                                                        <div class="newValue">45,000원</div>
+                                                    </div>
+                                                    <div class="note">
+                                                        <div class="value">50,000원 / 수량 : 1</div>
+                                                        <div class="newValue">15,000원 / 수량 : 3</div>
+                                                    </div>
+                                                    <div class="dropup-center dropstart">
+                                                        <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                        <ul class="dropdown-menu" style="width: 120px;">
+                                                        <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="item delete">
+                                                    <div class="name">
+                                                        주방 타일 덧방
+                                                        <div class="infoMark"></div>
+                                                        <div class="statusBadge">삭제</div>
+                                                    </div>
+                                                    <div class="price">
+                                                        <div class="value">50,000원</div>
+                                                    </div>
+                                                    <div class="note">
+                                                        <div class="value">50,000원 / 수량 : 1</div>
+                                                    </div>
+                                                    <div class="dropup-center dropstart">
+                                                        <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                        <ul class="dropdown-menu" style="width: 120px;">
+                                                        <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="item append">
+                                                    <div class="name">
+                                                        주방 타일 덧방
+                                                        <div class="infoMark"></div>
+                                                        <div class="statusBadge">추가</div>
+                                                    </div>
+                                                    <div class="price">
+                                                        <div class="value">50,000원</div>
+                                                    </div>
+                                                    <div class="note">
+                                                        <div class="value">50,000원 / 수량 : 1</div>
+                                                    </div>
+                                                    <div class="dropup-center dropstart">
+                                                        <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                        <ul class="dropdown-menu" style="width: 120px;">
+                                                        <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="contrastCon">
+                                            <div class="tit">
+                                                주방 2 (팀장 제출 원본)
+                                                <button class="btn-border-sm blue">수정</button>
+                                            </div>
+                                            <div class="itemList">
+                                                <div class="item">
+                                                    <div class="name">
+                                                        주방 타일 덧방
+                                                        <div class="infoMark"></div>
+                                                    </div>
+                                                    <div class="price">
+                                                        <div class="value">50,000원</div>
+                                                    </div>
+                                                    <div class="note">
+                                                        <div class="value">50,000원 / 수량 : 1</div>
+                                                    </div>
+                                                    <div class="dropup-center dropstart">
+                                                        <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                        <ul class="dropdown-menu" style="width: 120px;">
+                                                        <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="item edit">
+                                                    <div class="name">
+                                                        중형 주방기기(가스레인지)
+                                                        <div class="infoMark"></div>
+                                                        <div class="statusBadge">수정</div>
+                                                    </div>
+                                                    <div class="price">
+                                                        <div class="value">50,000원</div>
+                                                        <div class="newValue">45,000원</div>
+                                                    </div>
+                                                    <div class="note">
+                                                        <div class="value">50,000원 / 수량 : 1</div>
+                                                        <div class="newValue">15,000원 / 수량 : 3</div>
+                                                    </div>
+                                                    <div class="dropup-center dropstart">
+                                                        <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                        <ul class="dropdown-menu" style="width: 120px;">
+                                                        <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="item delete">
+                                                    <div class="name">
+                                                        주방 타일 덧방
+                                                        <div class="infoMark"></div>
+                                                        <div class="statusBadge">삭제</div>
+                                                    </div>
+                                                    <div class="price">
+                                                        <div class="value">1,000,000원</div>
+                                                    </div>
+                                                    <div class="note">
+                                                        <div class="value">1,000,000원 / 수량: 1</div>
+                                                    </div>
+                                                    <div class="dropup-center dropstart">
+                                                        <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                        <ul class="dropdown-menu" style="width: 120px;">
+                                                        <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="item append">
+                                                    <div class="name">
+                                                        주방 타일 덧방
+                                                        <div class="infoMark"></div>
+                                                        <div class="statusBadge">추가</div>
+                                                    </div>
+                                                    <div class="price">
+                                                        <div class="value">50,000원</div>
+                                                    </div>
+                                                    <div class="note">
+                                                        <div class="value">50,000원 / 수량 : 1</div>
+                                                    </div>
+                                                    <div class="dropup-center dropstart">
+                                                        <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                        <ul class="dropdown-menu" style="width: 120px;">
+                                                        <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="teamCard">
-                                    <h4>종합철거팀</h4>
-                                    <a class="tel" href="tel:01055130825">01055130825</a>
-                                    <div class="profileWrap">
-                                        <div class="profile">
-                                            <img src="./img/ic_profile_df.svg" alt="profile">
-                                        </div>
-                                        <div>
-                                            <div class="name">정형욱</div>
-                                            <div class="desc">
-                                                진입: 23-11-09 (목), 12:00
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="teamCard">
-                                    <h4>종합철거팀</h4>
-                                    <a class="tel" href="tel:01055130825">01055130825</a>
-                                    <div class="profileWrap">
-                                        <div class="profile">
-                                            <img src="./img/ic_profile_df.svg" alt="profile">
-                                        </div>
-                                        <div>
-                                            <div class="name">정형욱</div>
-                                            <div class="desc">
-                                                진입: 23-11-09 (목), 12:00
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <hr/>
 
-                            <div class="sideConTit">
-                                <h4>청구서</h4>
-                                <button class="btn-border-sm blue">상세 및 수정</button>
-                            </div>
-
-                            <div class="priceList">
-                                <div class="price">
-                                    <span class="key">종합철거팀</span>
-                                    <span class="value">2,500,000원</span>
                                 </div>
-                                <div class="price">
-                                    <span class="key">확장설비팀</span>
-                                    <span class="value">2,500,000원</span>
+                                
+                                <!-- 전후 사진 -->
+                                <div class="tab-pane fade" id="photo-tab-pane" role="tabpanel" aria-labelledby="photo-tab" tabindex="0">
+                                    ...
                                 </div>
-                                <div class="price">
-                                    <span class="key">마루철거팀</span>
-                                    <span class="value">2,000,000원</span>
+                                <!-- 최종 청구서 -->
+                                <div class="tab-pane fade" id="final-tab-pane" role="tabpanel" aria-labelledby="final-tab" tabindex="0">
+                                    ...
                                 </div>
                             </div>
-                            <div class="total">
-                                <span class="key">합계</span>
-                                <span class="value">7,000,000원</span>
-                            </div>
-                            <a href="#" class="link">청구서 조회</a>
                         </div>
                     </div>
                 </div>
