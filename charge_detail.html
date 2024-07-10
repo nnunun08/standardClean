@@ -101,180 +101,370 @@
                                 <div class="tab-pane fade show active" id="contrast-tab-pane" role="tabpanel" aria-labelledby="contrast-tab" tabindex="0">
                 
                                     <div class="tray">
-                                        <div class="tabList">
-                                            <div class="tabItem active">종합 철거</div>
-                                            <div class="tabItem">확장 설비</div>
-                                        </div>
-                                        <div class="contrastCon">
-                                            <div class="tit">
-                                                주방 1 (팀장 제출 원본)
-                                                <button class="btn-border-sm blue">수정</button>
+                                        <ul class="nav nav-tabs tab3" id="myTab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">종합 철거</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">확장 설비</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content tab-contrastCon" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                                <div class="contrastCon">
+                                                    <div class="tit">
+                                                        주방 1 (팀장 제출 원본)
+                                                        <button class="btn-border-sm blue" data-bs-toggle="modal" data-bs-target="#editCon" >수정</button>
+                                                    </div>
+                                                    <div class="itemList">
+                                                        <div class="item">
+                                                            <div class="name">
+                                                                주방 타일 덧방
+                                                                <!-- tooltip -->
+                                                                <div class="infoToolTip">
+                                                                    <div class="infoMark"></div>
+                                                                    <div class="infoBx">
+                                                                        <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="price">
+                                                                <div class="value">50,000원</div>
+                                                            </div>
+                                                            <div class="note">
+                                                                <div class="value">50,000원 / 수량 : 1</div>
+                                                            </div>
+                                                            <div class="dropup-center dropstart">
+                                                                <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                <ul class="dropdown-menu" style="width: 120px;">
+                                                                <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item edit">
+                                                            <div class="name">
+                                                                주방 타일 덧방
+
+                                                                <!-- tooltip -->
+                                                                <div class="infoToolTip">
+                                                                    <div class="infoMark"></div>
+                                                                    <div class="infoBx">
+                                                                        <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- 수정했을때 붙는 뱃지 -->
+                                                                <div class="statusBadge" >수정</div>
+                                                            </div>
+                                                            <div class="price">
+                                                                <div class="value">50,000원</div>
+                                                                <div class="newValue">45,000원</div>
+                                                            </div>
+                                                            <div class="note">
+                                                                <div class="value">50,000원 / 수량 : 1</div>
+                                                                <div class="newValue">15,000원 / 수량 : 3</div>
+                                                            </div>
+                                                            <div class="dropup-center dropstart">
+                                                                <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                <ul class="dropdown-menu" style="width: 120px;">
+                                                                <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item delete">
+                                                            <div class="name">
+                                                                주방 타일 덧방
+
+                                                                <!-- tooltip -->
+                                                                <div class="infoToolTip">
+                                                                    <div class="infoMark"></div>
+                                                                    <div class="infoBx">
+                                                                        <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- 삭제했을때 붙는 뱃지 -->
+                                                                <div class="statusBadge">삭제</div>
+                                                            </div>
+                                                            <div class="price">
+                                                                <div class="value">50,000원</div>
+                                                            </div>
+                                                            <div class="note">
+                                                                <div class="value">50,000원 / 수량 : 1</div>
+                                                            </div>
+                                                            <div class="dropup-center dropstart">
+                                                                <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                <ul class="dropdown-menu" style="width: 120px;">
+                                                                <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item append">
+                                                            <div class="name">
+                                                                주방 타일 덧방
+
+                                                                <!-- tooltip -->
+                                                                <div class="infoToolTip">
+                                                                    <div class="infoMark"></div>
+                                                                    <div class="infoBx">
+                                                                        <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm주방 왼쪽 벽면 3000mm + 오른쪽 2200mm주방 왼쪽 벽면 3000mm + 오른쪽 2200mm 긴 설명글이 들어갔을때</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- 추가되었을때 붙는 뱃지 -->
+                                                                <div class="statusBadge">추가</div>
+                                                            </div>
+                                                            <div class="price">
+                                                                <div class="value">50,000원</div>
+                                                            </div>
+                                                            <div class="note">
+                                                                <div class="value">50,000원 / 수량 : 1</div>
+                                                            </div>
+                                                            <div class="dropup-center dropstart">
+                                                                <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                <ul class="dropdown-menu" style="width: 120px;">
+                                                                <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="contrastCon">
+                                                    <div class="tit">
+                                                        주방 1 (팀장 제출 원본)
+                                                        <button class="btn-border-sm blue" data-bs-toggle="modal" data-bs-target="#editCon" >수정</button>
+                                                    </div>
+                                                    <div class="itemList">
+                                                        <div class="item">
+                                                            <div class="name">
+                                                                주방 타일 덧방
+                                                                <!-- tooltip -->
+                                                                <div class="infoToolTip">
+                                                                    <div class="infoMark"></div>
+                                                                    <div class="infoBx">
+                                                                        <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="price">
+                                                                <div class="value">50,000원</div>
+                                                            </div>
+                                                            <div class="note">
+                                                                <div class="value">50,000원 / 수량 : 1</div>
+                                                            </div>
+                                                            <div class="dropup-center dropstart">
+                                                                <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                <ul class="dropdown-menu" style="width: 120px;">
+                                                                <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item edit">
+                                                            <div class="name">
+                                                                주방 타일 덧방
+
+                                                                <!-- tooltip -->
+                                                                <div class="infoToolTip">
+                                                                    <div class="infoMark"></div>
+                                                                    <div class="infoBx">
+                                                                        <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- 수정했을때 붙는 뱃지 -->
+                                                                <div class="statusBadge">수정</div>
+                                                            </div>
+                                                            <div class="price">
+                                                                <div class="value">50,000원</div>
+                                                                <div class="newValue">45,000원</div>
+                                                            </div>
+                                                            <div class="note">
+                                                                <div class="value">50,000원 / 수량 : 1</div>
+                                                                <div class="newValue">15,000원 / 수량 : 3</div>
+                                                            </div>
+                                                            <div class="dropup-center dropstart">
+                                                                <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                <ul class="dropdown-menu" style="width: 120px;">
+                                                                <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item delete">
+                                                            <div class="name">
+                                                                주방 타일 덧방
+
+                                                                <!-- tooltip -->
+                                                                <div class="infoToolTip">
+                                                                    <div class="infoMark"></div>
+                                                                    <div class="infoBx">
+                                                                        <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- 삭제했을때 붙는 뱃지 -->
+                                                                <div class="statusBadge">삭제</div>
+                                                            </div>
+                                                            <div class="price">
+                                                                <div class="value">50,000원</div>
+                                                            </div>
+                                                            <div class="note">
+                                                                <div class="value">50,000원 / 수량 : 1</div>
+                                                            </div>
+                                                            <div class="dropup-center dropstart">
+                                                                <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                <ul class="dropdown-menu" style="width: 120px;">
+                                                                <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item append">
+                                                            <div class="name">
+                                                                주방 타일 덧방
+
+                                                                <!-- tooltip -->
+                                                                <div class="infoToolTip">
+                                                                    <div class="infoMark"></div>
+                                                                    <div class="infoBx">
+                                                                        <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm주방 왼쪽 벽면 3000mm + 오른쪽 2200mm주방 왼쪽 벽면 3000mm + 오른쪽 2200mm 긴 설명글이 들어갔을때</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- 추가되었을때 붙는 뱃지 -->
+                                                                <div class="statusBadge">추가</div>
+                                                            </div>
+                                                            <div class="price">
+                                                                <div class="value">50,000원</div>
+                                                            </div>
+                                                            <div class="note">
+                                                                <div class="value">50,000원 / 수량 : 1</div>
+                                                            </div>
+                                                            <div class="dropup-center dropstart">
+                                                                <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                <ul class="dropdown-menu" style="width: 120px;">
+                                                                <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="itemList">
-                                                <div class="item">
-                                                    <div class="name">
-                                                        주방 타일 덧방
-                                                        <div class="infoMark"></div>
+                                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                                                <div class="contrastCon">
+                                                    <div class="tit">
+                                                        주방 1 (팀장 제출 원본)
+                                                        <button class="btn-border-sm blue" data-bs-toggle="modal" data-bs-target="#editCon" >수정</button>
                                                     </div>
-                                                    <div class="price">
-                                                        <div class="value">50,000원</div>
-                                                    </div>
-                                                    <div class="note">
-                                                        <div class="value">50,000원 / 수량 : 1</div>
-                                                    </div>
-                                                    <div class="dropup-center dropstart">
-                                                        <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
-                                                        <ul class="dropdown-menu" style="width: 120px;">
-                                                        <li><a class="dropdown-item" href="#">삭제</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="item edit">
-                                                    <div class="name">
-                                                        주방 타일 덧방
-                                                        <div class="infoMark"></div>
-                                                        <div class="statusBadge">수정</div>
-                                                    </div>
-                                                    <div class="price">
-                                                        <div class="value">50,000원</div>
-                                                        <div class="newValue">45,000원</div>
-                                                    </div>
-                                                    <div class="note">
-                                                        <div class="value">50,000원 / 수량 : 1</div>
-                                                        <div class="newValue">15,000원 / 수량 : 3</div>
-                                                    </div>
-                                                    <div class="dropup-center dropstart">
-                                                        <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
-                                                        <ul class="dropdown-menu" style="width: 120px;">
-                                                        <li><a class="dropdown-item" href="#">삭제</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
+                                                    <div class="itemList">
+                                                        <div class="item">
+                                                            <div class="name">
+                                                                주방 타일 덧방
+                                                                <!-- tooltip -->
+                                                                <div class="infoToolTip">
+                                                                    <div class="infoMark"></div>
+                                                                    <div class="infoBx">
+                                                                        <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="price">
+                                                                <div class="value">50,000원</div>
+                                                            </div>
+                                                            <div class="note">
+                                                                <div class="value">50,000원 / 수량 : 1</div>
+                                                            </div>
+                                                            <div class="dropup-center dropstart">
+                                                                <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                <ul class="dropdown-menu" style="width: 120px;">
+                                                                <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item edit">
+                                                            <div class="name">
+                                                                주방 타일 덧방
 
-                                                <div class="item delete">
-                                                    <div class="name">
-                                                        주방 타일 덧방
-                                                        <div class="infoMark"></div>
-                                                        <div class="statusBadge">삭제</div>
-                                                    </div>
-                                                    <div class="price">
-                                                        <div class="value">50,000원</div>
-                                                    </div>
-                                                    <div class="note">
-                                                        <div class="value">50,000원 / 수량 : 1</div>
-                                                    </div>
-                                                    <div class="dropup-center dropstart">
-                                                        <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
-                                                        <ul class="dropdown-menu" style="width: 120px;">
-                                                        <li><a class="dropdown-item" href="#">삭제</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
+                                                                <!-- tooltip -->
+                                                                <div class="infoToolTip">
+                                                                    <div class="infoMark"></div>
+                                                                    <div class="infoBx">
+                                                                        <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm</p>
+                                                                    </div>
+                                                                </div>
 
-                                                <div class="item append">
-                                                    <div class="name">
-                                                        주방 타일 덧방
-                                                        <div class="infoMark"></div>
-                                                        <div class="statusBadge">추가</div>
-                                                    </div>
-                                                    <div class="price">
-                                                        <div class="value">50,000원</div>
-                                                    </div>
-                                                    <div class="note">
-                                                        <div class="value">50,000원 / 수량 : 1</div>
-                                                    </div>
-                                                    <div class="dropup-center dropstart">
-                                                        <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
-                                                        <ul class="dropdown-menu" style="width: 120px;">
-                                                        <li><a class="dropdown-item" href="#">삭제</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="contrastCon">
-                                            <div class="tit">
-                                                주방 2 (팀장 제출 원본)
-                                                <button class="btn-border-sm blue">수정</button>
-                                            </div>
-                                            <div class="itemList">
-                                                <div class="item">
-                                                    <div class="name">
-                                                        주방 타일 덧방
-                                                        <div class="infoMark"></div>
-                                                    </div>
-                                                    <div class="price">
-                                                        <div class="value">50,000원</div>
-                                                    </div>
-                                                    <div class="note">
-                                                        <div class="value">50,000원 / 수량 : 1</div>
-                                                    </div>
-                                                    <div class="dropup-center dropstart">
-                                                        <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
-                                                        <ul class="dropdown-menu" style="width: 120px;">
-                                                        <li><a class="dropdown-item" href="#">삭제</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="item edit">
-                                                    <div class="name">
-                                                        중형 주방기기(가스레인지)
-                                                        <div class="infoMark"></div>
-                                                        <div class="statusBadge">수정</div>
-                                                    </div>
-                                                    <div class="price">
-                                                        <div class="value">50,000원</div>
-                                                        <div class="newValue">45,000원</div>
-                                                    </div>
-                                                    <div class="note">
-                                                        <div class="value">50,000원 / 수량 : 1</div>
-                                                        <div class="newValue">15,000원 / 수량 : 3</div>
-                                                    </div>
-                                                    <div class="dropup-center dropstart">
-                                                        <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
-                                                        <ul class="dropdown-menu" style="width: 120px;">
-                                                        <li><a class="dropdown-item" href="#">삭제</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
+                                                                <!-- 수정했을때 붙는 뱃지 -->
+                                                                <div class="statusBadge">수정</div>
+                                                            </div>
+                                                            <div class="price">
+                                                                <div class="value">50,000원</div>
+                                                                <div class="newValue">45,000원</div>
+                                                            </div>
+                                                            <div class="note">
+                                                                <div class="value">50,000원 / 수량 : 1</div>
+                                                                <div class="newValue">15,000원 / 수량 : 3</div>
+                                                            </div>
+                                                            <div class="dropup-center dropstart">
+                                                                <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                <ul class="dropdown-menu" style="width: 120px;">
+                                                                <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item delete">
+                                                            <div class="name">
+                                                                주방 타일 덧방
 
-                                                <div class="item delete">
-                                                    <div class="name">
-                                                        주방 타일 덧방
-                                                        <div class="infoMark"></div>
-                                                        <div class="statusBadge">삭제</div>
-                                                    </div>
-                                                    <div class="price">
-                                                        <div class="value">1,000,000원</div>
-                                                    </div>
-                                                    <div class="note">
-                                                        <div class="value">1,000,000원 / 수량: 1</div>
-                                                    </div>
-                                                    <div class="dropup-center dropstart">
-                                                        <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
-                                                        <ul class="dropdown-menu" style="width: 120px;">
-                                                        <li><a class="dropdown-item" href="#">삭제</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
+                                                                <!-- tooltip -->
+                                                                <div class="infoToolTip">
+                                                                    <div class="infoMark"></div>
+                                                                    <div class="infoBx">
+                                                                        <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm</p>
+                                                                    </div>
+                                                                </div>
 
-                                                <div class="item append">
-                                                    <div class="name">
-                                                        주방 타일 덧방
-                                                        <div class="infoMark"></div>
-                                                        <div class="statusBadge">추가</div>
-                                                    </div>
-                                                    <div class="price">
-                                                        <div class="value">50,000원</div>
-                                                    </div>
-                                                    <div class="note">
-                                                        <div class="value">50,000원 / 수량 : 1</div>
-                                                    </div>
-                                                    <div class="dropup-center dropstart">
-                                                        <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
-                                                        <ul class="dropdown-menu" style="width: 120px;">
-                                                        <li><a class="dropdown-item" href="#">삭제</a></li>
-                                                        </ul>
+                                                                <!-- 삭제했을때 붙는 뱃지 -->
+                                                                <div class="statusBadge">삭제</div>
+                                                            </div>
+                                                            <div class="price">
+                                                                <div class="value">50,000원</div>
+                                                            </div>
+                                                            <div class="note">
+                                                                <div class="value">50,000원 / 수량 : 1</div>
+                                                            </div>
+                                                            <div class="dropup-center dropstart">
+                                                                <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                <ul class="dropdown-menu" style="width: 120px;">
+                                                                <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item append">
+                                                            <div class="name">
+                                                                주방 타일 덧방
+
+                                                                <!-- tooltip -->
+                                                                <div class="infoToolTip">
+                                                                    <div class="infoMark"></div>
+                                                                    <div class="infoBx">
+                                                                        <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm주방 왼쪽 벽면 3000mm + 오른쪽 2200mm주방 왼쪽 벽면 3000mm + 오른쪽 2200mm 긴 설명글이 들어갔을때</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- 추가되었을때 붙는 뱃지 -->
+                                                                <div class="statusBadge">추가</div>
+                                                            </div>
+                                                            <div class="price">
+                                                                <div class="value">50,000원</div>
+                                                            </div>
+                                                            <div class="note">
+                                                                <div class="value">50,000원 / 수량 : 1</div>
+                                                            </div>
+                                                            <div class="dropup-center dropstart">
+                                                                <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                <ul class="dropdown-menu" style="width: 120px;">
+                                                                <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -286,11 +476,349 @@
                                 
                                 <!-- 전후 사진 -->
                                 <div class="tab-pane fade" id="photo-tab-pane" role="tabpanel" aria-labelledby="photo-tab" tabindex="0">
-                                    ...
+                                    <div class="tray">
+                                        <ul class="nav nav-tabs tab3" id="myTab2" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="step2-tab1" data-bs-toggle="tab" data-bs-target="#step2-tab1-pane" type="button" role="tab" aria-controls="step2-tab1-pane" aria-selected="true">종합 철거</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="step2-tab2" data-bs-toggle="tab" data-bs-target="#step2-tab2-pane" type="button" role="tab" aria-controls="step2-tab2-pane" aria-selected="false">확장 설비</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content tab-contrastCon" id="myTab2Content">
+                                            <div class="tab-pane fade show active" id="step2-tab1-pane" role="tabpanel" aria-labelledby="step2-tab1" tabindex="0">
+                                                <div class="photoWrap">
+                                                    <div class="constructImg">
+                                                        <p class="desc">이전사진</p>
+                                                        <div class="imgWrap">
+                                                            <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
+                                                            <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
+                                                            <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
+                                                            <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="constructImg">
+                                                        <p class="desc">이후사진</p>
+                                                        <div class="imgWrap">
+                                                            <!-- <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
+                                                            <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
+                                                            <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
+                                                            <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- 최종 청구서 -->
                                 <div class="tab-pane fade" id="final-tab-pane" role="tabpanel" aria-labelledby="final-tab" tabindex="0">
-                                    ...
+
+                                    <div class="dualTray">
+                                        <div class="tray leftTray">
+                                            <ul class="nav nav-tabs tab3" id="finalTab" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="step3-tab1" data-bs-toggle="tab" data-bs-target="#step3-tab1-pane" type="button" role="tab" aria-controls="step3-tab1-pane" aria-selected="true">종합 철거</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="step3-tab2" data-bs-toggle="tab" data-bs-target="#step3-tab2-pane" type="button" role="tab" aria-controls="step3-tab2-pane" aria-selected="false">확장 설비</button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content tab-contrastCon" id="finalTabContent">
+                                                <div class="tab-pane fade show active" id="step3-tab1-pane" role="tabpanel" aria-labelledby="step3-tab1" tabindex="0">
+                                                    <div class="contrastCon vertical">
+                                                        <div class="tit">
+                                                            주방 1 (팀장 제출 원본)
+                                                        </div>
+                                                        <div class="itemList">
+                                                            <div class="item">
+                                                                <div class="name">
+                                                                    주방 타일 덧방
+                                                                    <!-- tooltip -->
+                                                                    <div class="infoToolTip">
+                                                                        <div class="infoMark"></div>
+                                                                        <div class="infoBx">
+                                                                            <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="price">
+                                                                    <div class="value">50,000원</div>
+                                                                </div>
+                                                                <div class="note">
+                                                                    <div class="value">50,000원 / 수량 : 1</div>
+                                                                </div>
+                                                                <div class="dropup-center dropstart">
+                                                                    <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                    <ul class="dropdown-menu" style="width: 120px;">
+                                                                    <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item edit">
+                                                                <div class="name">
+                                                                    주방 타일 덧방
+                                                                    <!-- tooltip -->
+                                                                    <div class="infoToolTip">
+                                                                        <div class="infoMark"></div>
+                                                                        <div class="infoBx">
+                                                                            <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- 수정했을때 붙는 뱃지 -->
+                                                                    <div class="statusBadge" >수정</div>
+                                                                </div>
+                                                                <div class="price">
+                                                                    <div class="value">50,000원</div>
+                                                                    <div class="newValue">45,000원</div>
+                                                                </div>
+                                                                <div class="note">
+                                                                    <div class="value">50,000원 / 수량 : 1</div>
+                                                                    <div class="newValue">15,000원 / 수량 : 3</div>
+                                                                </div>
+                                                                <div class="dropup-center dropstart">
+                                                                    <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                    <ul class="dropdown-menu" style="width: 120px;">
+                                                                    <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item delete">
+                                                                <div class="name">
+                                                                    주방 타일 덧방
+                                                                    <!-- tooltip -->
+                                                                    <div class="infoToolTip">
+                                                                        <div class="infoMark"></div>
+                                                                        <div class="infoBx">
+                                                                            <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- 삭제했을때 붙는 뱃지 -->
+                                                                    <div class="statusBadge">삭제</div>
+                                                                </div>
+                                                                <div class="price">
+                                                                    <div class="value">50,000원</div>
+                                                                </div>
+                                                                <div class="note">
+                                                                    <div class="value">50,000원 / 수량 : 1</div>
+                                                                </div>
+                                                                <div class="dropup-center dropstart">
+                                                                    <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                    <ul class="dropdown-menu" style="width: 120px;">
+                                                                    <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item append">
+                                                                <div class="name">
+                                                                    주방 타일 덧방
+                                                                    <!-- tooltip -->
+                                                                    <div class="infoToolTip">
+                                                                        <div class="infoMark"></div>
+                                                                        <div class="infoBx">
+                                                                            <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm주방 왼쪽 벽면 3000mm + 오른쪽 2200mm주방 왼쪽 벽면 3000mm + 오른쪽 2200mm 긴 설명글이 들어갔을때</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- 추가되었을때 붙는 뱃지 -->
+                                                                    <div class="statusBadge">추가</div>
+                                                                </div>
+                                                                <div class="price">
+                                                                    <div class="value">50,000원</div>
+                                                                </div>
+                                                                <div class="note">
+                                                                    <div class="value">50,000원 / 수량 : 1</div>
+                                                                </div>
+                                                                <div class="dropup-center dropstart">
+                                                                    <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                    <ul class="dropdown-menu" style="width: 120px;">
+                                                                    <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="contrastCon vertical">
+                                                        <div class="tit">
+                                                            주방 1 (팀장 제출 원본)
+                                                        </div>
+                                                        <div class="itemList">
+                                                            <div class="item">
+                                                                <div class="name">
+                                                                    주방 타일 덧방
+                                                                    <!-- tooltip -->
+                                                                    <div class="infoToolTip">
+                                                                        <div class="infoMark"></div>
+                                                                        <div class="infoBx">
+                                                                            <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="price">
+                                                                    <div class="value">50,000원</div>
+                                                                </div>
+                                                                <div class="note">
+                                                                    <div class="value">50,000원 / 수량 : 1</div>
+                                                                </div>
+                                                                <div class="dropup-center dropstart">
+                                                                    <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                    <ul class="dropdown-menu" style="width: 120px;">
+                                                                    <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item edit">
+                                                                <div class="name">
+                                                                    주방 타일 덧방
+                                                                    <!-- tooltip -->
+                                                                    <div class="infoToolTip">
+                                                                        <div class="infoMark"></div>
+                                                                        <div class="infoBx">
+                                                                            <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- 수정했을때 붙는 뱃지 -->
+                                                                    <div class="statusBadge">수정</div>
+                                                                </div>
+                                                                <div class="price">
+                                                                    <div class="value">50,000원</div>
+                                                                    <div class="newValue">45,000원</div>
+                                                                </div>
+                                                                <div class="note">
+                                                                    <div class="value">50,000원 / 수량 : 1</div>
+                                                                    <div class="newValue">15,000원 / 수량 : 3</div>
+                                                                </div>
+                                                                <div class="dropup-center dropstart">
+                                                                    <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                    <ul class="dropdown-menu" style="width: 120px;">
+                                                                    <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item delete">
+                                                                <div class="name">
+                                                                    주방 타일 덧방
+                                                                    <!-- tooltip -->
+                                                                    <div class="infoToolTip">
+                                                                        <div class="infoMark"></div>
+                                                                        <div class="infoBx">
+                                                                            <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- 삭제했을때 붙는 뱃지 -->
+                                                                    <div class="statusBadge">삭제</div>
+                                                                </div>
+                                                                <div class="price">
+                                                                    <div class="value">50,000원</div>
+                                                                </div>
+                                                                <div class="note">
+                                                                    <div class="value">50,000원 / 수량 : 1</div>
+                                                                </div>
+                                                                <div class="dropup-center dropstart">
+                                                                    <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                    <ul class="dropdown-menu" style="width: 120px;">
+                                                                    <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item append">
+                                                                <div class="name">
+                                                                    주방 타일 덧방
+                                                                    <!-- tooltip -->
+                                                                    <div class="infoToolTip">
+                                                                        <div class="infoMark"></div>
+                                                                        <div class="infoBx">
+                                                                            <p class="infoMsg">주방 왼쪽 벽면 3000mm + 오른쪽 2200mm주방 왼쪽 벽면 3000mm + 오른쪽 2200mm주방 왼쪽 벽면 3000mm + 오른쪽 2200mm 긴 설명글이 들어갔을때</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- 추가되었을때 붙는 뱃지 -->
+                                                                    <div class="statusBadge">추가</div>
+                                                                </div>
+                                                                <div class="price">
+                                                                    <div class="value">50,000원</div>
+                                                                </div>
+                                                                <div class="note">
+                                                                    <div class="value">50,000원 / 수량 : 1</div>
+                                                                </div>
+                                                                <div class="dropup-center dropstart">
+                                                                    <button class="moreBtn" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                                                                    <ul class="dropdown-menu" style="width: 120px;">
+                                                                    <li><a class="dropdown-item" href="#">삭제</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="footerWrap">
+                                                        <div>종합철거팀 총 합계</div>
+                                                        <div class="total">2,350,000원</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="step3-tab2-pane" role="tabpanel" aria-labelledby="step3-tab2" tabindex="0">
+                                                    ...
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tray vertical rightTray">
+                                            <h3>통합 청구서</h3>
+
+                                            <div class="eachCostWrap">
+                                                <div class="eachCost">
+                                                    <div class="flexWrap">
+                                                        <div class="key">종합철거팀</div>
+                                                        <div class="value">홍천기 사장</div>
+                                                    </div>
+                                                    <div class="cost">2,350,000원</div>
+                                                </div>
+                                                <div class="eachCost">
+                                                    <div class="flexWrap">
+                                                        <div class="key">확장설비팀</div>
+                                                        <div class="value">홍천기 사장</div>
+                                                    </div>
+                                                    <div class="cost">1,000,000원</div>
+                                                </div>
+                                                <div class="eachCost">
+                                                    <div class="flexWrap">
+                                                        <div class="key">마루철거팀</div>
+                                                        <div class="value">홍천기 사장</div>
+                                                    </div>
+                                                    <div class="cost">500,000원</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="photoWrap vertical">
+                                                <div class="constructImg">
+                                                    <p class="desc">이전사진</p>
+                                                    <div class="imgWrap">
+                                                        <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
+                                                        <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
+                                                        <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
+                                                        <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
+                                                        <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
+                                                        <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="constructImg">
+                                                    <p class="desc">이후사진</p>
+                                                    <div class="imgWrap">
+                                                        <!-- <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
+                                                        <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
+                                                        <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div>
+                                                        <div class="imgBx"><img src="./img/sampleImg.jpg" alt="img"></div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="resultCost">
+                                                <div>공급가: 3,850,000원</div>
+                                                <div class="sub">+ 부가세 (10%): 385,000원</div>
+                                                <div class="flexWrap">
+                                                    <div class="key">총 금액</div>
+                                                    <div class="value">4,235,000원</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -300,676 +828,99 @@
         </div>
     </section>
 
-    <!-- SAMPLE -->
-    <div class="modal2 modal fade" id="sample" tabindex="-1" aria-labelledby="sampleLabel" aria-hidden="true">
 
-        <!-- 모달 width를 maxwidth로 설정해 주세요 -->
-        <div class="modal-dialog" style="max-width: 860px;">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h1 class="modal-title" id="sampleLabel">현장상세</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
 
-                <!-- .modal-body를 form으로 감싸주세요  -->
-
-                <form>
-                    <div class="modal-body">
-                        <div class="modalForm">
-                            <!-- text -->
-                            <div class="tr">
-                                <div class="th">텍스트</div>
-                                <div class="td">
-                                    <input type="text" placeholder="제목을 입력하세요">
-                                </div>
-                            </div>
-                            <!-- select -->
-                            <div class="tr">
-                                <div class="th">셀렉트</div>
-                                <div class="td">
-                                    <select name="" id="">
-                                        <option value="1">1000003</option>
-                                        <option value="2">1000004</option>
-                                        <option value="3">1000005</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <!-- date -->
-                            <div class="tr">
-                                <div class="th">캘린더</div>
-                                <div class="td">
-                                    <input type="text" class="calendar" id="datepicker2" placeholder="2023.02 ~ 현재">
-                                </div>
-                            </div>
-                            <!-- textarea -->
-                            <div class="tr">
-                                <div class="th">textarea</div>
-                                <div class="td">
-                                    <textarea style="height: 120px;" placeholder="설명 내용을 입력해 주세요"></textarea>
-                                </div>
-                            </div>
-                            <!-- radio -->
-                            <div class="tr">
-                                <div class="th">라디오</div>
-                                <div class="td">
-                                    <label class="form-check">
-                                        <input type="radio" name="status2" checked>
-                                        <div class="radio">Y</div>
-                                    </label>
-                                    <label class="form-check">
-                                        <input type="radio" name="status2">
-                                        <div class="radio">N</div>
-                                    </label>
-                                    <label class="form-check">
-                                        <input type="radio" name="status2">
-                                        <div class="radio">X</div>
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- tag -->
-                            <div class="tr">
-                                <div class="th">태그</div>
-                                <div class="td">
-                                    <div class="tagWrap">
-                                        <a href="#" class="appendTag"></a>
-                                        <div class="tagItem">사다리차:500,000</div>
-                                        <div class="tagItem">자재:0</div>
-                                        <div class="tagItem">폐기물:1,300,000</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- multy field -->
-                            <div class="tr">
-                                <div class="th">다중 입력 필드</div>
-                                <div class="td">
-                                    <div class="flexWrap">
-                                        <select name="" id="" style="width: auto;">
-                                            <option value="1">현장상태</option>
-                                        </select>
-                                        <input type="text">
-                                        <input type="text">
-                                        <input type="text">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 구분선 -->
-                            <hr/>
-
-                            <!-- 이미지 첨부 -->
-                            <div class="tr">
-                                <div class="th">현장참고사진</div>
-                                <div class="td">
-                                    <div class="fileHead">
-                                        <label class="fileAttach">
-                                            파일 선택
-                                            <input type="file">
-                                        </label>
-                                    </div>
-                                    <ul class="imgList">
-                                        <li><img src="./img/sampleImg.jpg" alt="sample"><button class="imgRemove"></button></li>
-                                        <li><img src="./img/sampleImg.jpg" alt="sample"><button class="imgRemove"></button></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- 파일첨부 -->
-                            <hr/>
-                            <div class="tr">
-                                <div class="th">첨부파일</div>
-                                <div class="td">
-                                    <div class="fileHead">
-                                        <label class="fileAttach">
-                                            파일 선택
-                                            <input type="file">
-                                        </label>
-                                        <div class="size">총 0 Bytes</div>
-                                    </div>
-                                    <ul class="fileList">
-                                        <li><div>첨부된파일1.pdf</div><button class="fileRemove">X</button></li>
-                                        <li><div>첨부된파일2.pdf</div><button class="fileRemove">X</button></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </form>
-                <div class="modal-footer">
-                    <button type="button" class="btn-transparent" data-bs-dismiss="modal">닫기</button>
-                    <button type="button" class="btn-primary">등록</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- 현장팀장 -->
-    <div class="modal2 modal fade" id="teamLeader" tabindex="-1" aria-labelledby="teamLeaderLabel" aria-hidden="true">
-        <div class="modal-dialog" style="max-width: 860px;">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h1 class="modal-title" id="teamLeaderLabel">현장팀장</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form>
-                    <div class="modal-body">
-                        <div class="modalForm">
-                            <div class="tr">
-                                <div class="th">현장번호</div>
-                                <div class="td">
-                                    <select name="" id="">
-                                        <option value="1">1000003</option>
-                                        <option value="2">1000004</option>
-                                        <option value="3">1000005</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">작업타입</div>
-                                <div class="td">
-                                    <select name="" id="">
-                                        <option value="1">종합철거</option>
-                                        <option value="2">종합철거</option>
-                                        <option value="3">종합철거</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">직원</div>
-                                <div class="td">
-                                    <select name="" id="">
-                                        <option value="1">박태원</option>
-                                        <option value="2">박태원</option>
-                                        <option value="3">박태원</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">작업일자</div>
-                                <div class="td">
-                                    <!-- flatpickr -->
-                                    <input type="text" class="calendar" id="datepicker3" placeholder="2023.02 ~ 현재">
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">작업시간</div>
-                                <div class="td">
-                                    <select name="" id="">
-                                        <option value="1">09:00</option>
-                                        <option value="2">09:00</option>
-                                        <option value="3">09:00</option>
-                                    </select>
-                                </div>
-                            </div>
-                    
-                            <div class="tr">
-                                <div class="th">설명</div>
-                                <div class="td">
-                                    <textarea style="height: 120px;" placeholder="설명 내용을 입력해 주세요"></textarea>
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">상태</div>
-                                <div class="td">
-                                    <label class="form-check">
-                                        <input type="radio" name="status3" checked>
-                                        <div class="radio">Y</div>
-                                    </label>
-                                    <label class="form-check">
-                                        <input type="radio" name="status3">
-                                        <div class="radio">N</div>
-                                    </label>
-                                    <label class="form-check">
-                                        <input type="radio" name="status3">
-                                        <div class="radio">X</div>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <div class="modal-footer">
-                    <button type="button" class="btn-transparent" data-bs-dismiss="modal">닫기</button>
-                    <button type="button" class="btn-primary">등록</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 현장상세 -->
-    <div class="modal2 modal fade" id="siteDetail" tabindex="-1" aria-labelledby="siteDetailLabel" aria-hidden="true">
-        <div class="modal-dialog" style="max-width: 860px;">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h1 class="modal-title" id="siteDetailLabel">현장상세</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form>
-                    <div class="modal-body">
-                        <div class="modalForm">
-                            <div class="tr">
-                                <div class="th">현장번호</div>
-                                <div class="td">
-                                    <input type="text" placeholder="제목을 입력하세요">
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">현장번호</div>
-                                <div class="td">
-                                    <input type="text" placeholder="제목을 입력하세요">
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">당일 현장 상태</div>
-                                <div class="td">
-                                    <select name="" id="">
-                                        <option value="1">거주중</option>
-                                        <option value="2">당일이사</option>
-                                        <option value="3">빈집상태</option>
-                                        <option value="4">직접입력</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">당일 현장상태 메모</div>
-                                <div class="td">
-                                    <input type="text" placeholder="">
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">현장 상세내용</div>
-                                <div class="td">
-                                    <input type="text" placeholder="">
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">현장 요청사항</div>
-                                <div class="td">
-                                    <input type="text" placeholder="">
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">긴급 메모사항</div>
-                                <div class="td">
-                                    <input type="text" placeholder="">
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">세대정보</div>
-                                <div class="td">
-                                    <input type="text" placeholder="">
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">설명</div>
-                                <div class="td">
-                                    <input type="text" placeholder="">
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">상태</div>
-                                <div class="td">
-                                    <label class="form-check">
-                                        <input type="radio" name="status1" checked>
-                                        <div class="radio">Y</div>
-                                    </label>
-                                    <label class="form-check">
-                                        <input type="radio" name="status1">
-                                        <div class="radio">N</div>
-                                    </label>
-                                    <!-- <label class="form-check">
-                                        <input type="radio" name="status1">
-                                        <div class="radio">X</div>
-                                    </label> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <div class="modal-footer">
-                    <button type="button" class="btn-transparent" data-bs-dismiss="modal">닫기</button>
-                    <button type="button" class="btn-primary">등록</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 현장 -->
-    <div class="modal2 modal fade" id="siteFull" tabindex="-1" aria-labelledby="siteFullLabel" aria-hidden="true">
-        <div class="modal-dialog" style="max-width: 1200px;">
+    <!-- 원본대조 수정 팝업 -->
+    <div class="modal2 modal fade" id="editCon" tabindex="-1" aria-labelledby="editConLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 1080px;">
             <div class="modal-content">
                 <div class="modal-header">
                 <div class="h1Wrap">
-                    <h1 class="modal-title" id="siteFullLabel">
-                        현장
-                    </h1>
-                    <select name="" id="">
-                        <option value="1">협력업체</option>
-                    </select>
-                </div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form>
-                    <div class="modal-body">
-                        <!-- left layout -->
-                        <div class="modalForm">
-                            <div class="tr">
-                                <div class="th">우편번호</div>
-                                <div class="td">
-                                    <div class="flexWrap">
-                                        <input type="text" placeholder="15726" style="width: 94px">
-                                        <button class="btn-border-sm blue">우편번호검색</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">주소</div>
-                                <div class="td">
-                                    <input type="text" placeholder="자동 입력">
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">상세주소</div>
-                                <div class="td">
-                                    <input type="text" placeholder="상세 주소를 입력해 주세요">
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">현장타입</div>
-                                <div class="td">
-                                    <select name="" id="">
-                                        <option value="1">현장타입</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">일반/사업자고객</div>
-                                <div class="td">
-                                    <select name="" id="">
-                                        <option value="1">일반/사업자고객</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">영업사원</div>
-                                <div class="td">
-                                    <select name="" id="">
-                                        <option value="1">영업사원</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <hr/>
-                            <div class="tr">
-                                <div class="th">현장소장</div>
-                                <div class="td">
-                                    <select name="" id="">
-                                        <option value="1">현장소장</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">철겨현황</div>
-                                <div class="td">
-                                    <select name="" id="">
-                                        <option value="1">철겨현황</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">철거시작일</div>
-                                <div class="td">
-                                    <div class="flexWrap">
-                                        <input type="text" class="calendar" id="datepicker4">
-                                        <select name="" id="" style="width: auto;">
-                                            <option value="1">시작시간</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">철거종료일</div>
-                                <div class="td">
-                                    <input type="text" class="calendar" id="datepicker4">
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">철거예정일</div>
-                                <div class="td">
-                                    <input type="text" class="calendar" id="datepicker4">
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">마루철거일</div>
-                                <div class="td">
-                                    <input type="text" class="calendar" id="datepicker4">
-                                </div>
-                            </div>
-                            <div class="tr vertical">
-                                <div class="th">설명</div>
-                                <div class="td">
-                                    <textarea style="height: 120px;" placeholder="설명 내용을 입력해 주세요"></textarea>
-                                </div>
-                            </div>
-                    
-                            <div class="tr">
-                                <div class="th">상태</div>
-                                <div class="td">
-                                    <label class="form-check">
-                                        <input type="radio" name="status4" checked>
-                                        <div class="radio">Y</div>
-                                    </label>
-                                    <label class="form-check">
-                                        <input type="radio" name="status4">
-                                        <div class="radio">N</div>
-                                    </label>
-                                    <label class="form-check">
-                                        <input type="radio" name="status4">
-                                        <div class="radio">X</div>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- right layout -->
-                        <div class="modalForm">
-                            <div class="tr">
-                                <div class="th">현장참고사진</div>
-                                <div class="td">
-                                    <div class="fileHead">
-                                        <label class="fileAttach">
-                                            파일 선택
-                                            <input type="file">
-                                        </label>
-                                    </div>
-                                    <ul class="imgList">
-                                        <li><img src="./img/sampleImg.jpg" alt="sample"><button class="imgRemove"></button></li>
-                                        <li><img src="./img/sampleImg.jpg" alt="sample"><button class="imgRemove"></button></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <hr/>
-                            <div class="tr">
-                                <div class="th">철거 항목</div>
-                                <div class="td">
-                                    <div class="tagWrap">
-                                        <a href="#" class="appendTag" data-bs-toggle="modal" data-bs-target="#checkList"></a>
-                                        <div class="tagItem">종합철거:주방</div>
-                                        <div class="tagItem">종합철거:가구목대</div>
-                                        <div class="tagItem">종합철거:방문</div>
-                                        <div class="tagItem">종합철거:벽체</div>
-                                        <div class="tagItem">확장설비:확장</div>
-                                        <div class="tagItem">확장설비:셀프레벨링</div>
-                                        <div class="tagItem">보양수거:동선보양</div>
-                                        <div class="tagItem">보양수거:폐기물 수거</div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <hr/>
-                            <div class="tr">
-                                <div class="th">당일 현장상태</div>
-                                <div class="td">
-                                    <div class="flexWrap">
-                                        <select name="" id="" style="width: auto;">
-                                            <option value="1">현장상태</option>
-                                        </select>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">현장 상세내용</div>
-                                <div class="td">
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">현장 요청사항</div>
-                                <div class="td">
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">긴급 메모사항</div>
-                                <div class="td">
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th">세대정보</div>
-                                <div class="td">
-                                    <div class="flexWrap">
-                                        <input type="text" placeholder="평수">
-                                        <input type="text" placeholder="공동현관비밀번호">
-                                        <input type="text" placeholder="세대비밀번호">
-                                    </div>
-                                </div>
-                            </div>
-                            <hr/>
-                            <div class="tr">
-                                <div class="th">팀장배정</div>
-                                <div class="td">
-                                    <div class="tagWrap">
-                                        <a href="#" class="appendTag"></a>
-                                        <div class="tagItem">설비/정철욱/010-2703-6212</div>
-                                        <div class="tagItem">마루철거/박영현/010-2824-7915</div>
-                                        <div class="tagItem">종합철거/박태원/010-2783-1357</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr/>
-                            <div class="tr">
-                                <div class="th">현장비용</div>
-                                <div class="td">
-                                    <div class="tagWrap">
-                                        <a href="#" class="appendTag"></a>
-                                        <div class="tagItem">사다리차:500,000</div>
-                                        <div class="tagItem">자재:0</div>
-                                        <div class="tagItem">폐기물:1,300,000</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr/>
-                            <div class="tr">
-                                <div class="th">청구서</div>
-                                <div class="td">
-                                    <div class="tagWrap">
-                                        <a href="#" class="appendTag"></a>
-                                        <div class="tagItem">주방:205,000</div>
-                                        <div class="tagItem">벽체:0</div>
-                                        <div class="tagItem">욕실:0</div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <div class="modal-footer">
-                    <button type="button" class="btn-transparent" data-bs-dismiss="modal">닫기</button>
-                    <button type="button" class="btn-primary">등록</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 철거항목 -->
-    <div class="modal2 modal fade" id="checkList" tabindex="-1" aria-labelledby="checkListLabel" aria-hidden="true">
-        <div class="modal-dialog" style="max-width: 1000px;">
-            <div class="modal-content">
-                <div class="modal-header">
-                <div class="h1Wrap">
-                    <h1 class="modal-title" id="siteFullLabel">
-                        철거항목
+                    <h1 class="modal-title" id="billLabel">
+                        주방 1 철거항목 수정
                     </h1>
                 </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form>
                     <div class="modal-body">
-                        <div class="checkList">
-                            <div class="columnItem">
-                                <div class="tit">종합철거</div>
-                                <div class="conWrap">
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>주방</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>가구목대</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>방문</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>벽체</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>현관</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>천장</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>욕실</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>발코니베란다</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>몰딩/장판</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>콘센트복스 및 잡철거</span></label>
+                        <div class="modalForm">
+                            <div class="modal-body flexWrap">
+                                <div class="modalForm">
+                                    <div class="tr vertical">
+                                        <div class="td">
+                                            <div class="flexWrap">
+                                                <select name="" id="">
+                                                    <option value="1">대분류</option>
+                                                </select>
+                                                <input type="text" placeholder="공간설명">
+                                                <select name="" id="">
+                                                    <option value="1">중분류</option>
+                                                </select>
+                                                <select name="" id="">
+                                                    <option value="1">소분류</option>
+                                                </select>
+                                                <input type="text" placeholder="입력">
+                                                <select name="" id="">
+                                                    <option value="1">단가단위</option>
+                                                </select>
+                                                <input type="text" placeholder="금액">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="columnItem">
-                                <div class="tit">수거/보양</div>
-                                <div class="conWrap">
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>확장</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>셀프레벨링</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>주방 냉온수배관설비</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>냉온수배관설비</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>PVC하수배관설비</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>분배기설비</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>젠다이설비</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>수도내림올림공사</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>라디에이터 철거</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>욕실 보일러배관신설</span></label>
-                                </div>
-                            </div>
-                            <div class="columnItem">
-                                <div class="tit">마루철거</div>
-                                <div class="conWrap">
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>강마루(합판마루)</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>강화마루</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>데코타일</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>냉온수배관설비</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>스펀지마루</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>폴리싱타일</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>MD마루</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>맥반석마루</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>원목마루</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>카펫마루</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>에폭시마루</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>에폭시마루</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>우레탄옥상</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>장판샌딩</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>마루기본샌딩</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>마루 기타 옵션작업</span></label>
-                                </div>
-                            </div>
-                            <div class="columnItem">
-                                <div class="tit">확장설비</div>
-                                <div class="conWrap">
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>엘리베이터 보양</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>동선보양</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>세대내보양</span></label>
-                                    <label><input type="checkbox"><span class="checkIcon"></span><span>폐기물수거</span></label>
-                                </div>
+                                <div class="addGrid"><button class="btn-border">추가</button></div>
                             </div>
                         </div>
+                        
                     </div>
                 </form>
+
+                <div class="grid">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="">대분류</th>
+                                <th class="">공간설명</th>
+                                <th class="">중분류</th>
+                                <th class="">소분류</th>
+                                <th class="">입력</th>
+                                <th class="">단위</th>
+                                <th class="">금액</th>
+                                <th class="wid_50">삭제</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <!-- grid noData -->
+                            <tr class="noData">
+                                <td>
+                                    <div class="noDataMsg">
+                                        <svg width="25" height="37" viewBox="0 0 25 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.4182 13.374C11.3338 13.4588 11.193 13.4588 11.1085 13.374C11.0897 13.3551 11.0757 13.3316 11.0663 13.3127L9.43308 14.9523C9.25005 15.136 8.95438 15.136 8.76666 14.9523L7.14755 13.3269C6.96452 13.1431 6.96452 12.8463 7.14755 12.6578L8.78543 11.0135C8.75258 11.0041 8.72442 10.9853 8.70096 10.9617C8.61648 10.8769 8.61648 10.7356 8.70096 10.6508L9.10456 10.2456L8.75727 9.89694L10.0385 8.61072L10.3858 8.95936L10.7894 8.55418C10.8738 8.46938 11.0146 8.46938 11.0991 8.55418C11.1226 8.57774 11.1414 8.61072 11.1507 8.63899L12.7886 6.9947C12.9717 6.81095 13.2673 6.81095 13.455 6.9947L15.0742 8.62014C15.2572 8.80389 15.2572 9.10071 15.0742 9.28916L13.441 10.9287C13.441 10.9287 13.4832 10.9523 13.502 10.9711C13.5864 11.0559 13.5864 11.1973 13.502 11.2821L13.0984 11.6873L19.3214 17.9346L25 12.2338L13.9103 1.08657C13.1312 0.304476 11.8688 0.304476 11.0897 1.08657L0.708654 11.513L13.1828 24.0359L13.5864 23.6307C13.6709 23.5459 13.8117 23.5459 13.8962 23.6307C13.915 23.6496 13.929 23.6731 13.9384 23.692L15.5716 22.0524C15.7546 21.8687 16.0503 21.8687 16.238 22.0524L17.8571 23.6779C18.0402 23.8616 18.0402 24.1584 17.8571 24.3469L16.2193 25.9912C16.2521 26.0006 16.2803 26.0194 16.3037 26.043C16.3882 26.1278 16.3882 26.2691 16.3037 26.3539L15.9001 26.7591L16.2474 27.1078L14.9662 28.394L14.6189 28.0453L14.2153 28.4505C14.1308 28.5353 13.9901 28.5353 13.9056 28.4505C13.8821 28.427 13.8633 28.394 13.854 28.3657L12.2161 30.01C12.033 30.1938 11.7374 30.1938 11.5497 30.01L9.93054 28.3846C9.74751 28.2008 9.74751 27.904 9.93054 27.7155L11.5637 26.076C11.5637 26.076 11.5215 26.0524 11.5027 26.0336C11.4182 25.9488 11.4182 25.8074 11.5027 25.7226L11.9063 25.3174L5.68331 19.0701L0 24.7756L11.0944 35.9134C11.8735 36.6955 13.1359 36.6955 13.915 35.9134L24.3007 25.487L11.8265 12.9641L11.4229 13.3693L11.4182 13.374Z" fill="#181B20"/>
+                                        </svg>                                            
+                                        데이터가 없습니다.
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>주방</td>
+                                <td>테이블</td>
+                                <td>메인 주방</td>
+                                <td>상부 하부장 철거</td>
+                                <td>12</td>
+                                <td>미터(m)</td>
+                                <td>70,000</td>
+                                <td>
+                                    <button class="rowDel"></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
                 <div class="modal-footer">
                     <button type="button" class="btn-transparent" data-bs-dismiss="modal">닫기</button>
                     <button type="button" class="btn-primary">저장</button>
