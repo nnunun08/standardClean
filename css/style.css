@@ -26,7 +26,7 @@
   --light-greyScale-grey7: #30343A;
   --light-greyScale-grey8: #23262A;
   --light-greyScale-white: #FFFFFF;
-  --light-gridHover: #F0F4F9;
+  --light-gridHover: #F6F7F9;
   --light-outline: #E7E5ED;
   --light-secondary: #E7EDF7;
   --light-status-bronze: #EDE3DC;
@@ -338,6 +338,23 @@ input {
   outline: none;
 }
 
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--greyScale-grey1, rgba(124, 127, 130, 0.4823529412));
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-button {
+  display: none;
+}
+
 h2 {
   font-size: 28px;
   margin-bottom: 16px;
@@ -559,6 +576,70 @@ a:hover {
 }
 .btn-print:hover {
   opacity: 0.8;
+}
+
+.infoToolTip {
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+.infoToolTip:hover .infoMsg {
+  display: -webkit-box;
+}
+.infoToolTip.inline {
+  display: inline-block;
+}
+.infoToolTip.inline .infoMark {
+  margin-top: 2px;
+  margin-left: 5px;
+}
+
+.infoMark {
+  flex: 0 0 auto;
+  width: 12px;
+  height: 12px;
+  background: url(../img/ic_infoMark.svg) center no-repeat;
+}
+
+.infoBx {
+  position: absolute;
+  top: 20px;
+  left: -9px;
+  z-index: 1;
+}
+.infoBx .infoMsg {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  display: none;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 320px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: var(--num-4, 4px);
+  background: var(--greyScale-grey7, #30343A);
+  color: var(--greyScale-white, #FFF);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 16.8px */
+}
+.infoBx .infoMsg::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 10px;
+  width: 12px;
+  height: 12px;
+  background: var(--greyScale-grey7, #30343A);
+  display: block;
+  border-radius: 2px;
+  transform: rotate(45deg);
 }
 
 .input {
@@ -1954,7 +2035,7 @@ a:hover {
   box-shadow: 0 0 0 1px #E7E5ED;
 }
 .grid tbody tr:hover {
-  background: var(--gridHover, #F0F4F9);
+  background: var(--gridHover, #F6F7F9);
 }
 .grid tr.hightlight td {
   background: var(--gridHover, #F0F4F9);
@@ -2026,6 +2107,9 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
+.grid td .infoMark {
+  background-image: url(../img/ic_infoMark_grey.svg);
+}
 .grid .text-blue {
   color: var(--blueTone-primary, #1F79FF);
 }
@@ -2043,6 +2127,14 @@ a:hover {
   border-radius: 2px;
   color: var(--blueTone-primary, #1F79FF);
   background: var(--badgeBG, #E7EDF7);
+}
+.grid .finish {
+  padding-right: 22px;
+  background: url(../img/ic_status_check.svg) right center no-repeat;
+}
+.grid .stay {
+  padding-right: 22px;
+  background: url(../img/ic_status_nonCheck.svg) right center no-repeat;
 }
 .grid .stepUI {
   display: flex;
@@ -3957,6 +4049,8 @@ a:hover {
   display: flex;
   align-items: flex-start;
   gap: 20px;
+  border: 0;
+  border-radius: 0;
 }
 .chargeDetail .tray .tab3 .nav-link {
   color: var(--greyScale-grey3, #BDC1CC);
@@ -4054,60 +4148,6 @@ a:hover {
   letter-spacing: -0.26px;
   position: relative;
   margin: 6px 0;
-}
-.chargeDetail .tray .contrastCon .itemList .item .name .infoToolTip {
-  position: relative;
-  width: 12px;
-  height: 12px;
-}
-.chargeDetail .tray .contrastCon .itemList .item .name .infoToolTip:hover .infoMsg {
-  display: -webkit-box;
-}
-.chargeDetail .tray .contrastCon .itemList .item .name .infoMark {
-  flex: 0 0 auto;
-  width: 12px;
-  height: 12px;
-  background: url(../img/ic_infoMark.svg) center no-repeat;
-}
-.chargeDetail .tray .contrastCon .itemList .item .name .infoBx {
-  position: absolute;
-  top: 20px;
-  left: -9px;
-  z-index: 1;
-}
-.chargeDetail .tray .contrastCon .itemList .item .name .infoBx .infoMsg {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 10;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  display: none;
-  width: -moz-max-content;
-  width: max-content;
-  max-width: 320px;
-  padding: 8px 16px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: var(--num-4, 4px);
-  background: var(--greyScale-grey7, #30343A);
-  color: var(--greyScale-white, #FFF);
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%; /* 16.8px */
-}
-.chargeDetail .tray .contrastCon .itemList .item .name .infoBx .infoMsg::before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: 10px;
-  width: 12px;
-  height: 12px;
-  background: var(--greyScale-grey7, #30343A);
-  display: block;
-  border-radius: 2px;
-  transform: rotate(45deg);
 }
 .chargeDetail .tray .contrastCon .itemList .item .statusBadge {
   position: absolute;
