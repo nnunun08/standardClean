@@ -3384,29 +3384,30 @@ a:hover {
 .modal2 .modal-body .modalForm .form-check {
   display: inline-block;
   padding: 3px 0;
+  margin: 0;
   margin-right: 8px;
 }
 .modal2 .modal-body .modalForm .form-check .radio {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 24px;
+  height: 30px;
   min-width: 42px;
   padding: 0px 10px;
   border-radius: 40px;
-  background: var(--secondary, #E7EDF7);
+  border: 1px solid var(--greyScale-grey3, #BDC1CC);
   color: var(--greyScale-grey4, #8B909D);
   text-align: center;
   font-family: Pretendard;
   font-size: 13px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
 }
 .modal2 .modal-body .modalForm .form-check input {
   display: none;
 }
 .modal2 .modal-body .modalForm .form-check input:checked + .radio {
+  font-weight: 600;
+  border: 0;
   background: var(--blueTone-primary, #1F79FF);
   color: #fff;
 }
