@@ -207,7 +207,7 @@ a {
 @mixin tray {
 	border-radius: var(--Border-8, 8px);
 	border: 1px solid #E7E5ED;
-	background: #FFF;
+	background: var(--bgWhite, #FFF);
 	padding: 8px;
 	/* boxshadow */
 	box-shadow: 0px 4px 32px 0px rgba(171, 163, 194, 0.20);
@@ -1835,6 +1835,22 @@ a {
 	overflow: auto;
 	// overflow: hidden;
 	position: relative;
+
+
+	&.greyGrid {
+		border: 0;
+		background: var(--bgNormal, #F5F5F7);
+		padding: 0 40px;
+		box-shadow: none;
+		thead {
+			background-color: transparent;
+			box-shadow: none;
+			th {
+				border-bottom: 1px solid var(--outline, #E7E5ED);
+			}
+		}
+	}
+
 	table {
 		width: 100%;
 		&.tableFixed {
@@ -1845,7 +1861,7 @@ a {
 		position: sticky;
 		top: 0;
 		background-color: #fff;
-		box-shadow: 0 0 0 1px #E7E5ED;
+		box-shadow: 0 0 0 1px var(--outline, #E7E5ED);
 	}
 	tbody tr:hover {	
 		background: var(--gridHover, #F6F7F9);
@@ -1888,7 +1904,7 @@ a {
 		height: 34px;
 		padding: 6px 10px;
 		vertical-align: middle;
-		border-bottom: 1px solid #E7E5ED;
+		border-bottom: 1px solid var(--outline, #E7E5ED);
 		&:first-child {padding-left: 20px;}
 		&:last-child {padding-right: 20px;}
 		&.textRight {
@@ -4098,6 +4114,7 @@ a {
 	  }
 }
 
+.expenseLayout,
 .employeeLayout {
 	display: flex;
 	// align-items: stretch;
@@ -4311,5 +4328,20 @@ a {
 		font-style: normal;
 		font-weight: 600;
 		line-height: 22px; /* 137.5% */
+	}
+}
+
+
+.inlineForm {
+	min-height: 600px;
+	height: calc(100% - 37px);
+	@extend .modal2;
+	@include tray() {
+		padding: 40px;
+	};
+	.flexColumnGap40 {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
 	}
 }
