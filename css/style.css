@@ -624,7 +624,7 @@ a:hover {
   padding: 12px;
   transition: 0.2s;
   border-radius: 8px;
-  border: 1px solid var(--greyScale-grey4, #8B909D);
+  border: 1px solid var(--outline, #E7E5ED);
   display: inline-flex;
   width: 42px;
   height: 42px;
@@ -633,6 +633,31 @@ a:hover {
   text-indent: -9999px;
 }
 .btn-print:hover {
+  opacity: 0.8;
+}
+
+.btn-share {
+  width: 100%;
+  height: 56px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  transition: 0.2s;
+  border-radius: 8px;
+  border: 1px solid var(--outline, #E7E5ED);
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  color: var(--greyScale-white, #FFF);
+  background: url(../img/ic_share.svg) center no-repeat;
+  text-indent: -9999px;
+}
+.btn-share:hover {
   opacity: 0.8;
 }
 

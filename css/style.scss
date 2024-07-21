@@ -384,12 +384,25 @@ a {
 .btn-print {
 	@include btn {
 		border-radius: 8px;
-		border: 1px solid var(--greyScale-grey4, #8B909D);
+		border: 1px solid var(--outline, #E7E5ED);
 		display: inline-flex;
 		width: 42px;
 		height: 42px;
 		color: var(--greyScale-white, #FFF);
 		background: url(../img/ic_print.svg) center no-repeat;
+		text-indent: -9999px;
+	}
+}
+
+.btn-share {
+	@include btn {
+		border-radius: 8px;
+		border: 1px solid var(--outline, #E7E5ED);
+		display: inline-flex;
+		width: 42px;
+		height: 42px;
+		color: var(--greyScale-white, #FFF);
+		background: url(../img/ic_share.svg) center no-repeat;
 		text-indent: -9999px;
 	}
 }
