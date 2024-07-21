@@ -85,7 +85,10 @@
                         <div class="tab2">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="tab1" data-bs-toggle="tab" data-bs-target="#tab1-pane" type="button" role="tab" aria-controls="tab1-pane" aria-selected="true">비용</button>
+                                    <button class="nav-link active" id="tab3" data-bs-toggle="tab" data-bs-target="#tab3-pane" type="button" role="tab" aria-controls="tab3-pane" aria-selected="true">셀프견적</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="tab1" data-bs-toggle="tab" data-bs-target="#tab1-pane" type="button" role="tab" aria-controls="tab1-pane" aria-selected="true">비용</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#tab2-pane" type="button" role="tab" aria-controls="tab2-pane" aria-selected="false">단가</button>
@@ -93,8 +96,305 @@
                             </ul>
                             
                             <div class="tab-content" id="myTabContent" style="margin-top: 36px;">
+                                <!-- 셀프견적 -->
+                                <div class="tab-pane fade show active" id="tab3-pane" role="tabpanel" aria-labelledby="tab3" tabindex="0">
+                                    <div class="selfEstimate">
+                                        <h3>셀프로 필요한 작업의 수량, 범위를 설정해서 비용을 확인해보세요</h3>
+
+                                        <div class="estimateBox">
+                                            <div class="left">
+                                                <div class="tray">
+                                                    <div class="cate">
+                                                        <div class="gridTh">
+                                                            <div class="gridTh-item">카테고리</div>
+                                                        </div>
+                                                        <ul class="nav nav-tabs" id="estimateList" role="tablist">
+                                                            <li class="nav-item" role="presentation"><button class="nav-link active" id="estimateList1" data-bs-toggle="tab" data-bs-target="#estimateList1-pane" type="button" role="tab" aria-controls="estimateList1-pane" aria-selected="true">주방</button></li>
+                                                            <li class="nav-item" role="presentation"><button class="nav-link" id="estimateList2" data-bs-toggle="tab" data-bs-target="#estimateList2-pane" type="button" role="tab" aria-controls="estimateList2-pane" aria-selected="true">목대/가구</button></li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="content">
+                                                        <div class="gridTh">
+                                                            <div class="gridTh-item">작업 구분</div>
+                                                            <div class="gridTh-item">입력/단위</div>
+                                                            <div class="gridTh-item">금액</div>
+                                                            <div class="gridTh-item">제외</div>
+                                                        </div>
+                                                        <div class="tab-content" id="estimateListContent">
+                                                            <div class="tab-pane fade show active" id="estimateList1-pane" role="tabpanel" aria-labelledby="estimateList1" tabindex="0">
+                                                                <ul class="estimateItemWrap">
+                                                                    <li class="estimateItem">
+                                                                        <div class="text">
+                                                                            <div class="top">
+                                                                                <span class="tit">상부 하부장 철거</span>
+                                                                                <span class="gruop">메인 주방</span>
+                                                                            </div>
+                                                                            <span class="desc">싱크대 상부사이즈 +하부사이즈 6M이내 / 아일랜드 / 보조주방/시공목 포함 사이즈 전부 동일</span>
+                                                                        </div>
+                                                                        <div class="inputWrap">
+                                                                            <input type="number" placeholder="0">
+                                                                            <span class="legend">m</span>
+                                                                        </div>
+                                                                        <div class="price">0원</div>
+                                                                        <button class="rowDel">X</button>
+                                                                    </li>
+                                                                    <li class="estimateItem">
+                                                                        <div class="text">
+                                                                            <div class="top">
+                                                                                <span class="tit">보조주방 철거</span>
+                                                                                <span class="gruop">메인 주방</span>
+                                                                            </div>
+                                                                            <span class="desc">냉장고장 1칸당 / 냉장고장 2칸시 = 4만</span>
+                                                                        </div>
+                                                                        <div class="inputWrap">
+                                                                            <input type="number" placeholder="0">
+                                                                            <span class="legend">개</span>
+                                                                        </div>
+                                                                        <div class="price">0원</div>
+                                                                        <button class="rowDel">X</button>
+                                                                    </li>
+                                                                    <li class="estimateItem">
+                                                                        <div class="text">
+                                                                            <div class="top">
+                                                                                <span class="tit">일반장롱</span>
+                                                                                <span class="gruop">가구-붙[벽]박이/일반장롱</span>
+                                                                            </div>
+                                                                            <span class="desc">폭 100mm = 0.1m 당 주방 키큰장</span>
+                                                                        </div>
+                                                                        <div class="inputWrap">
+                                                                            <input type="number" placeholder="0">
+                                                                            <span class="legend">m</span>
+                                                                        </div>
+                                                                        <div class="price">0원</div>
+                                                                        <button class="rowDel">X</button>
+                                                                    </li>
+                                                                    <li class="estimateItem">
+                                                                        <div class="text">
+                                                                            <div class="top">
+                                                                                <span class="tit">냉장고장 철거</span>
+                                                                                <span class="gruop">냉장고장</span>
+                                                                            </div>
+                                                                            <span class="desc">폭 100mm = 0.1m 당 천연대리석 / 포세린 포함</span>
+                                                                        </div>
+                                                                        <div class="inputWrap">
+                                                                            <input type="number" placeholder="0">
+                                                                            <span class="legend">m</span>
+                                                                        </div>
+                                                                        <div class="price">0원</div>
+                                                                        <button class="rowDel">X</button>
+                                                                    </li>
+                                                                    <li class="estimateItem">
+                                                                        <div class="text">
+                                                                            <div class="top">
+                                                                                <span class="tit">냉장고장 EP</span>
+                                                                                <span class="gruop">냉장고장</span>
+                                                                            </div>
+                                                                            <span class="desc">폭 100mm = 0.1m 당(타일 높이 1.5M 이내) / (석고벽체시 파손 될 수 있음)</span>
+                                                                        </div>
+                                                                        <div class="inputWrap">
+                                                                            <input type="number" placeholder="0">
+                                                                            <span class="legend">m</span>
+                                                                        </div>
+                                                                        <div class="price">0원</div>
+                                                                        <button class="rowDel">X</button>
+                                                                    </li>
+                                                                    <li class="estimateItem">
+                                                                        <div class="text">
+                                                                            <div class="top">
+                                                                                <span class="tit">키큰장</span>
+                                                                                <span class="gruop">키큰장</span>
+                                                                            </div>
+                                                                            <span class="desc">폭 100mm = 0.1m 당 주방 키큰장</span>
+                                                                        </div>
+                                                                        <div class="inputWrap">
+                                                                            <input type="number" placeholder="0">
+                                                                            <span class="legend">개</span>
+                                                                        </div>
+                                                                        <div class="price">0원</div>
+                                                                        <button class="rowDel">X</button>
+                                                                    </li>
+                                                                    <li class="estimateItem">
+                                                                        <div class="text">
+                                                                            <div class="top">
+                                                                                <span class="tit">주방 상판 칸스톤 철거</span>
+                                                                                <span class="gruop">칸스톤(천연대리석)</span>
+                                                                            </div>
+                                                                            <span class="desc">폭 100mm = 0.1m 당 주방 키큰장</span>
+                                                                        </div>
+                                                                        <div class="inputWrap">
+                                                                            <input type="number" placeholder="0">
+                                                                            <span class="legend">개</span>
+                                                                        </div>
+                                                                        <div class="price">0원</div>
+                                                                        <button class="rowDel">X</button>
+                                                                    </li>
+                                                                    <li class="estimateItem">
+                                                                        <div class="text">
+                                                                            <div class="top">
+                                                                                <span class="tit">기타 명세 품목</span>
+                                                                                <span class="gruop">소 분류명</span>
+                                                                            </div>
+                                                                            <span class="desc">견적에 대한 상세 설명 내용, 문구, 참고 내용 등</span>
+                                                                        </div>
+                                                                        <div class="inputWrap">
+                                                                            <input type="number" placeholder="0">
+                                                                            <span class="legend">개</span>
+                                                                        </div>
+                                                                        <div class="price">0원</div>
+                                                                        <button class="rowDel">X</button>
+                                                                    </li>
+                                                                    <li class="estimateItem">
+                                                                        <div class="text">
+                                                                            <div class="top">
+                                                                                <span class="tit">기타 명세 품목</span>
+                                                                                <span class="gruop">소 분류명</span>
+                                                                            </div>
+                                                                            <span class="desc">견적에 대한 상세 설명 내용, 문구, 참고 내용 등</span>
+                                                                        </div>
+                                                                        <div class="inputWrap">
+                                                                            <input type="number" placeholder="0">
+                                                                            <span class="legend">개</span>
+                                                                        </div>
+                                                                        <div class="price">0원</div>
+                                                                        <button class="rowDel">X</button>
+                                                                    </li>
+                                                                    <li class="estimateItem">
+                                                                        <div class="text">
+                                                                            <div class="top">
+                                                                                <span class="tit">기타 명세 품목</span>
+                                                                                <span class="gruop">소 분류명</span>
+                                                                            </div>
+                                                                            <span class="desc">견적에 대한 상세 설명 내용, 문구, 참고 내용 등</span>
+                                                                        </div>
+                                                                        <div class="inputWrap">
+                                                                            <input type="number" placeholder="0">
+                                                                            <span class="legend">개</span>
+                                                                        </div>
+                                                                        <div class="price">0원</div>
+                                                                        <button class="rowDel">X</button>
+                                                                    </li>
+                                                                    <li class="estimateItem">
+                                                                        <div class="text">
+                                                                            <div class="top">
+                                                                                <span class="tit">기타 명세 품목</span>
+                                                                                <span class="gruop">소 분류명</span>
+                                                                            </div>
+                                                                            <span class="desc">견적에 대한 상세 설명 내용, 문구, 참고 내용 등</span>
+                                                                        </div>
+                                                                        <div class="inputWrap">
+                                                                            <input type="number" placeholder="0">
+                                                                            <span class="legend">개</span>
+                                                                        </div>
+                                                                        <div class="price">0원</div>
+                                                                        <button class="rowDel">X</button>
+                                                                    </li>
+                                                                    <li class="estimateItem">
+                                                                        <div class="text">
+                                                                            <div class="top">
+                                                                                <span class="tit">기타 명세 품목</span>
+                                                                                <span class="gruop">소 분류명</span>
+                                                                            </div>
+                                                                            <span class="desc">견적에 대한 상세 설명 내용, 문구, 참고 내용 등</span>
+                                                                        </div>
+                                                                        <div class="inputWrap">
+                                                                            <input type="number" placeholder="0">
+                                                                            <span class="legend">개</span>
+                                                                        </div>
+                                                                        <div class="price">0원</div>
+                                                                        <button class="rowDel">X</button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="tab-pane fade show" id="estimateList2-pane" role="tabpanel" aria-labelledby="estimateList2" tabindex="0">
+                                                                <ul class="estimateItemWrap">
+                                                                    <li class="estimateItem">
+                                                                        <div class="text">
+                                                                            <div class="top">
+                                                                                <span class="tit">상부 하부장 철거</span>
+                                                                                <span class="gruop">메인 주방</span>
+                                                                            </div>
+                                                                            <span class="desc">싱크대 상부사이즈 +하부사이즈 6M이내 / 아일랜드 / 보조주방/시공목 포함 사이즈 전부 동일</span>
+                                                                        </div>
+                                                                        <div class="inputWrap">
+                                                                            <input type="number" placeholder="0">
+                                                                            <span class="legend">m</span>
+                                                                        </div>
+                                                                        <div class="price">0원</div>
+                                                                        <button class="rowDel">X</button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="right">
+                                                <div class="top">
+                                                    <div class="tit">예상 견적</div>
+                                                    <div class="insert">
+                                                        <div class="caption">마진율 설정</div>
+                                                        <input type="number" value="10" placeholder="0">
+                                                        <div class="legend">%</div>
+                                                    </div>
+                                                </div>
+
+                                                <ul class="resultList">
+                                                    <li class="resultItem">
+                                                        <div class="name">상부장철거</div>
+                                                        <div>
+                                                            <div class="origin">
+                                                                <div class="discount">10%</div>
+                                                                <div class="price">370,000원</div>
+                                                            </div>
+                                                            <div class="result">407,000원</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="resultItem">
+                                                        <div class="name">냉장고장</div>
+                                                        <div>
+                                                            <div class="origin">
+                                                                <div class="discount">10%</div>
+                                                                <div class="price">80,000원</div>
+                                                            </div>
+                                                            <div class="result">88,000원</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="resultItem">
+                                                        <div class="name">상부장철거</div>
+                                                        <div>
+                                                            <div class="origin">
+                                                                <div class="discount">10%</div>
+                                                                <div class="price">1,230,000원</div>
+                                                            </div>
+                                                            <div class="result">1,353,000원</div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="total">
+                                                    <div class="totalList">
+                                                        <div class="key">단가</div>
+                                                        <div class="value">1,680,000원</div>
+                                                    </div>
+                                                    <div class="totalList">
+                                                        <div class="key">마진율</div>
+                                                        <div class="value">10%</div>
+                                                    </div>
+                                                    <div class="divider"></div>
+                                                    <div class="totalResult">
+                                                        <div class="key">최종 견적</div>
+                                                        <div class="value">1,848,000원</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
                                 <!-- 단가 -->
-                                <div class="tab-pane fade show active" id="tab1-pane" role="tabpanel" aria-labelledby="tab1" tabindex="0">
+                                <div class="tab-pane fade" id="tab1-pane" role="tabpanel" aria-labelledby="tab1" tabindex="0">
                                     <!-- 검색모듈 -->
                                     <div class="searchModule">
                                         <div class="item">
@@ -556,7 +856,7 @@
                         <div class="tr">
                             <div class="th">현장번호</div>
                             <div class="td">
-                                <input type="text" placeholder="0">
+                                <input type="number" placeholder="0">
                             </div>
                         </div>
                         <div class="tr">
