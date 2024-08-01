@@ -159,6 +159,10 @@ body {
 	}
 }
 
+#film {
+	position: fixed;
+}
+
 
 button {
 	font-family: inherit;
@@ -596,6 +600,13 @@ a {
 		border-radius: var(--num-4, 4px);
 	}
 	.page-item {
+		.page-link {
+			&:hover {
+				background-color: var(--bgNormal);
+				text-decoration: none;
+				color: inherit;
+			}
+		}
 		&.active .page-link {
 			background: var(--blueTone-primary, #1F79FF);
 			color: #fff;
@@ -631,7 +642,7 @@ a {
 	.dropdown-menu {
 		border-radius: 4px;
 		background: var(--bgWhite);
-		background: var(--bgNormal);
+		// background: var(--bgNormal);
 		padding: 0 !important;
 		border: 0;
 		box-shadow: 0 0 0 1px var(--outline);
@@ -1320,6 +1331,7 @@ a {
 	display: flex;
 	height: 100vh;
 	min-width: 1260px;
+	min-width: 1440px;
 	.conLayout {
 		flex: 1 0 0;
 		background-color: var(--bgWhite);
@@ -1328,6 +1340,7 @@ a {
 		.contents {
 			width: 100%;
 			padding: 40px;
+			padding-bottom: 0;
 			// height: 120vh;
 			box-sizing: border-box;
 		}
@@ -1953,8 +1966,8 @@ a {
 		font-weight: 700;
 		// line-height: 22px; /* 157.143% */
 		line-height: 1.2;
-
-		height: 42px;
+		// height: 42px;
+		height: 46px;
 		padding: 10px;
 		vertical-align: middle;
 		// border-bottom: 1px solid var(--outline, #E7E5ED);
@@ -1983,7 +1996,13 @@ a {
 			text-align: right;
 		}
 		
-		
+		.ridge {
+			border: 0;
+			color: var(--blueTone-primary);
+			&:hover {
+				font-weight: inherit;
+			}
+		}
 		.red {
 			color: #E63939;
 		}
@@ -2160,6 +2179,7 @@ a {
 			color: var(--greyScale-grey6, #434850);
 			font-weight: 600;
 			padding: 8px 16px;
+			background-color: var(--bgNormal);
 		}
 
 		.red {
@@ -2255,6 +2275,12 @@ a {
 				&:last-child .date {
 					color: var(--greyScale-grey4, #8B909D);
 				}
+
+				&.active {
+					border: 0 !important;
+					background-color: var(--blueTone-blue1);
+				}
+
 				.date {
 					color: var(--greyScale-grey7, #30343A);
 					text-align: center;
@@ -2756,6 +2782,12 @@ a {
 		gap: 40px;
 		background: var(--bgWhite, #FFF);
 	}
+
+	// 모달푸터가 없을때 패딩바텀을 좀 더 넓게 디자인
+	.modal-content:not(:has(.modal-footer)) {
+		padding-bottom: 60px;
+	}
+
 	.modal-header {
 		padding: 0;
 		border: 0;
@@ -3016,6 +3048,7 @@ a {
 					color: var(--greyScale-grey3, #BDC1CC);
 				}
 			}
+			input[type="number"],
 			input[type="text"] {
 				width: 100%;
 				height: 36px;
@@ -4994,14 +5027,24 @@ a {
 			margin-top: 10px;
 			height: 422px;
 			overflow: auto;
+			.resultItem + .resultItem {
+				margin-top: 20px;
+			}
 			.resultItem {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
-				height: 46px;
+				min-height: 46px;
 				padding: 0 10px;
 				text-align: right;
+				gap: 4px;
+				.rowDel {
+					width: 20px;
+					height: 20px;
+					background-size: 50%;
+				}
 				.name {
+					flex: 1 0 0;
 					color: var(--greyScale-grey5, #686E7A);
 					font-family: Pretendard;
 					font-size: 14px;
@@ -5010,6 +5053,11 @@ a {
 					line-height: 130%; /* 18.2px */
 					letter-spacing: -0.28px;
 					text-align: left;
+					.hierarchy {
+						font-size: 13px;
+						font-weight: 400;
+						color: var(--greyScale-grey3);
+					}
 				}
 				.origin {
 					display: flex;
@@ -5194,7 +5242,6 @@ a {
 		.td {
 			flex: 1 0 0;
 		}
-
 		input[type="text"] {
 			width: 100%;
 			height: 36px;

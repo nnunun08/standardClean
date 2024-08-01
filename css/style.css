@@ -338,6 +338,10 @@ body.dark .modeBtn {
   background: url(../img/mode_dark.svg) center no-repeat;
 }
 
+#film {
+  position: fixed;
+}
+
 button {
   font-family: inherit;
   letter-spacing: -0.025em;
@@ -747,6 +751,11 @@ a:hover {
   border-radius: var(--num-4, 4px);
 }
 
+.page-item .page-link:hover {
+  background-color: var(--bgNormal);
+  text-decoration: none;
+  color: inherit;
+}
 .page-item.active .page-link {
   background: var(--blueTone-primary, #1F79FF);
   color: #fff;
@@ -951,7 +960,6 @@ a:hover {
 .searchModule .dropdown-menu {
   border-radius: 4px;
   background: var(--bgWhite);
-  background: var(--bgNormal);
   padding: 0 !important;
   border: 0;
   box-shadow: 0 0 0 1px var(--outline);
@@ -1429,6 +1437,7 @@ a:hover {
   display: flex;
   height: 100vh;
   min-width: 1260px;
+  min-width: 1440px;
 }
 .page-wrap .conLayout {
   flex: 1 0 0;
@@ -1439,6 +1448,7 @@ a:hover {
 .page-wrap .conLayout .contents {
   width: 100%;
   padding: 40px;
+  padding-bottom: 0;
   box-sizing: border-box;
 }
 
@@ -1483,7 +1493,6 @@ a:hover {
 .gnb .dropdown-menu {
   border-radius: 4px;
   background: var(--bgWhite);
-  background: var(--bgNormal);
   padding: 0 !important;
   border: 0;
   box-shadow: 0 0 0 1px var(--outline);
@@ -1693,7 +1702,6 @@ a:hover {
 .gnb .myState .more .dropdown-menu {
   border-radius: 4px;
   background: var(--bgWhite);
-  background: var(--bgNormal);
   padding: 0 !important;
   border: 0;
   box-shadow: 0 0 0 1px var(--outline);
@@ -2232,7 +2240,7 @@ a:hover {
   font-style: normal;
   font-weight: 700;
   line-height: 1.2;
-  height: 42px;
+  height: 46px;
   padding: 10px;
   vertical-align: middle;
 }
@@ -2266,6 +2274,13 @@ a:hover {
 }
 .grid td.textRight {
   text-align: right;
+}
+.grid td .ridge {
+  border: 0;
+  color: var(--blueTone-primary);
+}
+.grid td .ridge:hover {
+  font-weight: inherit;
 }
 .grid td .red {
   color: #E63939;
@@ -2442,7 +2457,6 @@ a:hover {
 .grid .dropdown-menu {
   border-radius: 4px;
   background: var(--bgWhite);
-  background: var(--bgNormal);
   padding: 0 !important;
   border: 0;
   box-shadow: 0 0 0 1px var(--outline);
@@ -2482,6 +2496,7 @@ a:hover {
   color: var(--greyScale-grey6, #434850);
   font-weight: 600;
   padding: 8px 16px;
+  background-color: var(--bgNormal);
 }
 .grid .dropdown-menu .red {
   color: var(--status-red, #E63939);
@@ -2508,6 +2523,11 @@ a:hover {
   line-height: normal;
   letter-spacing: -0.14px;
   border-radius: var(--num-4, 4px);
+}
+.grid .page-item .page-link:hover {
+  background-color: var(--bgNormal);
+  text-decoration: none;
+  color: inherit;
 }
 .grid .page-item.active .page-link {
   background: var(--blueTone-primary, #1F79FF);
@@ -2603,6 +2623,10 @@ a:hover {
 }
 .schedule .calendarBody .calRow .day:first-child .date, .schedule .calendarBody .calRow .day:last-child .date {
   color: var(--greyScale-grey4, #8B909D);
+}
+.schedule .calendarBody .calRow .day.active {
+  border: 0 !important;
+  background-color: var(--blueTone-blue1);
 }
 .schedule .calendarBody .calRow .day .date {
   color: var(--greyScale-grey7, #30343A);
@@ -3154,6 +3178,9 @@ a:hover {
   gap: 40px;
   background: var(--bgWhite, #FFF);
 }
+.modal2 .modal-content:not(:has(.modal-footer)), .inlineForm .modal-content:not(:has(.modal-footer)) {
+  padding-bottom: 60px;
+}
 .modal2 .modal-header, .inlineForm .modal-header {
   padding: 0;
   border: 0;
@@ -3430,7 +3457,9 @@ a:hover {
   background: var(--greyScale-grey1, #DEE3E9);
   color: var(--greyScale-grey3, #BDC1CC);
 }
-.modal2 .modal-body .modalForm input[type=text], .inlineForm .modal-body .modalForm input[type=text] {
+.modal2 .modal-body .modalForm input[type=number], .inlineForm .modal-body .modalForm input[type=number],
+.modal2 .modal-body .modalForm input[type=text],
+.inlineForm .modal-body .modalForm input[type=text] {
   width: 100%;
   height: 36px;
   padding: 0 14px;
@@ -3445,21 +3474,27 @@ a:hover {
   border: 1px solid var(--greyScale-grey2, #CFD4D9);
   color: var(--greyScale-grey6, #434850);
 }
-.modal2 .modal-body .modalForm input[type=text]::-moz-placeholder, .inlineForm .modal-body .modalForm input[type=text]::-moz-placeholder {
+.modal2 .modal-body .modalForm input[type=number]::-moz-placeholder, .inlineForm .modal-body .modalForm input[type=number]::-moz-placeholder, .modal2 .modal-body .modalForm input[type=text]::-moz-placeholder, .inlineForm .modal-body .modalForm input[type=text]::-moz-placeholder {
   color: var(--greyScale-grey2, #CFD4D9);
 }
-.modal2 .modal-body .modalForm input[type=text]::placeholder, .inlineForm .modal-body .modalForm input[type=text]::placeholder {
+.modal2 .modal-body .modalForm input[type=number]::placeholder, .inlineForm .modal-body .modalForm input[type=number]::placeholder,
+.modal2 .modal-body .modalForm input[type=text]::placeholder,
+.inlineForm .modal-body .modalForm input[type=text]::placeholder {
   color: var(--greyScale-grey2, #CFD4D9);
 }
-.modal2 .modal-body .modalForm input[type=text][disabled], .inlineForm .modal-body .modalForm input[type=text][disabled] {
+.modal2 .modal-body .modalForm input[type=number][disabled], .inlineForm .modal-body .modalForm input[type=number][disabled],
+.modal2 .modal-body .modalForm input[type=text][disabled],
+.inlineForm .modal-body .modalForm input[type=text][disabled] {
   border: 1px solid var(--greyScale-grey2, #CFD4D9);
   background: var(--greyScale-grey1, #DEE3E9);
   color: var(--greyScale-grey3, #BDC1CC);
 }
-.modal2 .modal-body .modalForm input[type=text][disabled]::-moz-placeholder, .inlineForm .modal-body .modalForm input[type=text][disabled]::-moz-placeholder {
+.modal2 .modal-body .modalForm input[type=number][disabled]::-moz-placeholder, .inlineForm .modal-body .modalForm input[type=number][disabled]::-moz-placeholder, .modal2 .modal-body .modalForm input[type=text][disabled]::-moz-placeholder, .inlineForm .modal-body .modalForm input[type=text][disabled]::-moz-placeholder {
   color: var(--greyScale-grey3, #BDC1CC);
 }
-.modal2 .modal-body .modalForm input[type=text][disabled]::placeholder, .inlineForm .modal-body .modalForm input[type=text][disabled]::placeholder {
+.modal2 .modal-body .modalForm input[type=number][disabled]::placeholder, .inlineForm .modal-body .modalForm input[type=number][disabled]::placeholder,
+.modal2 .modal-body .modalForm input[type=text][disabled]::placeholder,
+.inlineForm .modal-body .modalForm input[type=text][disabled]::placeholder {
   color: var(--greyScale-grey3, #BDC1CC);
 }
 .modal2 .modal-body .modalForm textarea, .inlineForm .modal-body .modalForm textarea {
@@ -4521,7 +4556,6 @@ a:hover {
 .chargeDetail .tray .contrastCon .itemList .item .dropdown-menu {
   border-radius: 4px;
   background: var(--bgWhite);
-  background: var(--bgNormal);
   padding: 0 !important;
   border: 0;
   box-shadow: 0 0 0 1px var(--outline);
@@ -4945,7 +4979,6 @@ a:hover {
 .employeeLayout .rightLayout .dropdown-menu {
   border-radius: 4px;
   background: var(--bgWhite);
-  background: var(--bgNormal);
   padding: 0 !important;
   border: 0;
   box-shadow: 0 0 0 1px var(--outline);
@@ -5599,15 +5632,25 @@ a:hover {
   height: 422px;
   overflow: auto;
 }
+.selfEstimate .estimateBox .resultList .resultItem + .resultItem {
+  margin-top: 20px;
+}
 .selfEstimate .estimateBox .resultList .resultItem {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 46px;
+  min-height: 46px;
   padding: 0 10px;
   text-align: right;
+  gap: 4px;
+}
+.selfEstimate .estimateBox .resultList .resultItem .rowDel {
+  width: 20px;
+  height: 20px;
+  background-size: 50%;
 }
 .selfEstimate .estimateBox .resultList .resultItem .name {
+  flex: 1 0 0;
   color: var(--greyScale-grey5, #686E7A);
   font-family: Pretendard;
   font-size: 14px;
@@ -5616,6 +5659,11 @@ a:hover {
   line-height: 130%; /* 18.2px */
   letter-spacing: -0.28px;
   text-align: left;
+}
+.selfEstimate .estimateBox .resultList .resultItem .name .hierarchy {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--greyScale-grey3);
 }
 .selfEstimate .estimateBox .resultList .resultItem .origin {
   display: flex;
