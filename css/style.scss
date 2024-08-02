@@ -896,6 +896,8 @@ a {
 		justify-content: flex-start;
 		gap: 20px;
 		padding-top: 28px;
+		position: fixed;
+		overflow: auto;
 	}
 	.confirm,
 	.alert {
@@ -2779,6 +2781,7 @@ a {
 	$contentPadding : 40px;
 	.modal-content {
 		padding: $contentPadding;
+		padding-bottom: 30px;
 		gap: 40px;
 		background: var(--bgWhite, #FFF);
 	}
