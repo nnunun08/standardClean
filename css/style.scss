@@ -227,6 +227,33 @@ a {
 	}
 }
 
+@mixin nodata() {
+	.noData {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 20px;
+		gap: 10px;
+		// border-top: 1px solid var(--outline, var(--outline, #E7E5ED));
+		color: var(--greyScale-grey3, #BDC1CC);
+		font-family: Pretendard;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		height: 100%;
+		path {
+			fill: var(--greyScale-grey3, #BDC1CC);
+		}
+		&:only-child {
+			display: flex;
+		}
+		@content;
+	}
+}
+@include nodata;
+
 @mixin dropArr {
 	content: '';
 	display: block;
@@ -2146,6 +2173,7 @@ a {
 	.noData {
 		position: relative;
 		background: none !important;
+		display: table-row;
 		td {
 			padding-top: 100px;
 			border: 0;
@@ -2574,26 +2602,8 @@ a {
 				}
 			}
 		}
-		.noData {
-			display: none;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			padding: 20px;
-			gap: 10px;
+		@include nodata() {
 			border-top: 1px solid var(--outline, var(--outline, #E7E5ED));
-			color: var(--greyScale-grey3, #BDC1CC);
-			font-family: Pretendard;
-			font-size: 16px;
-			font-style: normal;
-			font-weight: 700;
-			line-height: normal;
-			path {
-				fill: var(--greyScale-grey3, #BDC1CC);
-			}
-		}
-		.noData:only-child {
-			display: flex;		
 		}
 	}
 	
