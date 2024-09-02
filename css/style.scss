@@ -1008,8 +1008,8 @@ a {
 		gap: 24px;
 		border: 1px solid #CFD4D9;
 		border-radius: 5px;
-		padding: 42px;
-		padding-bottom: 60px;
+		padding: 30px 42px;
+		// padding-bottom: 60px;
 		margin-bottom: 36px;
 		color: var(--greyScale-grey4);
 		font-weight: 600;
@@ -1048,6 +1048,7 @@ a {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			margin-top: 8px;
 			span {
 				color: #757881;
 				font-size: 16px;
@@ -3031,6 +3032,7 @@ a {
 			}
 
 			.btn-border-sm {
+				display: inline-flex;
 				height: 36px;
 			}
 
@@ -3051,6 +3053,7 @@ a {
 					color: var(--greyScale-grey3, #BDC1CC);
 				}
 			}
+			input[type="password"],
 			input[type="number"],
 			input[type="text"] {
 				width: 100%;
@@ -4761,6 +4764,7 @@ a {
 }
 
 .selfEstimate {
+	padding-bottom: 40px;
 	h3 {
 		color: var(--greyScale-grey5, #686E7A);
 		text-align: center;
@@ -4770,14 +4774,18 @@ a {
 		font-weight: 500;
 		line-height: 150%; /* 31.5px */
 		letter-spacing: -0.63px;
-		margin-bottom: 24px;
+		margin-bottom: 34px;
+	}
+	.gridTit {
+		justify-content: space-between;
+		margin-bottom: 20px;
 	}
 	.estimateBox {
 
 		@mixin estimateBoxColWidth () {
 			> div:nth-child(1){flex: 1 0 0;}
 			> div:nth-child(2){flex: 0 0 80px; text-align: right;}
-			> div:nth-child(3){flex: 0 0 100px; text-align: right;}
+			> div:nth-child(3){flex: 0 0 30px; text-align: right;}
 			> div:nth-child(4){flex: 0 0 38px; text-align: center;}
 		}
 		position: relative;
@@ -4946,6 +4954,11 @@ a {
 						line-height: 150%; /* 21px */
 						letter-spacing: -0.28px;
 					}
+				}
+				.rowPlus {
+					border:0;
+					background-color: transparent;
+					padding: 0;
 				}
 				.price {
 					flex: 0 0 100px;
@@ -5164,7 +5177,11 @@ a {
 	}
 }
 
+.modalForm .setting .section {
+	border-top: 0;
+}
 .setting {
+	width: 100%;
 	.profileWrap {
 		display: flex;
 		align-items: center;
@@ -5196,7 +5213,7 @@ a {
 			font-style: normal;
 			font-weight: 600;
 			line-height: 22px; /* 183.333% */
-			height: 24px;
+			height: 24px !important;
 			padding: 0 4px;
 			border: 1px solid var(--greyScale-grey3, #BDC1CC);
 		}

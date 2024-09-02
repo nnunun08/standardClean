@@ -84,6 +84,7 @@
                         샘플
                     </h2>
                     <div class="btn-black" data-bs-toggle="modal" data-bs-target="#imgSlide">이미지슬라이드</div>
+                    <div class="btn-black" data-bs-toggle="modal" data-bs-target="#profile">계정정보</div>
                     <div class="inner">
                     </div>
                 </div>
@@ -114,6 +115,97 @@
                         <div><img src="./img/dummy02.png" alt="img"></div>
                         <div><img src="./img/dummy.png" alt="img"></div>
                         <div><img src="./img/dummy03.png" alt="img"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 계정정보 -->
+    <div class="profileModal modal2 modal fade" id="profile" tabindex="-1" aria-labelledby="profileLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="h1Wrap">
+                        <h1 class="modal-title" id="billLabel">
+                            계정정보
+                        </h1>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="modalForm">
+                        <div class="setting">
+                            <div class="profileWrap">
+                                <div class="profile">
+                                    <div class="imgWrap">
+                                        <!-- <img src="./img/img_profile_df.jpg" alt="profile"> -->
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="btn-border-sm">
+                                        <input type="file">
+                                        프로필 수정</label>
+                                    <button class="btn-border-sm">프로필 삭제</button>
+                                </div>
+                            </div>
+                            <div class="section">
+                                <h3>계정정보</h3>
+                                <div class="settingForm">
+                                    <div class="tr">
+                                        <div class="th">text</div>
+                                        <div class="td">
+                                            <input type="text" placeholder="" value="카카오철거">
+                                        </div>
+                                    </div>
+                                    <div class="tr">
+                                        <div class="th">select</div>
+                                        <div class="td">
+                                            <select name="" id="">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="tr">
+                                        <div class="th">비밀번호 신규</div>
+                                        <div class="td">
+                                            <input type="password" id="user_pass_new" class="input_small" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="tr">
+                                        <div class="th">비밀번호 확인</div>
+                                        <div class="td">
+                                            <input type="password" id="user_pass_check" class="input_small" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section">
+                                <h3>사업자 정보</h3>
+                                <div class="settingForm">
+                                    <div class="tr">
+                                        <div class="th">text</div>
+                                        <div class="td">
+                                            <input type="text" placeholder="" value="카카오철거">
+                                        </div>
+                                    </div>
+                                    <div class="tr">
+                                        <div class="th">select</div>
+                                        <div class="td">
+                                            <select name="" id="">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>

@@ -104,6 +104,28 @@
                                     <div class="selfEstimate">
                                         <h3>셀프로 필요한 작업의 수량, 범위를 설정해서 비용을 확인해보세요</h3>
 
+
+                                        <div class="gridTit">
+                                            <div>
+                                                <select id="estimate_seq" class="form-control wid_300" style="float:left; margin-right: 4px;" onchange="onchange_estimate_extend_select();">
+                                                    <option value="">예상견적서</option><option disabled="">-----------</option>
+                                                </select>
+                                                <button type="button" class="btn-black" style="float:left; width:100px; height:37px;" onclick="estimate_pdf();">PDF</button>
+                                            </div>
+                                            <!-- <h3 style="float:left; width:90%; margin-bottom:0px;">셀프로 필요한 작업의 수량, 범위를 설정해서 비용을 확인해보세요</h3> -->
+                                            
+                                            <div>
+                                                <input type="text" id="estimate_name" class="form-control wid_300" style="display: inline-block; margin-right: 2px;" placeholder="견적서명">
+                                                <div style="display: inline-block; width:70px; margin-right: 2px;">
+                                                    <button type="button" class="btn-primary" style="height:37px;" onclick="estimate_extend_process();">저장</button>
+                                                </div>
+                                                <div style="display: inline-block;width:70px;">
+                                                    <button type="button" class="btn-primary" style="height:37px;" onclick="estimate_extend_init();">초기화</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
                                         <div class="estimateBox">
                                             <div class="left">
                                                 <div class="tray">
@@ -121,7 +143,7 @@
                                                         <div class="gridTh">
                                                             <div class="gridTh-item">작업 구분</div>
                                                             <div class="gridTh-item">입력/단위</div>
-                                                            <div class="gridTh-item">금액</div>
+                                                            <div class="gridTh-item">추가</div>
                                                             <!-- <div class="gridTh-item">제외</div> -->
                                                         </div>
                                                         <div class="tab-content" id="estimateListContent">
@@ -139,8 +161,12 @@
                                                                             <input type="number" placeholder="0">
                                                                             <span class="legend">m</span>
                                                                         </div>
-                                                                        <div class="price">0원</div>
-                                                                        <!-- <button class="rowDel">X</button> -->
+                                                                        <button class="rowPlus" onclick="self_division_estimate_insert('100032','m');">
+                                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M4 0.5H16C17.933 0.5 19.5 2.067 19.5 4V16C19.5 17.933 17.933 19.5 16 19.5H4C2.067 19.5 0.5 17.933 0.5 16V4C0.5 2.067 2.067 0.5 4 0.5Z" stroke="#1F79FF"/>
+                                                                                <path d="M10 5.75781V14.2444M5.75671 10.0011H14.2433" stroke="#1F79FF"/>
+                                                                            </svg>                                                                                    
+                                                                        </button>
                                                                     </li>
                                                                     <li class="estimateItem">
                                                                         <div class="text">
@@ -154,7 +180,12 @@
                                                                             <input type="number" placeholder="0">
                                                                             <span class="legend">개</span>
                                                                         </div>
-                                                                        <div class="price">0원</div>
+                                                                        <button class="rowPlus" onclick="self_division_estimate_insert('100032','m');">
+                                                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path d="M4 0.5H16C17.933 0.5 19.5 2.067 19.5 4V16C19.5 17.933 17.933 19.5 16 19.5H4C2.067 19.5 0.5 17.933 0.5 16V4C0.5 2.067 2.067 0.5 4 0.5Z" stroke="#1F79FF"/>
+                                                                                    <path d="M10 5.75781V14.2444M5.75671 10.0011H14.2433" stroke="#1F79FF"/>
+                                                                                </svg>                                                                                    
+                                                                            </button>
                                                                         <!-- <button class="rowDel">X</button> -->
                                                                     </li>
                                                                     <li class="estimateItem">
@@ -169,7 +200,12 @@
                                                                             <input type="number" placeholder="0">
                                                                             <span class="legend">m</span>
                                                                         </div>
-                                                                        <div class="price">0원</div>
+                                                                        <button class="rowPlus" onclick="self_division_estimate_insert('100032','m');">
+                                                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path d="M4 0.5H16C17.933 0.5 19.5 2.067 19.5 4V16C19.5 17.933 17.933 19.5 16 19.5H4C2.067 19.5 0.5 17.933 0.5 16V4C0.5 2.067 2.067 0.5 4 0.5Z" stroke="#1F79FF"/>
+                                                                                    <path d="M10 5.75781V14.2444M5.75671 10.0011H14.2433" stroke="#1F79FF"/>
+                                                                                </svg>                                                                                    
+                                                                            </button>
                                                                         <!-- <button class="rowDel">X</button> -->
                                                                     </li>
                                                                     <li class="estimateItem">
@@ -184,7 +220,12 @@
                                                                             <input type="number" placeholder="0">
                                                                             <span class="legend">m</span>
                                                                         </div>
-                                                                        <div class="price">0원</div>
+                                                                        <button class="rowPlus" onclick="self_division_estimate_insert('100032','m');">
+                                                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path d="M4 0.5H16C17.933 0.5 19.5 2.067 19.5 4V16C19.5 17.933 17.933 19.5 16 19.5H4C2.067 19.5 0.5 17.933 0.5 16V4C0.5 2.067 2.067 0.5 4 0.5Z" stroke="#1F79FF"/>
+                                                                                    <path d="M10 5.75781V14.2444M5.75671 10.0011H14.2433" stroke="#1F79FF"/>
+                                                                                </svg>                                                                                    
+                                                                            </button>
                                                                         <!-- <button class="rowDel">X</button> -->
                                                                     </li>
                                                                     <li class="estimateItem">
@@ -199,7 +240,12 @@
                                                                             <input type="number" placeholder="0">
                                                                             <span class="legend">m</span>
                                                                         </div>
-                                                                        <div class="price">0원</div>
+                                                                        <button class="rowPlus" onclick="self_division_estimate_insert('100032','m');">
+                                                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path d="M4 0.5H16C17.933 0.5 19.5 2.067 19.5 4V16C19.5 17.933 17.933 19.5 16 19.5H4C2.067 19.5 0.5 17.933 0.5 16V4C0.5 2.067 2.067 0.5 4 0.5Z" stroke="#1F79FF"/>
+                                                                                    <path d="M10 5.75781V14.2444M5.75671 10.0011H14.2433" stroke="#1F79FF"/>
+                                                                                </svg>                                                                                    
+                                                                            </button>
                                                                         <!-- <button class="rowDel">X</button> -->
                                                                     </li>
                                                                     <li class="estimateItem">
@@ -214,7 +260,12 @@
                                                                             <input type="number" placeholder="0">
                                                                             <span class="legend">개</span>
                                                                         </div>
-                                                                        <div class="price">0원</div>
+                                                                        <button class="rowPlus" onclick="self_division_estimate_insert('100032','m');">
+                                                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path d="M4 0.5H16C17.933 0.5 19.5 2.067 19.5 4V16C19.5 17.933 17.933 19.5 16 19.5H4C2.067 19.5 0.5 17.933 0.5 16V4C0.5 2.067 2.067 0.5 4 0.5Z" stroke="#1F79FF"/>
+                                                                                    <path d="M10 5.75781V14.2444M5.75671 10.0011H14.2433" stroke="#1F79FF"/>
+                                                                                </svg>                                                                                    
+                                                                            </button>
                                                                         <!-- <button class="rowDel">X</button> -->
                                                                     </li>
                                                                     <li class="estimateItem">
@@ -229,7 +280,12 @@
                                                                             <input type="number" placeholder="0">
                                                                             <span class="legend">개</span>
                                                                         </div>
-                                                                        <div class="price">0원</div>
+                                                                        <button class="rowPlus" onclick="self_division_estimate_insert('100032','m');">
+                                                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path d="M4 0.5H16C17.933 0.5 19.5 2.067 19.5 4V16C19.5 17.933 17.933 19.5 16 19.5H4C2.067 19.5 0.5 17.933 0.5 16V4C0.5 2.067 2.067 0.5 4 0.5Z" stroke="#1F79FF"/>
+                                                                                    <path d="M10 5.75781V14.2444M5.75671 10.0011H14.2433" stroke="#1F79FF"/>
+                                                                                </svg>                                                                                    
+                                                                            </button>
                                                                         <!-- <button class="rowDel">X</button> -->
                                                                     </li>
                                                                     <li class="estimateItem">
@@ -244,7 +300,12 @@
                                                                             <input type="number" placeholder="0">
                                                                             <span class="legend">개</span>
                                                                         </div>
-                                                                        <div class="price">0원</div>
+                                                                        <button class="rowPlus" onclick="self_division_estimate_insert('100032','m');">
+                                                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path d="M4 0.5H16C17.933 0.5 19.5 2.067 19.5 4V16C19.5 17.933 17.933 19.5 16 19.5H4C2.067 19.5 0.5 17.933 0.5 16V4C0.5 2.067 2.067 0.5 4 0.5Z" stroke="#1F79FF"/>
+                                                                                    <path d="M10 5.75781V14.2444M5.75671 10.0011H14.2433" stroke="#1F79FF"/>
+                                                                                </svg>                                                                                    
+                                                                            </button>
                                                                         <!-- <button class="rowDel">X</button> -->
                                                                     </li>
                                                                     <li class="estimateItem">
@@ -259,7 +320,12 @@
                                                                             <input type="number" placeholder="0">
                                                                             <span class="legend">개</span>
                                                                         </div>
-                                                                        <div class="price">0원</div>
+                                                                        <button class="rowPlus" onclick="self_division_estimate_insert('100032','m');">
+                                                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path d="M4 0.5H16C17.933 0.5 19.5 2.067 19.5 4V16C19.5 17.933 17.933 19.5 16 19.5H4C2.067 19.5 0.5 17.933 0.5 16V4C0.5 2.067 2.067 0.5 4 0.5Z" stroke="#1F79FF"/>
+                                                                                    <path d="M10 5.75781V14.2444M5.75671 10.0011H14.2433" stroke="#1F79FF"/>
+                                                                                </svg>                                                                                    
+                                                                            </button>
                                                                         <!-- <button class="rowDel">X</button> -->
                                                                     </li>
                                                                     <li class="estimateItem">
@@ -274,7 +340,12 @@
                                                                             <input type="number" placeholder="0">
                                                                             <span class="legend">개</span>
                                                                         </div>
-                                                                        <div class="price">0원</div>
+                                                                        <button class="rowPlus" onclick="self_division_estimate_insert('100032','m');">
+                                                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path d="M4 0.5H16C17.933 0.5 19.5 2.067 19.5 4V16C19.5 17.933 17.933 19.5 16 19.5H4C2.067 19.5 0.5 17.933 0.5 16V4C0.5 2.067 2.067 0.5 4 0.5Z" stroke="#1F79FF"/>
+                                                                                    <path d="M10 5.75781V14.2444M5.75671 10.0011H14.2433" stroke="#1F79FF"/>
+                                                                                </svg>                                                                                    
+                                                                            </button>
                                                                         <!-- <button class="rowDel">X</button> -->
                                                                     </li>
                                                                     <li class="estimateItem">
@@ -289,7 +360,12 @@
                                                                             <input type="number" placeholder="0">
                                                                             <span class="legend">개</span>
                                                                         </div>
-                                                                        <div class="price">0원</div>
+                                                                        <button class="rowPlus" onclick="self_division_estimate_insert('100032','m');">
+                                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M4 0.5H16C17.933 0.5 19.5 2.067 19.5 4V16C19.5 17.933 17.933 19.5 16 19.5H4C2.067 19.5 0.5 17.933 0.5 16V4C0.5 2.067 2.067 0.5 4 0.5Z" stroke="#1F79FF"/>
+                                                                                <path d="M10 5.75781V14.2444M5.75671 10.0011H14.2433" stroke="#1F79FF"/>
+                                                                            </svg>                                                                                    
+                                                                        </button>
                                                                         <!-- <button class="rowDel">X</button> -->
                                                                     </li>
                                                                     <li class="estimateItem">
@@ -304,7 +380,12 @@
                                                                             <input type="number" placeholder="0">
                                                                             <span class="legend">개</span>
                                                                         </div>
-                                                                        <div class="price">0원</div>
+                                                                        <button class="rowPlus" onclick="self_division_estimate_insert('100032','m');">
+                                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M4 0.5H16C17.933 0.5 19.5 2.067 19.5 4V16C19.5 17.933 17.933 19.5 16 19.5H4C2.067 19.5 0.5 17.933 0.5 16V4C0.5 2.067 2.067 0.5 4 0.5Z" stroke="#1F79FF"/>
+                                                                                <path d="M10 5.75781V14.2444M5.75671 10.0011H14.2433" stroke="#1F79FF"/>
+                                                                            </svg>                                                                                    
+                                                                        </button>
                                                                         <!-- <button class="rowDel">X</button> -->
                                                                     </li>
                                                                 </ul>
@@ -323,7 +404,12 @@
                                                                             <input type="number" placeholder="0">
                                                                             <span class="legend">m</span>
                                                                         </div>
-                                                                        <div class="price">0원</div>
+                                                                        <button class="rowPlus" onclick="self_division_estimate_insert('100032','m');">
+                                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M4 0.5H16C17.933 0.5 19.5 2.067 19.5 4V16C19.5 17.933 17.933 19.5 16 19.5H4C2.067 19.5 0.5 17.933 0.5 16V4C0.5 2.067 2.067 0.5 4 0.5Z" stroke="#1F79FF"/>
+                                                                                <path d="M10 5.75781V14.2444M5.75671 10.0011H14.2433" stroke="#1F79FF"/>
+                                                                            </svg>                                                                                    
+                                                                        </button>
                                                                         <!-- <button class="rowDel">X</button> -->
                                                                     </li>
                                                                 </ul>
