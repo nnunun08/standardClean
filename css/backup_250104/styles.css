@@ -338,13 +338,6 @@ body.dark .modeBtn {
   background: url(../img/mode_dark.svg) center no-repeat;
 }
 
-body:has(#employee_detail_page.show) #employee_detail_page {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-body:has(#employee_detail_page.show) .modal-backdrop {
-  display: none;
-}
-
 #film {
   position: fixed;
 }
@@ -3351,6 +3344,59 @@ a:hover {
   position: relative;
   padding-right: 16px;
   background: url(../img/ic_link_arr.svg) right center no-repeat;
+  cursor: pointer;
+}
+.sideCon .link:hover {
+  text-decoration: underline;
+}
+
+.teamCardDetail + .teamCardDetail {
+  margin-top: 20px;
+}
+
+.teamCardDetail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.teamCardDetail .profile {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--greyScale-grey2);
+  background-color: var(--greyScale-grey1);
+}
+.teamCardDetail .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.teamCardDetail .detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.teamCardDetail .detail .name {
+  color: var(--greyScale-grey8, #23262A);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.32px;
+}
+.teamCardDetail .detail .car, .teamCardDetail .detail .phone {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  color: var(--greyScale-grey5, #686E7A);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 21px */
+  letter-spacing: -0.28px;
 }
 
 .gridTit {
@@ -3410,7 +3456,6 @@ a:hover {
 .modal2 .modal-header, .inlineForm .modal-header {
   padding: 0;
   border: 0;
-  gap: 10px;
 }
 .modal2 .modal-header .h1Wrap, .inlineForm .modal-header .h1Wrap {
   display: flex;
@@ -3464,7 +3509,7 @@ a:hover {
   letter-spacing: -0.42px;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   display: -webkit-box;
 }
@@ -3511,10 +3556,6 @@ a:hover {
 }
 .modal2 .modal-body, .inlineForm .modal-body {
   padding: 0;
-}
-.modal2 .modal-body img, .inlineForm .modal-body img {
-  max-width: 100%;
-  margin: 8px 0;
 }
 .modal2 .modal-body.flexWrap, .inlineForm .modal-body.flexWrap {
   display: flex;
@@ -3603,9 +3644,7 @@ a:hover {
 }
 .modal2 .modal-body .modalForm .th, .inlineForm .modal-body .modalForm .th {
   padding: 5px 0px 2px;
-  min-width: 100px;
-  width: 25%;
-  flex: 0 0 auto;
+  width: 130px;
   padding-right: 10px;
   color: var(--greyScale-grey5, #686E7A);
   font-family: Pretendard;
@@ -3622,18 +3661,10 @@ a:hover {
 }
 .modal2 .modal-body .modalForm .td, .inlineForm .modal-body .modalForm .td {
   flex: 1 0 0;
-  width: 50%;
 }
 @media screen and (max-width: 1200px) {
   .modal2 .modal-body .modalForm .td, .inlineForm .modal-body .modalForm .td {
     flex: 1 0 auto;
-    width: 100%;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .modal2 .modal-body .modalForm .flex .td, .inlineForm .modal-body .modalForm .flex .td {
-    flex: 1 0 auto;
-    width: 50%;
   }
 }
 .modal2 .modal-body .modalForm .sectionDivider, .inlineForm .modal-body .modalForm .sectionDivider {
@@ -5618,295 +5649,6 @@ a:hover {
   }
 }
 
-.paymentPopModal .modal-body {
-  height: auto;
-  overflow: auto;
-}
-.paymentPopModal .modal-footer {
-  z-index: 1;
-  background-color: #fff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 16px 24px 24px 24px;
-  border-top: 1px solid var(--outline, #E7E5ED);
-}
-.paymentPopModal .modal-footer::after {
-  content: "";
-  width: 100%;
-  height: 15px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFF 100%);
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  margin-bottom: 1px;
-}
-.paymentPopModal .modal-footer .flexWrap {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  margin: 0;
-  gap: 10px;
-  width: 100%;
-  height: 56px;
-}
-.paymentPopModal .modal-footer input,
-.paymentPopModal .modal-footer select {
-  flex: 0 0 auto;
-  width: auto !important;
-  height: 100% !important;
-  margin: 0;
-}
-.paymentPopModal .modal-footer button {
-  flex: 1 0 0 !important;
-  height: 100% !important;
-  width: 50%;
-}
-.paymentPopModal .modal-content {
-  padding: 24px 24px 97px 24px;
-  gap: 20px !important;
-}
-.paymentPopModal .group + .group {
-  border-top: 1px solid #E7E5ED;
-  padding-top: 16px;
-}
-.paymentPopModal .group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  align-self: stretch;
-}
-.paymentPopModal .group .groupTit {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  color: var(--greyScale-grey8, #23262A);
-  font-family: Pretendard;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%; /* 24px */
-  letter-spacing: -0.32px;
-}
-.paymentPopModal .group .point {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  color: var(--blueTone-primary, #1F79FF);
-  font-family: Pretendard;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -0.32px;
-}
-.paymentPopModal .group .usePoint {
-  margin-bottom: 16px;
-  display: flex;
-  gap: 4px;
-  align-items: center;
-  width: 100%;
-  height: 42px;
-}
-.paymentPopModal .group .usePoint label {
-  flex: 1 0 0;
-  position: relative;
-  height: 100%;
-}
-.paymentPopModal .group .usePoint label .label {
-  position: absolute;
-  top: 50%;
-  left: 14px;
-  transform: translateY(-50%);
-  color: var(--greyScale-grey5, #686E7A);
-  font-family: Pretendard;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%; /* 19.5px */
-  letter-spacing: -0.26px;
-}
-.paymentPopModal .group .usePoint label input {
-  height: 100%;
-  text-align: right;
-  padding: 0 20px 0 40px;
-}
-.paymentPopModal .group .usePoint .btn-primary-sm {
-  padding: 0 16px;
-  height: 100%;
-  flex: 0 0 auto;
-}
-.paymentPopModal .group .receipt {
-  width: 100%;
-  margin-bottom: 20px;
-}
-.paymentPopModal .group .receipt li {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  color: var(--greyScale-grey5, #686E7A);
-  font-family: Pretendard;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%; /* 19.5px */
-  letter-spacing: -0.26px;
-}
-.paymentPopModal .group .receipt li .value {
-  color: #30343A;
-}
-.paymentPopModal .group .receipt li + li {
-  margin-top: 2px;
-}
-.paymentPopModal .group .receipt .total {
-  margin-top: 8px;
-  color: var(--greyScale-grey5, #686E7A);
-  font-family: Pretendard;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%; /* 24px */
-  letter-spacing: -0.32px;
-}
-.paymentPopModal .group .receipt .total .value {
-  color: var(--greyScale-grey7, #30343A);
-  text-align: right;
-  font-family: Pretendard;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%; /* 24px */
-  letter-spacing: -0.32px;
-}
-.paymentPopModal .group .list {
-  width: 100%;
-  height: 200px;
-  overflow: auto;
-}
-.paymentPopModal .group .list .item + .item {
-  margin-top: 4px;
-}
-.paymentPopModal .group .list .item {
-  border-radius: 8px;
-  background: var(--bgNormal, #F5F5F7);
-  display: flex;
-  padding: 8px;
-  flex-direction: column;
-  gap: 8px;
-  align-self: stretch;
-}
-.paymentPopModal .group .list .item .addr {
-  color: var(--greyScale-grey6, #434850);
-  font-family: Pretendard;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 16px; /* 123.077% */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-}
-.paymentPopModal .group .list .item .amount {
-  color: var(--greyScale-grey8, #23262A);
-  text-align: right;
-  font-family: Pretendard;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-.paymentPopModal .group .list .item:last-child {
-  margin-bottom: 8px;
-}
-.paymentPopModal select {
-  width: 100%;
-  height: 36px;
-  padding: 0px 30px 0px 14px;
-  align-items: center;
-  background: url(../img/ic_select_arr.svg) right 3px center no-repeat;
-  font-family: Pretendard;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%; /* 21px */
-  letter-spacing: -0.28px;
-  border-radius: 8px;
-  background-color: transparent;
-  border: 1px solid var(--greyScale-grey2, #CFD4D9);
-  color: var(--greyScale-grey6, #434850);
-}
-.paymentPopModal select::placeholder {
-  color: var(--greyScale-grey2, #CFD4D9);
-}
-.paymentPopModal select[disabled] {
-  border: 1px solid var(--greyScale-grey2, #CFD4D9);
-  background: var(--greyScale-grey1, #DEE3E9);
-  color: var(--greyScale-grey3, #BDC1CC);
-}
-.paymentPopModal input[type=number],
-.paymentPopModal input[type=text] {
-  width: 100%;
-  height: 36px;
-  padding: 0 14px;
-  font-family: Pretendard;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%; /* 21px */
-  letter-spacing: -0.28px;
-  border-radius: 8px;
-  background-color: transparent;
-  border: 1px solid var(--greyScale-grey2, #CFD4D9);
-  color: var(--greyScale-grey6, #434850);
-}
-.paymentPopModal input[type=number]::placeholder,
-.paymentPopModal input[type=text]::placeholder {
-  color: var(--greyScale-grey2, #CFD4D9);
-}
-.paymentPopModal input[type=number][disabled],
-.paymentPopModal input[type=text][disabled] {
-  border: 1px solid var(--greyScale-grey2, #CFD4D9);
-  background: var(--greyScale-grey1, #DEE3E9);
-  color: var(--greyScale-grey3, #BDC1CC);
-}
-.paymentPopModal input[type=number][disabled]::placeholder,
-.paymentPopModal input[type=text][disabled]::placeholder {
-  color: var(--greyScale-grey3, #BDC1CC);
-}
-@media screen and (max-width: 1200px) {
-  .paymentPopModal .modal-dialog .modal-content {
-    padding-bottom: 97px;
-    margin-bottom: 0;
-  }
-}
-@media screen and (max-width: 577px) {
-  .paymentPopModal .modal-dialog {
-    position: fixed;
-    margin: 0;
-    bottom: 0;
-  }
-  .paymentPopModal .modal-dialog .modal-content {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    height: 90vh;
-    padding-bottom: 75px;
-  }
-  .paymentPopModal .modal-dialog .modal-footer {
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-bottom: 16px;
-  }
-  .paymentPopModal .modal-dialog .modal-footer .flexWrap {
-    height: 42px;
-    gap: 4px;
-  }
-}
-
 .imgSlideModal {
   padding-bottom: 60px;
   min-width: 1200px;
@@ -7492,9 +7234,6 @@ a:hover {
     padding-bottom: 80px;
     gap: 24px;
   }
-  .modal2 .modal-content, .inlineForm .modal-content {
-    padding-bottom: 24px;
-  }
   .modal2 .modal-body.flexWrap, .inlineForm .modal-body.flexWrap {
     flex-direction: column;
     margin-bottom: 20px;
@@ -7640,6 +7379,9 @@ a:hover {
   }
   .gridModule-indexBlade.constructGrid table td:nth-child(5)::before {
     content: "담당자 : ";
+  }
+  .gridModule-indexBlade.constructGrid table td:nth-child(6)::before {
+    content: "마루철거일 : ";
   }
   .gridModule-indexBlade.constructGrid table td:nth-child(7) {
     flex: 1 0 100%;
@@ -8129,4 +7871,4 @@ a:hover {
   .inlineForm .modal-body .modalForm .tr.half {
     width: 100%;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=styles.css.map */
