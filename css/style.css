@@ -5665,13 +5665,12 @@ a:hover {
 }
 .paymentPopModal .modal-footer input,
 .paymentPopModal .modal-footer select {
-  flex: 0 0 auto;
-  width: auto !important;
+  flex: 1 0 0;
   height: 100% !important;
   margin: 0;
 }
 .paymentPopModal .modal-footer button {
-  flex: 1 0 0 !important;
+  flex: 2 0 0 !important;
   height: 100% !important;
   width: 50%;
 }

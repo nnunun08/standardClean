@@ -5082,13 +5082,13 @@ a {
 		}
 		input,
 		select {
-			flex: 0 0 auto;
-			width: auto !important;
+			flex: 1 0 0;
+			// width: auto !important;
 			height: 100% !important;
 			margin: 0;
 		}
 		button {
-			flex: 1 0 0 !important;
+			flex: 2 0 0 !important;
 			height: 100% !important;
 			width: 50%;
 		}
