@@ -5051,6 +5051,8 @@ a {
 			left: 0;
 			margin-bottom: 1px;
 		}
+		justify-content: flex-start;
+		gap: 4px;
 		z-index: 1;
 		background-color: #fff;
 		position: absolute;
@@ -5059,6 +5061,16 @@ a {
 		width: 100%;
 		padding: 16px 24px 24px 24px;
 		border-top: 1px solid var(--outline, #E7E5ED);
+		.mesg {
+			color: var(--blueTone-blue7, #4792FB);
+			font-family: Pretendard;
+			font-size: 13px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 150%;
+			letter-spacing: -0.26px;
+			margin: 0;
+		}
 		.flexWrap {
 			display: flex;
 			flex-wrap: nowrap;

@@ -5623,6 +5623,8 @@ a:hover {
   overflow: auto;
 }
 .paymentPopModal .modal-footer {
+  justify-content: flex-start;
+  gap: 4px;
   z-index: 1;
   background-color: #fff;
   position: absolute;
@@ -5641,6 +5643,16 @@ a:hover {
   bottom: 100%;
   left: 0;
   margin-bottom: 1px;
+}
+.paymentPopModal .modal-footer .mesg {
+  color: var(--blueTone-blue7, #4792FB);
+  font-family: Pretendard;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.26px;
+  margin: 0;
 }
 .paymentPopModal .modal-footer .flexWrap {
   display: flex;
